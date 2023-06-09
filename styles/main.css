@@ -1,0 +1,9 @@
+
+.logo{
+    width: 100px;
+}
+
+.barra-buscar2{
+    display: flex;
+    justify-content: center;
+}
