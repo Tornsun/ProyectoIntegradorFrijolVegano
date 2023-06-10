@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 20px;
+}
+
+@media (min-width: 768px) and (max-width: 5000px){
+
+.navBarSuperior {
+    background-color: #EE692A;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    padding: 5px 10%;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+}
+
+.logo img {
+    width: 100px;
+}
+
+.form-control {
+    width: 430px;
+}
+
+.btn {
+    border-color: #FBE0D3;
+}
+
+.btn:hover {
+    background-color: #FBE0D3;
+    border-color: #FBE0D3;
+}
+
+/* .posicionNavBar row col-sm-12 navBarInferior{
+    display:none;
+} */
+
+.navBarInferior {
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FBE0D3;
+    height: 50px;
+    position: fixed;
+    top: 85px;
+    right: 0px;
+    left: 0px;
+}
+
+.navBarInferior .nav-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding: 5px 10%;
+}
+
+.nav-links,
+a {
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+}
+.contenido {
+    margin-top: 145px;
+}
+
+.footer {
+    background-color: #EE692A;
+    justify-content: space-between;
+    margin: auto;
+    position: static;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    /* display: flex;
+    align-items: center;
+    justify-content: space-between; */
+    /* position: fixed;
+    bottom: 0px;
+    right: 0px;
+    left: 0px; */
+}
+
+.textoIzquierda,
+span {
+    display: flex;
+    align-items: center;
+    height: -50%;
+    flex-direction: column;
+    color: white;
+    justify-content: center;
+    text-align: center;
+}
+
+.redesSociales {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    /* vertical-align: middle; */
+    /* flex-direction: row; */
+    justify-content: center;
+}
+
+.textoDerecha {
+    display: flex;
+    align-items: center;
+    height: 150px;
+    flex-direction: column;
+    color: white;
+    justify-content: center;
+}
