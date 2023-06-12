@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 20px;
+}
+
+.navBarSuperior {
+    background-color: #EE692A;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    padding: 2px 5%;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+}
+
+.logo img {
+    width: 100px;
+}
+
+.contenedor-barra-busqueda{
+    width: 50%;
+    position: relative;
+    
+}
+
+.barra-buscar{
+    width:100%;
+    border: 0;
+    outline: none;
+    border-radius: 100px;
+    text-align: center;
+    padding:7px;
+    padding-inline-end:15%;
+    padding-inline-start:3%;
+
+}
+
+.boton-buscar{
+    position: absolute;
+    border: 0;
+    outline: none;
+    background:peachpuff;
+    border-radius: 100px;
+    padding:7px 30px;
+    right:0;
+    top:0;
+}
+
+.logos{
+    align-items: end;
+}
+
+.menu-hamburguesa svg{
+    width: 80px;
+    height: 80px;
+    display:flex;
+    color: white;
+}
+
+.logoCentral img {
+    width: 100px;
+}
+
+/* .posicionNavBar row col-sm-12 navBarInferior{
+    display:none;
+} */
+
+.navBarInferior {
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FBE0D3;
+    height: 50px;
+    position: fixed;
+    top: 85px;
+    right: 0px;
+    left: 0px;
+}
+
+.navBarInferior .nav-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding: 5px 10%;
+}
+
+.nav-links,
+a {
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+
+.contenido {
+    margin-top: 200px;
+}
+
+.footer {
+    background-color: #EE692A;
+    /* justify-content: space-between; */
+}
+
+.textoIzquierda, span {
+    display: flex;
+    align-items: center;
+    height: -50%;
+    flex-direction: column;
+    color: white;
+    justify-content: center;
+    text-align: center;
+    padding: 12px;
+}
+
+.contenedorRedes{
+    position: relative;
+}
+
+.redesSociales {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.redesSocialesCentral{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 40%;
+    left: 35%;
+}
+
+.contenedorContacto{
+    position:relative;
+}
+
+.textoDerecha{
+    flex-direction: column;
+    color: white;
+    justify-content: center;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+}
