@@ -8,15 +8,13 @@
     font-size: 20px;
 }
 
-@media (min-width: 768px) and (max-width: 5000px){
-
 .navBarSuperior {
     background-color: #EE692A;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 85px;
-    padding: 5px 10%;
+    padding: 2px 5%;
     position: fixed;
     top: 0px;
     right: 0px;
@@ -27,17 +25,48 @@
     width: 100px;
 }
 
-.form-control {
-    width: 430px;
+.contenedor-barra-busqueda{
+    width: 50%;
+    position: relative;
+    
 }
 
-.btn {
-    border-color: #FBE0D3;
+.barra-buscar{
+    width:100%;
+    border: 0;
+    outline: none;
+    border-radius: 100px;
+    text-align: center;
+    padding:7px;
+    padding-inline-end:15%;
+    padding-inline-start:3%;
+
 }
 
-.btn:hover {
-    background-color: #FBE0D3;
-    border-color: #FBE0D3;
+.boton-buscar{
+    position: absolute;
+    border: 0;
+    outline: none;
+    background:peachpuff;
+    border-radius: 100px;
+    padding:7px 30px;
+    right:0;
+    top:0;
+}
+
+.logos{
+    align-items: end;
+}
+
+.menu-hamburguesa svg{
+    width: 80px;
+    height: 80px;
+    display:flex;
+    color: white;
+}
+
+.logoCentral img {
+    width: 100px;
 }
 
 /* .posicionNavBar row col-sm-12 navBarInferior{
@@ -69,30 +98,17 @@ a {
     text-decoration: none;
     color: black;
 }
-}
+
 .contenido {
-    margin-top: 145px;
+    margin-top: 200px;
 }
 
 .footer {
     background-color: #EE692A;
-    justify-content: space-between;
-    margin: auto;
-    position: static;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    /* display: flex;
-    align-items: center;
-    justify-content: space-between; */
-    /* position: fixed;
-    bottom: 0px;
-    right: 0px;
-    left: 0px; */
+    /* justify-content: space-between; */
 }
 
-.textoIzquierda,
-span {
+.textoIzquierda, span {
     display: flex;
     align-items: center;
     height: -50%;
@@ -100,22 +116,36 @@ span {
     color: white;
     justify-content: center;
     text-align: center;
+    padding: 12px;
+}
+
+.contenedorRedes{
+    position: relative;
 }
 
 .redesSociales {
     display: flex;
     align-items: center;
-    height: 100px;
-    /* vertical-align: middle; */
-    /* flex-direction: row; */
     justify-content: center;
 }
 
-.textoDerecha {
+.redesSocialesCentral{
     display: flex;
-    align-items: center;
-    height: 150px;
+    justify-content: center;
+    position: absolute;
+    top: 40%;
+    left: 35%;
+}
+
+.contenedorContacto{
+    position:relative;
+}
+
+.textoDerecha{
     flex-direction: column;
     color: white;
     justify-content: center;
+    position: absolute;
+    top: 25%;
+    left: 25%;
 }
