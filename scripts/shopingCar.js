@@ -11,7 +11,8 @@ let idProduct = 0; //Aqui debe ir el id del producto seleccionado
 let container = document.querySelector(".product-container");//Contenedor de productos del carrito
 const inputNumProduct = document.querySelectorAll(".num-product");//Input de tipo number (valor en carrito minimo 1) para que el usuario MODIFIQUE PRODUCTOS
 const btnAddDeletProduct = document.querySelectorAll("#btn-delet");//Boton para eliminar producto
-
+let statusShopingCar = false;
+let statusProductInShopingCar = false;
 
 //ARRAYS & OBJETOS
 //Carrito de compras
@@ -166,8 +167,9 @@ function addProduct() {
     // let pPrice = productArray.precio;
     // let inputNumber = productArray.cantidad;
 
-    //Quiero que cada tarjettita tenga su propio div o contenedor
+    //Se crea un contenedor div para colocar el producto agregado
     const productCard = document.createElement("div");
+    //Le damos un espaco
     const brProduct = document.createElement("br");
     //Creamos el producto que se agregará al carrito de compras
     //Por defecto se agrega 1 solo producto, hay que entrar al carrito de compras para poder agregar mas elementos del mismo o eliminarlo
@@ -216,6 +218,7 @@ function modifyProduct() {
     if (productoExiste) {
         //Se debe modificar el atributo cantidad del producto DEL CARRITO DE COMPRAS
         shopingCar[productsAdd.cantidad] = inputNumber; //Se recibe el valor del Input de tipo number
+        console.log("Producto existe");
     }
 }
 
