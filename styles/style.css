@@ -23,50 +23,62 @@
 
 .logo img {
     width: 100px;
+    filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.3));
 }
 
-.contenedor-barra-busqueda{
+.contenedor-barra-busqueda {
     width: 50%;
     position: relative;
-    
+
 }
 
-.barra-buscar{
-    width:100%;
+.barra-buscar {
+    width: 100%;
     border: 0;
     outline: none;
     border-radius: 100px;
     text-align: center;
-    padding:7px;
-    padding-inline-end:15%;
-    padding-inline-start:3%;
-
+    padding: 7px;
+    padding-inline-end: 15%;
+    padding-inline-start: 3%;
+    filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.3));
 }
 
-.boton-buscar{
+.boton-buscar {
     position: absolute;
     border: 0;
     outline: none;
-    background:peachpuff;
+    background: peachpuff;
     border-radius: 100px;
-    padding:7px 30px;
-    right:0;
-    top:0;
+    padding: 7px 30px;
+    right: 0;
+    top: 0;
 }
 
-.logos{
+.logos {
     align-items: end;
+    display: flex;
+    /* position: relative; */
 }
 
-.menu-hamburguesa svg{
-    width: 80px;
-    height: 80px;
-    display:flex;
+.menu-hamburguesa svg {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    padding: 25px;
     color: white;
 }
 
 .logoCentral img {
     width: 100px;
+}
+
+.logos svg {
+    width: 45px;
+    height: 45px;
+    /* position: absolute; */
+    color: white;
+    filter: drop-shadow(0px 5px 2px rgba(0, 0, 0, 0.3));
 }
 
 /* .posicionNavBar row col-sm-12 navBarInferior{
@@ -100,15 +112,59 @@ a {
 }
 
 .contenido {
-    margin-top: 200px;
+    margin-top: 145px;
+    min-height: calc(100vh - 285px);
 }
 
-.footer {
-    background-color: #EE692A;
-    /* justify-content: space-between; */
+
+.footer{
+    background-color:#EE692A;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    position:relative;
+    color:white;
 }
 
-.textoIzquierda, span {
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .redesSociales {
+        margin-top: 10px;
+    }
+}
+
+.elementos-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+}
+
+.iconos-redes {
+    display: flex;
+    padding: 25px;
+}
+
+.iconos-redes svg {
+    width: 62px;
+    height: 62px;
+    display: flex;
+    color: white;
+    padding: 10px;
+    filter: drop-shadow(0px 5px 2px rgba(0, 0, 0, 0.3));
+}
+
+li {
+    list-style-type: none;
+}
+
+.textoIzquierda,
+span {
     display: flex;
     align-items: center;
     height: -50%;
@@ -119,7 +175,7 @@ a {
     padding: 12px;
 }
 
-.contenedorRedes{
+.contenedorRedes {
     position: relative;
 }
 
@@ -129,7 +185,7 @@ a {
     justify-content: center;
 }
 
-.redesSocialesCentral{
+.redesSocialesCentral {
     display: flex;
     justify-content: center;
     position: absolute;
@@ -137,15 +193,30 @@ a {
     left: 35%;
 }
 
-.contenedorContacto{
-    position:relative;
+.contenedorContacto {
+    position: relative;
 }
 
-.textoDerecha{
+.textoDerecha {
     flex-direction: column;
     color: white;
     justify-content: center;
     position: absolute;
     top: 25%;
     left: 25%;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+}
+/*Area de ID*/
+
+#userLogIn {
+    height: 50px;
+    width: 50px;
+
 }
