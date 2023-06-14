@@ -133,99 +133,35 @@ a {
     background-color:#EE692A;
     height: 100%;
     width: 100%;
-    align-items: center;
-    position:relative;
+
+}
+
+.elementos-row{
+    display:flex;
+    color:white;
+    justify-content: center;
+    flex-wrap:wrap;
+}
+
+
+.contenedor-iconos{
+    justify-content: center;
+}
+
+.iconos-redes{
+    display:flex;
+    justify-content: center;
+    padding-top:25px;
+}
+
+.iconos-redes svg{
+    filter: drop-shadow(0px 5px 2px rgba(0, 0, 0, 0.3));
+    height:35px;
+    width:35px;
+    margin: 0 10px;
     color:white;
 }
 
-@media (max-width: 768px) {
-    .footer {
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-    }
-
-    .redesSociales {
-        margin-top: 10px;
-    }
-}
-
-.elementos-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px;
-}
-
-.iconos-redes {
-    display: flex;
-    padding: 25px;
-}
-
-.iconos-redes svg {
-    width: 62px;
-    height: 62px;
-    display: flex;
-    color: white;
-    padding: 10px;
-    filter: drop-shadow(0px 5px 2px rgba(0, 0, 0, 0.3));
-}
-
-
-
-li {
+.footer ul{
     list-style-type: none;
 }
-
-.textoIzquierda,
-span {
-    display: flex;
-    align-items: center;
-    height: -50%;
-    flex-direction: column;
-    color: white;
-    justify-content: center;
-    text-align: center;
-    padding: 12px;
-}
-
-.contenedorRedes {
-    position: relative;
-}
-
-.redesSociales {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.redesSocialesCentral {
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    top: 40%;
-    left: 35%;
-}
-
-.contenedorContacto {
-    position: relative;
-}
-
-.textoDerecha {
-    flex-direction: column;
-    color: white;
-    justify-content: center;
-    position: absolute;
-    top: 25%;
-    left: 25%;
-}
-
-@media (max-width: 768px) {
-    .footer {
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-    }
-}
-/*Area de ID*/
-
