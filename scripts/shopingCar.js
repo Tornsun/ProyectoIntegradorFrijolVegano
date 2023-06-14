@@ -192,6 +192,7 @@ function addProduct() {
     //Colocamos el producto en el carrito
     container.appendChild(productCard);
     container.appendChild(brProduct);
+    alert('¡Se agregó producto al carrito!');
     console.log("Aqui ya anexé el bloque de producto agregado");
 }
 

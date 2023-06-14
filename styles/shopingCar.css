@@ -98,3 +98,7 @@ main{
     /* border: 1px solid black; */
     gap: 20px;
 }
+#img-carritoVacio{
+    width: 10%;
+    align-self: center;
+}
