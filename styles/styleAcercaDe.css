@@ -1,0 +1,301 @@
+/*Aqui empieza la modificacion de la informacion*/
+.razon {
+    /* Centramos el div de razon para que sean un titulo exclusivo */
+    /* position: sticky; */
+    text-align: center;
+}
+
+.mision,
+.vision,
+.valores {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.misioncita,
+.visioncita,
+.valorecitos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* gap: 1px; */
+
+}
+
+/*Modificacion de las imagenes*/
+img[href="mision"],
+[href="vision"],
+[href="valores"] {
+    width: 50px;
+    /*modificamos las imagenes a nuestro gusto preferido Ancho*/
+    height: 50px;
+    /*modificamos las imagenes a nuestro gusto preferido Altura*/
+
+    align-items: center;
+    /*Alineamos al centro*/
+    justify-items: center;
+    margin-right: 30px;
+    /*Colocamos un margen para que no se junte con el texto*/
+
+}
+
+.visionTitulo,
+.misionTitulo,
+.valoresTitulo,
+.porque {
+    /* position: sticky; */
+    text-align: center;
+    font-size: 50px;
+}
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+}
+
+.textoAcercaDe {
+    /* position: sticky; */
+    text-align: center;
+    font-size: 30px;
+}
+
+@media (max-width: 576px) {
+
+    .mision,
+    .vision,
+    .valores img [href="mision"],
+    [href="vision"],
+    [href="valores"] {
+        top: 20%;
+        /* Ajusta la posición*/
+    }
+}
+
+
+
+
+/*
+Aqui empieza la modificaion de la card para que haga el zoom */
+.contenedor {
+    height: 100%;
+    width: 100%;
+    /*Aqui vamos a declarar un maximo y un minimo a nuestras imagenes*/
+    /* max-height: 800px;
+  max-width: 1280px;
+  min-height: 400px; /*Aqui exclusivamente le damos el ALTURA a la imagen*/
+    /* min-width: 1500px; Aqui exclusivamente le damos el ANCHO a la imagen */
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-around;
+  align-items: start; Me alinea mi item al principio */
+    gap: 20px;
+    align-items: center;
+    margin: 50px;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+/*Redondea la imagen con un marco blanco*/
+.borde {
+    height: 369px;
+    width: 290px;
+    background: transparent;
+    border-radius: 10px;
+    transition: border 1s;
+    /* position: relative; */
+}
+
+.borde:hover {
+    border: 1px solid #cac3c3;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    /* font-size: 20px; */
+}
+
+
+.carta {
+    /* height: 379px;
+  width: 300px; */
+    background: #808080;
+    border-radius: 10px;
+    transition: background 0.8s;
+    /* overflow: hidden; */
+    background: #000;
+    box-shadow: 0 70px 63px -60px #000;
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* position: relative; */
+}
+
+
+
+/*Aqui empieza la creacion de la card 0 */
+.carta0 {
+    background: url("../assets/img/Ale.png") center center no-repeat;
+    background-size: 300px;
+}
+
+.carta0:hover {
+    background: url("../assets/img/Ale.png") left center no-repeat;
+    background-size: 600px;
+}
+
+.carta0:hover h2 {
+    opacity: 1;
+}
+
+.carta0:hover .fa {
+    opacity: 1;
+}
+
+/*Aqui empieza la creacion de la card 1 */
+
+
+
+.carta1 {
+    background: url("../assets/img/Gustavo.png") center center no-repeat;
+    background-size: 300px;
+}
+
+.carta1:hover {
+    background: url("../assets/img/Gustavo.png") left center no-repeat;
+    background-size: 600px;
+}
+
+.carta1:hover h2 {
+    opacity: 1;
+}
+
+.carta1:hover .fa {
+    opacity: 1;
+}
+
+
+
+/*Aqui empieza la creacion de la card 2 */
+.carta2 {
+    background: url("../assets/img/Andrea.png") center center no-repeat;
+    background-size: 300px;
+}
+
+.carta2:hover {
+    background: url("../assets/img/Andrea.png") left center no-repeat;
+    background-size: 600px;
+}
+
+.carta2:hover h2 {
+    opacity: 1;
+}
+
+.carta2:hover .fa {
+    opacity: 1;
+}
+
+
+/*Aqui empieza la creacion de la card 3 */
+
+.carta3 {
+    background: url("../assets/img/Ricardo.png") center center no-repeat;
+    background-size: 300px;
+}
+
+.carta3:hover {
+    background: url("../assets/img/Ricardo.png") left center no-repeat;
+    background-size: 600px;
+}
+
+.carta3:hover h2 {
+    opacity: 1;
+}
+
+.carta3:hover .fa {
+    opacity: 1;
+}
+
+/*Aqui empieza la creacion de la card 4 */
+.carta4 {
+    background: url("../assets/img/Itzel.png") center center no-repeat;
+    background-size: 300px;
+}
+
+.carta4:hover {
+    background: url("../assets/img/Itzel.png") left center no-repeat;
+    background-size: 600px;
+}
+
+.carta4:hover h2 {
+    opacity: 1;
+}
+
+.carta4:hover .fa {
+    opacity: 1;
+}
+
+
+/*Aqui empieza la creacion de la card 5 */
+
+.carta5 {
+    background: url("../assets/img/Hector.png") center center no-repeat;
+    background-size: 300px;
+}
+
+.carta5:hover {
+    background: url("../assets/img/Hector.png") left center no-repeat;
+    background-size: 600px;
+}
+
+.carta5:hover h2 {
+    opacity: 1;
+}
+
+.carta5:hover .fa {
+    opacity: 1;
+}
+
+/*Aqui empieza la creacion de la card 6 */
+.carta6 {
+    background: url("../assets/img/Carlos.png") center center no-repeat;
+    background-size: 300px;
+}
+
+.carta6:hover {
+    background: url("../assets/img/Carlos.png") left center no-repeat;
+    background-size: 600px;
+}
+
+.carta6:hover h2 {
+    opacity: 1;
+}
+
+.carta6:hover .fa {
+    opacity: 1;
+}
+
+
+/*Aqui finaliza la creacion de la card  */
+.textoCards {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    color: #fff;
+    margin: 20px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+/*Aqui empezamos la modificaion de la parte de las redes sociales*/
+
+
+
+.redes img,
+[href="github"],
+[href="linked"] {
+    width: 40px;
+    height: 40px;
+    display: table-column;
+}
