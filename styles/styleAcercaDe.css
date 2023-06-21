@@ -82,8 +82,8 @@ Aqui empieza la modificaion de la card para que haga el zoom */
     width: 100%;
     /*Aqui vamos a declarar un maximo y un minimo a nuestras imagenes*/
     /* max-height: 800px;
-  max-width: 1280px;
-  min-height: 400px; /*Aqui exclusivamente le damos el ALTURA a la imagen*/
+    max-width: 1280px;
+    min-height: 400px; /*Aqui exclusivamente le damos el ALTURA a la imagen*/
     /* min-width: 1500px; Aqui exclusivamente le damos el ANCHO a la imagen */
     display: flex;
     flex-wrap: wrap;

@@ -88,34 +88,41 @@
 
 
 
-    <div class="container-fluid contenedorLogIn">
+
+
+
+    <div class="container-fluid contenedorRegistro">
         <div class="row">
             <div class="col-md-6 col-lg-6 d-none d-lg-block d-md-block">
-                <img class="imagenLogIn" src="../assets/img/ChileRelleno.jpg">
+                <img class="imagenRegistro" src="../assets/img/ChileRelleno.jpg">
             </div>
 
             <div class="col-sm-12 col-md-6 col-lg-6">
-                <div class="contenedorAlineador">
-                    <h2 class="tituloLogIn">INICIA SESION</h2>
+                <div class="contenedorAlineadorRegistro">
+                    <h2 class="tituloRegistro">REGISTRATE</h2>
                     <div class="contenedorFormulario">
-                        <p>Usuario</p>
-                        <input class="form-control propiedadesFormulario" type="text" placeholder="Usuario"
-                            aria-label="default input example" required>
-                        <p>Constraseña</p>
-                        <input class="form-control propiedadesFormulario" type="text" placeholder="Constraseña"
-                            aria-label="default input example" required>
                         <br>
-                        <p class="tituloLogIn">¿Olvidaste tu contraseña?</p>
-                        <p class="tituloLogIn"><a href="../html/registroUsuarios.html">Registrarse</a></p>
+                        <p>Nombre Completo</p>
+                        <input class="form-control propiedadesFormularioRegistro" type="text" placeholder="Usuario" aria-label="default input example" required>
+                        <p>No. Telefono</p>
+                        <input class="form-control propiedadesFormularioRegistro" type="text" placeholder="No. Telefono" aria-label="default input example" required>
+                        <p>Correo Electronico</p>
+                        <input class="form-control propiedadesFormularioRegistro" type="email" placeholder="Correo Electronico" aria-label="default input example" required>
+                        <p>Contraseña</p>
+                        <input class="form-control propiedadesFormularioRegistro" type="password" placeholder="Constraseña" aria-label="default input example" id="contraseña" required minlength="8">
+                        <p>Confirmar Contraseña</p>
+                        <input class="form-control propiedadesFormularioRegistro" type="password" placeholder="Confirmar Constraseña" aria-label="default input example" required>
                     </div>
+
                     <div class="contenedorBoton">
-                        <button type="button" class="btn btn-primary colorBoton">Iniciar Sesion</button>
+                        <button type="submit" class="btn btn-primary colorBoton" >Enviar</button>
                     </div>
                 </div>
             </div>
 
         </div>
     </div>
+
 
 
 

@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap');
+
+/*Aqui inician los estilos de la pagina de Inicio de Sesion*/
+
+.contenedorLogIn{
+    margin-top: 140px;
+    margin-bottom: 25px;
+}
+
+
+.imagenLogIn{
+    border-radius: 40px;
+    width: 140%;
+    height: 750px;
+}
+
+.contenedorAlineador{
+    margin-top: 18%;
+    margin-left: 45%;
+    margin-right: 10%;
+}
+
+.propiedadesFormulario{
+    margin-top: -20px;
+    margin-bottom: 15px;
+    width: 100%;
+    border-color: black;
+}
+
+.tituloLogIn{
+    text-align: center;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.contenedorBoton{
+    margin-left: 28%;
+}
+
+.colorBoton{
+    margin-top: 15%;
+    background-color: #F50087 !important;
+    border: none;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+/*Aqui inician los estilos de la pagina de Registro de Usuarios*/
+
+.contenedorRegistro{
+    margin-top: 140px;
+    margin-bottom: 25px;
+}
+
+
+.imagenRegistro{
+    border-radius: 40px;
+    width: 140%;
+    height: 750px;
+}
+
+.contenedorAlineadorRegistro{
+    margin-top: 8%;
+    margin-left: 45%;
+    margin-right: 10%;
+}
+
+.propiedadesFormularioRegistro{
+    margin-top: -15px;
+    margin-bottom: 15px;
+    width: 100%;
+    height: 35px;
+    border-color: black;
+}
+
+.tituloRegistro{
+    text-align: center;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.contenedorBoton{
+    margin-left: 28%;
+}
+
+.colorBoton{
+    margin-top: 15%;
+    background-color: #F50087 !important;
+    border: none;
+    font-family: 'Nunito Sans', sans-serif;
+}
