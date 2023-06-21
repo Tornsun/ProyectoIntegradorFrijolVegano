@@ -1,15 +1,316 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acerca de nosotros</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" href="main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="../styles/styleAcercaDe.css">
+    <link rel="stylesheet" href="../styles/style.css">
 </head>
+
 <body>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+    <header>
+        <nav class="navbar navbar-expand-md ">
+            <div class="posicionNavBar">
+                <div class="row">
+                    <div class="col-sm-12 col-md-4 col-lg-4">
+                        <div class="navBarSuperior">
+
+                            <div class=" menu-hamburguesa d-lg-none">
+                                <div id="menuHamburguesa">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-list" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div class="logo d-none d-lg-block">
+                                <a href="../index.html"><img src="../assets/img/logo.png"></a>
+                            </div>
+
+                            <div class="contenedor-barra-busqueda d-none d-lg-block">
+                                <input class="barra-buscar" type="textbox" placeholder="Buscar">
+                                <div class="boton-buscar">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-search" viewBox="0 0 16 16">
+                                        <path
+                                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div class="logoCentral d-lg-none">
+                                <img src="../assets/img/logo.png">
+                            </div>
+
+                            <div class="logos">
+                                <a href="../html/login.html" target="_blank">
+                                    <svg class="logo-usuario" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                        class="bi bi-person-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                                    </svg>
+                                </a>
+                                <a href="../html/shoopingCar.html" target="_blank">
+                                    <svg class="logo-carrito" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                        class="bi bi-cart3" viewBox="0 0 16 16">
+                                        <path
+                                            d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                    </svg>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!--Navbar secundaria-->
+                <div class="row">
+                    <div class="d-none col-lg-12 d-lg-block">
+                        <div class="navBarInferior">
+                            <ul class="nav-links">
+                                <li><a href="../index.html">Inicio</a></li>
+                                <li><a href="../html/productos.html">Productos</a></li>
+                                <li><a href="../html/acercaDeNosotros.html"> Nosotros</a></li>
+                                <li><a href="../html/contactanos.html">Contacto</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="contenido">
+        <div class="elementos">
+            <div class="razon"> <!--Creamos una clase para el apartado de acerca de nosotros-->
+                <h1 class="porque">¿Por que Frijol vegano?</h1>
+                <P class="textoAcercaDe">Frijol vegano es una empresa sustentable que busca mejorar la calidad de vida de las personas,
+                    nosotros
+                    como equipo, el poder crear una pagina a partir de un proyecto que podria reflejarse en la vida real
+                    nos
+                    da la responsabilidad y ventaja de poder llevarlo a cabo</P>
+            </div>
+            <br>
+            <br>
+            <div class="mision"><!-- Div de la mision-->
+                <div class="misioncita">
+                    <img href="mision" src="../assets/img/objetivo.png" alt="mision">
+                    <h1 class="misionTitulo">Mision</h1>
+                </div>
+                <p class="textoAcercaDe">Crear una mayor difusión mediante el sitio web, de la cultura del veganismo para asi aumentar las ventas y que los talleres y servicios de comida para que el sean de facil acceso al usuario, para que asi interactúe de manera más dinámica y cómoda.</p>
+            </div>
+
+            <br>
+            <br>
+            <div class="vision"><!--Div de la vision-->
+                <div class="visioncita">
+                    <h1 class="visionTitulo">Vision</h1>
+                    <img href="vision" src="../assets/img/vision.png" alt="vision">
+                </div>
+                <p class="textoAcercaDe">Crear una plataforma de e-commerce en el mercado vegano, nuestro enfoque va más allá del crecimiento
+                    comercial. Nos esforzamos por generar conciencia sobre el impacto positivo que implica buscar un
+                    mundo
+                    más justo, sostenible y respetuoso con el medio ambiente.</p>
+            </div>
+            <br>
+            <br>
+            <div class="valores"><!--Div de los valores -->
+                <div class="valorecitos">
+                    <img href="valores" src="../assets/img/valores.png" alt="valores">
+                    <h1 class="valoresTitulo">Valores</h1>
+                </div>
+                <p class="textoAcercaDe">Ética animal Salud y bienestar Innovación culinaria Responsabilidad social Impacto positivo</p>
+            </div>
+        </div>
+        <br>
+        <br>
+        <h1>Script Masters</h1>
+        <!--Aqui empezamos la moficacion de las cards-->
+
+
+        <div>
+            <div class="contenedor"> <!--Contenedor de las primeras cuatro tarjetas-->
+                <div class="carta carta0">
+                    <!--contenedor por tarjeta, aqui tambien con ayuda del css insetaremos las imagenes-->
+                    <div class="borde"> <!--Contenedro de la imagen que nos va a dar un borde-->
+                        <h2 class="textoCards">Alejandra Cervantes</h2>
+                        <h2 class="textoCards">Desarolladora Java Full Stack</h2>
+                        <div class="redes">
+                            <a class="git" href="https://github.com/Ale-Cervantes"><img href="github"
+                                    src="../assets/img/github.png" alt="Imagen 1"></a>
+                            <br>
+                            <br>
+                            <a class="linke" href="https://www.linkedin.com/in/ale-cervantes-139a35275/">
+                                <img href="linked" src="../assets/img/linkedin.png" alt="Imagen 2">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carta carta1">
+                    <!--contenedor por tarjeta, aqui tambien con ayuda del css insetaremos las imagenes-->
+                    <div class="borde"> <!--Contenedro de la imagen que nos va a dar un borde-->
+                        <h2 class="textoCards">Gustavo Maldonado</h2>
+                        <h2 class="textoCards">Desarollador Java Full Stack</h2>
+                        <div class="redes">
+                            <a class="git" href="https://github.com/GustavMG"><img href="github"
+                                    src="../assets/img/github.png" alt="Imagen 1"></a>
+                            <br>
+                            <br>
+                            <a class="linke" href="https://www.linkedin.com/in/gustavo-maldonado95/">
+                                <img href="linked" src="../assets/img/linkedin.png" alt="Imagen 2">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carta carta2">
+                    <!--contenedor por tarjeta, aqui tambien con ayuda del css insetaremos las imagenes-->
+                    <div class="borde"> <!--Contenedro de la imagen que nos va a dar un borde-->
+                        <h2 class="textoCards">Andrea Avila</h2>
+                        <h2 class="textoCards">Desarolladora Java Full Stack</h2>
+                        <div class="redes">
+                            <a class="git" href="https://github.com/andrea-avila"><img href="github"
+                                    src="../assets/img/github.png" alt="Imagen 1"></a>
+                            <br>
+                            <br>
+                            <a class="linke" href="https://www.linkedin.com/in/andrea-avila-15aa6017b/">
+                                <img href="linked" src="../assets/img/linkedin.png" alt="Imagen 2">
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="carta carta3">
+                    <!--  contenedor por tarjeta, aqui tambien con ayuda del css insetaremos las imagenes -->
+                    <div class="borde"> <!-- Contenedro de la imagen que nos va a dar un borde -->
+                        <h2 class="textoCards">Ricardo De Haro</h2>
+                        <h2 class="textoCards">Desarolladora Java Full Stack</h2>
+                        <div class="redes">
+                            <a class="git" href="https://github.com/EliseoDHL"><img href="github"
+                                    src="../assets/img/github.png" alt="Imagen 1"></a>
+                            <br>
+                            <br>
+                            <a class="linke" href="https://www.linkedin.com/in/reliseodhl/">
+                                <img href="linked" src="../assets/img/linkedin.png" alt="Imagen 2">
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="carta carta4">
+                    <!-- contenedor por tarjeta, aqui tambien con ayuda del css insetaremos las imagenes -->
+                    <div class="borde"> <!--Contenedro de la imagen que nos va a dar un borde -->
+                        <h2 class="textoCards">Itzel Valle</h2>
+                        <h2 class="textoCards">Desarolladora Java Full Stack</h2>
+                        <div class="redes">
+                            <a class="git" href="https://github.com/andrea-avila"><img href="github"
+                                    src="../assets/img/github.png" alt="Imagen 1"></a>
+                            <br>
+                            <br>
+                            <a class="linke" href="https://www.linkedin.com/in/itzelvalle/">
+                                <img href="linked" src="../assets/img/linkedin.png" alt="Imagen 2">
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="carta carta5">
+                    <!-- contenedor por tarjeta, aqui tambien con ayuda del css insetaremos las imagenes -->
+                    <div class="borde"> <!--Contenedro de la imagen que nos va a dar un borde -->
+                        <h2 class="textoCards">Hector Rangel</h2>
+                        <h2 class="textoCards">Desarolladora Java Full Stack</h2>
+                        <div class="redes">
+                            <a class="git" href="https://github.com/HectorRangel948"><img href="github"
+                                    src="../assets/img/github.png" alt="Imagen 1"></a>
+                            <br>
+                            <br>
+                            <a class="linke" href="https://www.linkedin.com/in/hectorarangel/">
+                                <img href="linked" src="../assets/img/linkedin.png" alt="Imagen 2">
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="carta carta6">
+                    <!-- contenedor por tarjeta, aqui tambien con ayuda del css insetaremos las imagenes -->
+                    <div class="borde"> <!--Contenedro de la imagen que nos va a dar un borde -->
+                        <h2 class="textoCards">Carlos Grijalva</h2>
+                        <h2 class="textoCards">Desarolladora Java Full Stack</h2>
+                        <div class="redes">
+                            <a class="git" href="https://github.com/Tornsun"><img href="github"
+                                    src="../assets/img/github.png" alt="Imagen 1"></a>
+                            <br>
+                            <br>
+                            <a class="linke" href="https://www.linkedin.com/in/carlos-grijalva-558b161b9/">
+                                <img href="linked" src="../assets/img/linkedin.png" alt="Imagen 2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer container-fluid">
+            <div calss="contenedor-elementos-footer">
+                <div class="row">
+
+                    <div class="col-sm-12 col-md-4 col-lg-4 d-lg-none d-md-none d-sm-block">
+                        <div class="redesSociales">
+                            <a href="https://instagram.com/frijolvegano"><img src="../assets/img/Instagram.png"></a>
+                            <a href="https://www.facebook.com/FrijolVegano/"><img src="../assets/img/Facebook.png"></a>
+                            <a href="https://wa.me/message/EYIG5NRSYCEJE1"><img src="../assets/img/WhatsApp.png"></a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-4 col-lg-4">
+                        <div class="textoIzquierda">
+                            <a href="../html/avisoDePrivacidad.html"><span>Aviso de Privacidad</span></a>
+                            <a href="../html/politicasEnvio.html"><span>Politica de Envio</span></a>
+                            <p><span>Derechos Reservados<br> Frijol Vegano®</span></p>
+                        </div>
+                    </div>
+
+                    <div class="contenedorRedes col-sm-12 col-md-4 col-lg-4 d-lg-block d-md-block d-sm-none">
+                        <div class="redesSocialesCentral">
+                            <a href="https://instagram.com/frijolvegano"><img src="../assets/img/Instagram.png"></a>
+                            <a href="https://www.facebook.com/FrijolVegano/"><img src="../assets/img/Facebook.png"></a>
+                            <a href="https://wa.me/message/EYIG5NRSYCEJE1"><img src="../assets/img/WhatsApp.png"></a>
+                        </div>
+                    </div>
+
+                    <div class="contenedorContacto col-sm-12 col-md-4 col-lg-4">
+                        <div class="textoDerecha">
+                            <p>Teléfono: (+52) 811 479 6150</p>
+                            <p>Rafael Garza Cantú 3412<br> Col. Hidalgo, Monterrey, Nuevo León</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+
 </body>
+
 </html>
