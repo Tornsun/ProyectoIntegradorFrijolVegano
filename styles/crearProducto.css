@@ -1,0 +1,20 @@
+.contedor {
+    /* margin-top: 50%; */
+}
+
+.botones{
+display: flex;
+grid-template-rows: 500px;
+   
+}
+.boton1, .boton2{
+text-align: center;
+margin: 25%,25%,25%,25%;
+}
+.button1,.button2{
+    grid-template-rows: 50%;
+    text-align: center;
+    background-color: #F50087;
+    color:white;
+
+}
