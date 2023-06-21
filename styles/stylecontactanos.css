@@ -1,15 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Nunito:wght@500&display=swap');
+<<<<<<< HEAD
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 
 }
+=======
+
+>>>>>>> b8ebde8389597bd59b47ce98adc158f43d0f3689
 
 body{
     font-size: 15px;
     font-family: 'Nunito', sans-serif;
+<<<<<<< HEAD
+=======
+    
+>>>>>>> b8ebde8389597bd59b47ce98adc158f43d0f3689
 
 }
 
@@ -27,6 +35,7 @@ font-family: 'Nunito', sans-serif;*/
     border-radius: 45px;
     border-style: none;
     font-size: 20px; 
+<<<<<<< HEAD
       
 }
 #boton-container{
@@ -91,3 +100,49 @@ h3{font-family: 'Nunito', sans-serif;
         margin-bottom: 80px;
     }
  }
+=======
+}
+   
+    body{
+        font-size: 17px;
+        font-family: 'Nunito', sans-serif;
+        padding-inline-start: 20px;
+        padding-inline-end: 20px;
+        padding-top: 20px;
+    } 
+
+    
+    
+    /*font-family: 'Nunito', sans-serif;
+    
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Nunito', sans-serif;*/
+    
+    .boton{
+        background-color: #F50087;
+        font-family: 'Montserrat', sans-serif;
+        width: 148px;
+        height: 46px;
+        border-radius: 9px;
+        border-style: none;
+        font-size: 20px; 
+          color: white;
+    }
+    #boton-container{
+        margin: 30px;
+    
+    }
+
+.titulo-dudas{
+  padding-left: 20px;
+    
+}
+.titulo-contactanos{
+    padding-left: 20px;
+    
+}
+.titulo-escribenos{
+    padding-left: 20px;
+}
+   
+>>>>>>> b8ebde8389597bd59b47ce98adc158f43d0f3689
