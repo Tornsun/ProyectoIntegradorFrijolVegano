@@ -1,9 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap');
 
-.logo{
-    width: 100px;
+*{
+    box-sizing: border-box; 
+    margin: 0;
+    padding:0;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size:20px;
+    border-color:red;
 }
 
-.barra-buscar2{
+.posicionNavBar{
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+} 
+
+.header{
+    background-color: #EE692A;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    padding:5px 10%;
 }
+
+.header .logo img{
+    width: 100px;
+    display:flex;
+}
+
+.header .barra-buscar{
+    border-radius: 15px;
+    max-width: 100%;
+    margin: 10px;
+}
+
+.navbar-secundaria{
+    align-items:center;
+    justify-content: space-between;
+    background-color: #FBE0D3;
+    position: relative; 
+    height: 50px;
+}
+
+.navbar-secundaria .nav-links{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding:5px 10%;
+}
+
+.form-control{
+    width: 430px;
+}
+
+.nav-links, a{
+    list-style: none;
+    text-decoration: none;
+    color:black;
+}
+
+.btn{
+    border-color: #FBE0D3;
+}
+
+.btn:hover{
+    background-color:#FBE0D3;
+    border-color: #FBE0D3;
+}
+
+.footer{
+    background-color: #EE692A;
+    height: 350px;
+}
+
+.textoIzquierda, a{
+    list-style: none;
+    text-decoration: none;
+    color:black;
+}
+
+
+
+
