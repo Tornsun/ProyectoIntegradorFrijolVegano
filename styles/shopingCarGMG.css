@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0px;
+}
+
+main{
+    padding: 20px;
+    justify-content: center;
+}
+
+.h2-btn-shopingCar{
+    display: flex;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+    gap: 50px;
+}
+
+.btn-shopingCar{
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #F50087;
+    font-weight: 700;
+}
+
+.h2-btn-shopingCar a{
+    color: white;
+    text-decoration: none;
+}
+
+.section-products{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.section-products h2{
+    text-align: center;
+    font-weight: 900;
+}
+
+.container-products{
+    display: flex;
+    justify-content: center;
+    /* align-content: flex-start; */
+    flex-wrap: wrap;
+    width: 80%;
+    /* align-items: center; */
+    gap: 35px;
+}
+
+.container-product{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.container-product button{
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #F50087;
+    color: white;
+    font-weight: 700;
+}
+
+.btn-data-product button{
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #F50087;
+    color: white;
+    font-weight: 700;
+}
+
+#id-btn-void{
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #4af500;
+    color: white;
+    font-weight: 700;
+}
+
+.section-product-container{
+    border: 1px solid greenyellow;
+    gap: 20px;
+    
+}
+
+.h2-product{
+    text-align: center;
+}
+
+.product-container{
+    display:flex;
+    flex-direction: column;
+}
+
+.product-container div{
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid black; */
+}
+
+#data-product-shopingCar{
+    display:flex;
+    flex-direction: column;
+    width: 80%;
+    gap: 15px;
+    padding: 15px;
+}
+
+#h-p-data-product{
+    display:flex;
+    flex-direction: column;
+}
+
+.btn-data-product{
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid black; */
+    gap: 20px;
+}
+
+#img-carritoVacio{
+    width: 10%;
+    align-self: center;
+}
