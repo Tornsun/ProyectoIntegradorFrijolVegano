@@ -1,69 +1,123 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Nunito:wght@500&display=swap');
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contáctanos</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<link rel="stylesheet" href="../styles/stylecontactanos.css">
 
-
-body{
-    font-size: 15px;
-    font-family: 'Nunito', sans-serif;
+</head>
+<body>
     
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12 col-md-4 col-lg-4">
+            <h3 class="titulo-dudas"> ¿Dudas?</h3>
+            <div class="card text-center mb-3" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title"></h5>
+                  <p class="card-text">Escribenos tus dudas y nos pondremos en contacto contigo lo más pronto posible</p>
+                  
+                </div>
+              </div>
+              
+            
 
-}
-
-
-/*font-family: 'Nunito', sans-serif;
-
-font-family: 'Montserrat', sans-serif;
-font-family: 'Nunito', sans-serif;*/
-
-.boton{
-    background-color: #F50087;
-    font-family: 'Montserrat', sans-serif;
-    width: 148px;
-    height: 46px;
-    border-radius: 45px;
-    border-style: none;
-    font-size: 20px; 
-}
+        </div>
+        <div class="col-sm-12 col-md-4 col-lg-4">
+            <h3 class="titulo-contactanos"> Contactános</h3>
+            <div class="card text-center mb-3" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title"></h5>
+                  <p class="card-text">Horario de atención a clientes: Sábados 6:00 a 12:00 </p> 
+                   <p> Tel.  +52  8114796150 </p>
+                  
+                </div>
+              </div>
+            
+         </div>
+         <div class="col-sm-12 col-md-4 col-lg-4">
+           <div class="titulo-escribenos"><h3> !Escribenos!</h3></div>
    
-    body{
-        font-size: 17px;
-        font-family: 'Nunito', sans-serif;
-        padding-inline-start: 20px;
-        padding-inline-end: 20px;
-        padding-top: 20px;
-    } 
+           <div class="row">
+            <div class="">
+                <div class="">
+                    <form   id="form"  action="">
+                    <label for="nombre" class="form-label"></label>
+                    <input type="text"  minlength="10" class="form-control" id="nombre" required maxlength="37"  placeholder="Nombre y Apellido">
+                </div>
+            </div>
+        </div>
 
-    
-    
-    /*font-family: 'Nunito', sans-serif;
-    
-    font-family: 'Montserrat', sans-serif;
-    font-family: 'Nunito', sans-serif;*/
-    
-    .boton{
-        background-color: #F50087;
-        font-family: 'Montserrat', sans-serif;
-        width: 148px;
-        height: 46px;
-        border-radius: 9px;
-        border-style: none;
-        font-size: 20px; 
-          color: white;
-    }
-    #boton-container{
-        margin: 30px;
-    
-    }
+        <div class="row">
+            <div class="">
+                <div class="">
+                    <label for="telefono" class="form-label"></label>
+                    <input type="tel"    class="form-control" id="Telefono" required maxlength= "12" placeholder="Telefono">
+                </div>
+            </div>
+        </div>
 
-.titulo-dudas{
-  padding-left: 20px;
-    
-}
-.titulo-contactanos{
-    padding-left: 20px;
-    
-}
-.titulo-escribenos{
-    padding-left: 20px;
-}
-   
+        <div class="row">
+            <div class="">
+                <div class="">
+                    <label for="email" class="form-label"></label>
+                    <input class="form-control" type="email" class="form-control" id="exampleFormControlInput1"
+                        placeholder="name@example.com">
+                </div>
+            </div>
+        </div>
+
+
+
+
+           <div class="row">
+            <div class="">
+                <div class="">
+                    <label for="mensaje" class="form-label"></label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1 " required maxlength="300" placeholder="Mensaje"
+                    rows="3"></textarea>
+
+                        <div id="boton-container"> <button type="submit" class="boton"> Enviar</button> </div>
+                    </form>
+                </div>
+               
+            </div>
+         
+        </div>
+
+
+
+
+
+
+         </div><!--no borrar-->
+
+
+      
+       
+
+
+    </div> <!--row-->
+
+
+
+</div> <!--container first-->
+
+
+
+
+
+
+
+    <script src="Contactanos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+
+    </body>
+
+</html>
