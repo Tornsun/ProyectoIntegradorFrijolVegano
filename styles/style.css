@@ -1,11 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap');
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
     font-family: 'Nunito Sans', sans-serif;
     font-size: 20px;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+
+}
+
+.navBar{
+    top:0;
+    width:100%;
+    position:fixed;
+    z-index:1;
 }
 
 .navBarSuperior {
@@ -15,7 +23,6 @@
     align-items: center;
     height: 85px;
     padding: 2px 5%;
-    position: fixed;
     top: 0px;
     right: 0px;
     left: 0px;
@@ -29,7 +36,6 @@
 .contenedor-barra-busqueda {
     width: 50%;
     position: relative;
-
 }
 
 .barra-buscar {
@@ -61,10 +67,13 @@
     align-items: center;
 }
 
+.menu-hamburguesa{
+    display:none;
+}
+
 .menu-hamburguesa svg {
     width: 100px;
     height: 100px;
-    display: flex;
     padding: 25px;
     color: white;
 }
@@ -94,67 +103,57 @@
     filter: drop-shadow(0px 5px 2px rgba(0, 0, 0, 0.3));
 }
 
+/*Navbar inferior*/
 .navBarInferior {
-    align-items: center;
-    justify-content: space-between;
     background-color: #FBE0D3;
-    height: 50px;
-    position: fixed;
     top: 85px;
     right: 0px;
     left: 0px;
+    display: block; /*Si escondes el navbar desde el menu hamburguesa ya no aparece si la pantalla se hace grande */
 }
 
-.navBarInferior .nav-links {
-    display: flex;
+.nav-links {
+    display:flex;
     justify-content: space-between;
-    align-items: center;
-    height: 50px;
     padding: 5px 10%;
+
 }
 
-.nav-links,
-a {
+.nav-links a {
     list-style: none;
     text-decoration: none;
     color: black;
 }
 
-.contenido {
-    margin-top: 145px;
-    min-height: calc(100vh - 285px);
-    margin-bottom: 150px;
+/*Carrusel*/
+.contenedor-carrusel{
+    margin: 150px 50px 50px 50px;
 }
 
-/*Aquí empieza codigo del body del tutorial*/
-html{
-    margin:0;
-    padding:0;
-    position: relative;
-}
-
-body{
-    width:100%;
-    height:100%;
-    position:absolute;
-}
-
-.subtitulo{
+/*Subtítulo de la sección productos*/
+.contenedor-subtitulo{
     text-align: center;
     margin-top: 50px;
 }
 
-.container{
+.subtitulo{
+    font-size: 50px;
+}
+
+
+/*Aquí empieza codigo del body del tutorial*/
+
+.contenedor-tarjetas{
     width:100%;
-    max-width:1200px;
-    height:430px;
+    max-width:1000px;
+    /*height:430px; esto es lo que hace que se sobrepongan los elementos*/
     display:flex;
     flex-wrap:wrap;
     justify-content: center;
     margin:auto;
 }
 
-.container .card{
+.contenedor-tarjetas .card{
     width:200px;
     height:430px;
     border-radius:8px;
@@ -167,23 +166,23 @@ body{
     align-items: center;
 }
 
-.container .card:hover{
+.contenedor-tarjetas .card:hover{
     transform: translateY(-15px);
     box-shadow: 0 12px 16px rgba(0,0,0,0.2);
 }
 
-.container .card img{
+.contenedor-tarjetas .card img{
     width: 150px;
     height:170px;
 }
 
-.container .card p{
+.contenedor-tarjetas .card p{
     font-weight:600;
     padding: 0 1rem;
     font-size:16px;
 }
 
-.container .card button{
+.contenedor-tarjetas .card button{
     font-weight:500;
     text-decoration:none;
     background: #F50087;
@@ -192,55 +191,21 @@ body{
     border-radius: 5px;
     width:150px;
     height:50px;
-}
+} 
 
 
 /*Aqui termina el codigo del body del tutorial*/
 
-.footer{
+.footer {
     background-color:#EE692A;
-    display: grid;
-    position: relative;
-    bottom: 0;
     color:white;
 }
 
-@media (max-width: 768px) {
-    .footer {
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-    }
-
-    .redesSociales {
-        margin-top: 10px;
-    }
-}
-
-.elementos-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px;
-}
-
-.iconos-redes {
-    display: flex;
-    padding: 25px;
-}
-
-.iconos-redes svg {
-    width: 62px;
-    height: 62px;
-    display: flex;
-    color: white;
-    padding: 10px;
-    filter: drop-shadow(0px 5px 2px rgba(0, 0, 0, 0.3));
-}
 
 li {
     list-style-type: none;
 }
+
 
 .textoIzquierda,
 span {
@@ -285,26 +250,50 @@ span {
     left: 25%;
 }
 
-@media (max-width: 768px) {
-    .footer {
+@media screen and (max-width:991.00px){
+
+    .contenedor-barra-busqueda{
+        display:none;
+    }
+
+    .navBarSuperior{
+        position:relative;
+    }
+
+    .navBarInferior{
+        visibility:hidden;
+        display: flex;
+        background-color: white;
+        height:0;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+    }
+
+    .nav-links{
+        top:85px;
         flex-direction: column;
-        justify-content: center;
-        text-align: center;
+        align-items: start;
+        background-color: #EE692A;
+        align-items: center;
+        height:500px;
+        position:absolute;
+    }
+
+    .nav-links li{
+        padding-top:25px;
+        padding-bottom: 50px;
+    }
+
+    .nav-links a {
+        color:white;
+    }
+
+    .menu-hamburguesa{
+        display:flex;
+        cursor:pointer;
+    }
+
+    .contenedor-carrusel{
+        margin: 75px 100px 25px 100px;
     }
 }
-/*Area de ID*/
 
-#userLogIn {
-    height: 50px;
-    width: 50px;
-
-}
-
-#ubicacionFooter{
-    display: flex;
-    position: fixed;
-    /*margin-top: 600px; */
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
