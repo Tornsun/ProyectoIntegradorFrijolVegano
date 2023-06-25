@@ -64,6 +64,46 @@ main{
     font-weight: 700;
 }
 
+.btn-data-product button{
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #F50087;
+    color: white;
+    font-weight: 700;
+}
+
+#id-btn-void{
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #4af500;
+    color: black;
+    font-weight: 700;
+}
+
+#id-btn-getLocalStorage{
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #143eb3;
+    color: white;
+    font-weight: 700;
+}
+
+#id-btn-setLocalStorage{
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #b31436;
+    color: white;
+    font-weight: 700;
+}
+
+#id-btn-cleanLocalStorage{
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #b36414;
+    color: white;
+    font-weight: 700;
+}
+
 .section-product-container{
     border: 1px solid greenyellow;
     gap: 20px;

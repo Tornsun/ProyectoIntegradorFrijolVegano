@@ -1,0 +1,220 @@
+*{
+    margin: 0;
+    padding: 0px;
+}
+
+.descripcionCompleta-curso{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.descripcion-curso{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+    text-align: justify;
+}
+
+.titulo-curso{
+    text-align: center;
+    font-weight: 900;
+}
+
+.descripcion-curso img{
+    /* Verás que el valor cover actúa igual que al usarse en la propiedad background-size: reescala la imagen según el tamaño indicado por su anchura y/o altura realizando un recorte del sobrante desde el centro. Todo ello sin que haya deformaciones de la imagen. */
+    /* https://escss.blogspot.com/2015/01/recorte-centrado-automatico-imagen.html */
+    width: 70%;
+    /* Hacemos un "recorte" centrando la imagen */
+    object-fit: cover;
+    height: 350px;
+}
+
+.btn-adquirirCurso{
+    align-self: center;
+}
+
+.btn-adquirirCurso button{
+    border: none;
+    border-radius: 12px;
+    background-color: #F50087;
+    color: white;
+    padding: 8px 30px;
+}
+.btn-adquirirCurso span{
+    font-size: 45px;
+}
+
+.detalleYAprendizaje-curso{
+    /* background-color: blueviolet; */
+    display: flex;
+    /* align-content: stretch; */
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* flex-flow: row wrap; */
+    /* gap: 10px; */
+}
+
+.detalleYAprendizaje-curso h5{
+    font-weight: 600;
+    text-align: center;
+}
+
+.detalleYAprendizaje-curso{
+    text-align: justify;
+    padding-right: 32px;
+    margin-bottom: 4px;
+}
+
+.detalles-curso .aprendizaje-curso{
+    
+    /* padding-right: 32px;
+    margin-bottom: 4px; */
+}
+
+.resenias-curso{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.calificacion-curso{
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* flex-wrap: wrap; */
+    /* align-items: center; */
+    /* align-self: center; */
+    /* align-content: center; */
+    gap: 10px;
+}
+
+.estrellas-curso{
+    text-align: center;
+    /* Quiero ponerle un gap para hacer la separación de las estrellas pero debo hacerlo flex y reconfigurar TODO */
+    /* ? Est factible? */
+}
+
+.estrellas-curso input{
+    width: 55px;
+    height: 40px;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.estrellas-curso input::before{
+    content: url(../assets/img/estrellaResenia.svg);
+    /* !Ya no estamos usando el icono asi que no es neceario trabajar con la fuente */
+    /* font-family: fontAwesome; */
+    /* font-size: 34px; */
+    /* color: #C5B41A; */
+    /* gap: 15px; */
+}
+
+
+.calificacion-curso p{
+    margin: 0;
+    font-size:xx-large ;
+    text-align: center;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+
+#califiacion-curso{
+    /* Esto es solo para verificar que se manipule individualmente */
+    font-style: italic;
+    color: blue;
+}
+
+#carouselExampleFade button{
+    width: 50px;
+    /* height: 50px; */
+    /* position: absolute; */
+    z-index: 3;
+    border: none;
+    /* background: url("../assets/img/hojaIzquierda.svg"); */
+    background-repeat: no-repeat;
+    /* background-size: 100%; */
+    background-position: center;
+    display: flex;
+    /* align-self: center; */
+}
+
+/* Aqui esta el detalle que en la versión movil queda muy pequeño */
+.carousel-control-prev{
+    background: url("../assets/img/hojaIzquierda.svg");
+    margin-left: -38px;
+    /* left: 14% */
+}
+
+.carousel-control-next{
+    background: url("../assets/img/hojaDerecha.svg");
+    margin-right: -38px;
+    /* right: 14% */
+}
+
+.resenias-carrusel{    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* align-items: center; */
+    align-items: stretch;
+    gap: 90px;
+    justify-content: center;
+}
+
+.carousel-inner p{
+    text-align: justify;
+    
+}
+
+.resenias-carrusel-izquierda, .resenias-carrusel-derecha{
+    /* Aqui le estamos poniendo una altura FIJA para que no se vea un cambio brusco entre reseñas que tengan diferente tamaño. */
+    height: 400px;
+    border: solid 3px black;
+    border-radius: 35px;
+    padding: 15px;
+    background-color: rgba(238, 105, 42, 0.15);
+    display: flex;
+    align-self: stretch;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.resenias-carrusel-izquierda p{
+    display: flex;
+    /* align-self: stretch; */
+    align-self: center;
+}
+
+.encabezado-resenia{
+    display: flex;
+    gap: 15px;
+}
+
+.valoracion-resenia{
+    text-align: justify;
+    align-self: center;
+    /* align-items: center;
+    align-content: center; */
+}
+
+.estrellas-resenia{
+    /* text-align: center; */
+    text-align: left;
+}
+
+.estrellas-resenia input{
+    width: 25px;
+    height: 20px;
+    margin-left: -3px;
+    appearance: none;
+    -webkit-appearance: none;
+    content: url(../assets/img/estrellaResenia.svg);
+}
