@@ -102,21 +102,36 @@
                     <h2 class="tituloRegistro">REGISTRATE</h2>
                     <div class="contenedorFormulario">
                         <br>
-                        <p>Nombre Completo</p>
-                        <input class="form-control propiedadesFormularioRegistro" type="text" placeholder="Usuario" aria-label="default input example" required>
-                        <p>No. Telefono</p>
-                        <input class="form-control propiedadesFormularioRegistro" type="text" placeholder="No. Telefono" aria-label="default input example" required>
-                        <p>Correo Electronico</p>
-                        <input class="form-control propiedadesFormularioRegistro" type="email" placeholder="Correo Electronico" aria-label="default input example" required>
-                        <p>Contraseña</p>
-                        <input class="form-control propiedadesFormularioRegistro" type="password" placeholder="Constraseña" aria-label="default input example" id="contraseña" required minlength="8">
-                        <p>Confirmar Contraseña</p>
-                        <input class="form-control propiedadesFormularioRegistro" type="password" placeholder="Confirmar Constraseña" aria-label="default input example" required>
+                        <form id="formularioRegistro">
+                            <p>Nombre Completo</p>
+                            <input class="form-control propiedadesFormularioRegistro" type="text"
+                                placeholder="Nombre Completo" aria-label="default input example" required>
+                            <p>No. Telefono</p>
+                            <div class="displayTelefono">
+                                <span class="iconoBandera"></span>
+                                <span class="codigoPais">+52</span>
+                                <input class="form-control propiedadesFormularioRegistro" id="inputTelefono" type="text"
+                                    placeholder="No. Telefono" aria-label="default input example" required>
+                            </div>
+                            <p>Correo Electronico</p>
+                            <input class="form-control propiedadesFormularioRegistro" id="inputCorreo" type="email"
+                                placeholder="Correo Electronico" aria-label="default input example" required>
+                            <p>Contraseña</p>
+                            <input class="form-control propiedadesFormularioRegistro" id="inputContraseña" type="password"
+                                placeholder="Constraseña" aria-label="default input example" id="contraseña" required
+                                minlength="8">
+                            <p>Confirmar Contraseña</p>
+                            <input class="form-control propiedadesFormularioRegistro" type="password"
+                                placeholder="Confirmar Constraseña" aria-label="default input example" required>
+                            <label class="textoCheckBox"><input type="checkbox" class="checkboxRegistro" required> He
+                                leido y acepto los terminos y condiciones</label>
+                            <div class="contenedorBotonRegistro">
+                                <button type="submit" class="btn btn-primary colorBotonRegistro">Enviar</button>
+                            </div>
+                        </form>
                     </div>
 
-                    <div class="contenedorBoton">
-                        <button type="submit" class="btn btn-primary colorBoton" >Enviar</button>
-                    </div>
+
                 </div>
             </div>
 
@@ -172,6 +187,7 @@
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
     <script src="../scripts/script.js"></script>
+    <script src="../scripts/scriptRegistro.js"></script>
 </body>
 
 </html>
