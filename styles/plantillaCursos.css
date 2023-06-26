@@ -127,8 +127,9 @@
 
 #califiacion-curso{
     /* Esto es solo para verificar que se manipule individualmente */
-    font-style: italic;
-    color: blue;
+    /* font-style: italic; */
+    /* color: blue; */
+    text-align: left;
 }
 
 #carouselExampleFade button{
@@ -158,15 +159,26 @@
     /* right: 14% */
 }
 
-.resenias-carrusel{    
+
+.resenias-carrusel{
+    /* Aqui le estamos poniendo una altura FIJA para que no se vea un cambio brusco entre reseñas que tengan diferente tamaño. */
+    height: 300px;
+    border: solid 3px black;
+    border-radius: 35px;
+    padding: 15px;
+    background-color: rgba(238, 105, 42, 0.15);
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    /* align-items: center; */
+    /* flex-wrap: wrap; */
     align-items: stretch;
-    gap: 90px;
-    justify-content: center;
+    /* align-self: stretch; */
+    flex-direction: column;
+    /* justify-content: center; */
+    /* gap: 35px; */
+}
+
+.carousel{
+    display: flex;
+    align-self: center;
 }
 
 .carousel-inner p{
@@ -174,18 +186,7 @@
     
 }
 
-.resenias-carrusel-izquierda, .resenias-carrusel-derecha{
-    /* Aqui le estamos poniendo una altura FIJA para que no se vea un cambio brusco entre reseñas que tengan diferente tamaño. */
-    height: 400px;
-    border: solid 3px black;
-    border-radius: 35px;
-    padding: 15px;
-    background-color: rgba(238, 105, 42, 0.15);
-    display: flex;
-    align-self: stretch;
-    flex-direction: column;
-    gap: 35px;
-}
+
 
 .resenias-carrusel-izquierda p{
     display: flex;
