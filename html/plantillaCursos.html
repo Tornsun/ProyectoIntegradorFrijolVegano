@@ -24,89 +24,36 @@
     <!-- Finaliza conexión con JQuery -->
     <!-- Enlace con estilos CSS internos -->
     <link rel="stylesheet" href="../styles/plantillaCursos.css">
-    
+
     <!-- Finaliza conexión con estilos internos -->
 </head>
 
 <body>
     <header>
-        
+
     </header>
 
     <main>
+        <!-- Aqui inicia la sección de la descripción del curso incluyendo reseñas -->
         <section class="descripcionCompleta-curso">
-        
-            <!-- <div class="detalleYAprendizaje-curso">
-                <div class="detalles-curso col-sm-12 col-md-5 col-lg-5">
-                    <h5>Detalles de curso</h5>
-                    <ul>
-                        <li class="detalle-curso-item1" id="detalle-curso-item1">Duración: 3 horas (divididas en una
-                            sesión única).</li>
-                        <li class="detalle-curso-item2" id="detalle-curso-item2">Módulos: El curso consta de 4
-                            módulos temáticos que cubren los fundamentos de la cocina vegana y la preparación de
-                            diversos tipos de platos.</li>
-                        <li class="detalle-curso-item3" id="detalle-curso-item3">Requisitos: No se requieren
-                            conocimientos previos. Este curso está abierto a principiantes y a cualquier persona
-                            interesada en la cocina vegana.</li>
-                        <li class="detalle-curso-item4" id="detalle-curso-item4">Material proporcionado: Se te
-                            proporcionará un manual con las recetas y consejos prácticos para que puedas seguir
-                            practicando en casa.</li>
-                    </ul>
-                </div>
 
-                <div class="aprendizaje-curso col-sm-12 col-md-5 col-lg-5">
-                    <h5>¿Que aprenderas?</h5>
-                    <ul>
-                        <li class="detalle-curso-item1" id="detalle-curso-item1">Introducción al veganismo y sus
-                            beneficios para la salud y el medio ambiente.</li>
-                        <li class="detalle-curso-item2" id="detalle-curso-item2">Conocimiento de los ingredientes
-                            esenciales en la cocina vegana y cómo utilizarlos.</li>
-                        <li class="detalle-curso-item3" id="detalle-curso-item3">Técnicas de preparación de
-                            alimentos veganos, incluyendo cortes, marinados y sazonado.</li>
-                        <li class="detalle-curso-item4" id="detalle-curso-item4">Recetas básicas para desayunos,
-                            almuerzos, cenas y postres veganos.</li>
-                        <li class="detalle-curso-item5" id="detalle-curso-item5">Consejos sobre la planificación de
-                            comidas y la incorporación de una alimentación vegana en tu estilo de vida diario.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="resenias-curso">
-                <h2>Reseñas de usuarios</h2>
-                <div class="calificacion-curso">
-                    <div class="estrellas-curso">
-                        <input type="radio" class="starCurso" id="star01" readonly>
-                        <input type="radio" class="starCurso" id="star02" readonly>
-                        <input type="radio" class="starCurso" id="star03" readonly>
-                        <input type="radio" class="starCurso" id="star04" readonly>
-                        <input type="radio" class="starCurso" id="star05" readonly>
-                    </div>
-                    <div class="numero-calificacion">
-                    <p><span id="califiacion-curso">#</span> / 5</p>
-                </div>
-                </div>
-            </div> -->
-                
-                <div id="carouselExampleFade" class="carousel slide carousel-fade col-lg-6">
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        
-                      </div>
-
-                    </div>
+            <!-- Aqui insertamos un carrusel de bootstrap para las reseñas, se jugó con las columnas para responsive viewer -->
+            <div id="carouselExampleFade" class="carousel slide carousel-fade col-lg-6">
+                <div class="carousel-inner">
                     
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-                      <!-- <span class="carousel-control-prev-icon visually-hidden" aria-hidden="true"></span> -->
-                      <!-- <span class="visually-hidden">Previous</span> -->
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-                      <!-- <span class="carousel-control-next-icon visually-hidden" aria-hidden="true"></span> -->
-                      <!-- <span class="visually-hidden">Next</span> -->
-                    </button>
-                  </div>
-
-            
-
+                    <div class="carousel-item active">
+                        <!-- Debido a las configuraciones de bootstrap se tuvo que mantener este div para el primer elemento del carrusel -->
+                    </div>
+                </div>
+                
+                <!-- Sección de botones para ir pasando de reseña en reseña -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                    data-bs-slide="prev">
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                    data-bs-slide="next">
+                </button>
+            </div>
 
         </section>
     </main>

@@ -1,4 +1,5 @@
 
+//Variables para almacenar datos de bases de datos
 let resenia = [];
 let curso = [];
 
@@ -9,13 +10,15 @@ let descripcionCompletaCurso = document.querySelector(".descripcionCompleta-curs
 let carruselResenias = document.querySelector(".carousel-inner");
 let primerItemCarrusel = document.querySelector(".active");
 
-
+// Llamamos a las funciones para obtener los dato de las bases de datos
 obtenerDatosCursos();
 obtenerDatosResenia();
 
+//Seccion para consumir las fetch
 async function obtenerDatosCursos() {
   try {
-    //Accedemos a la base de datos local
+    //Accedemos a la base de datos local de los cursos (solo hay 1)
+    // !Pendiente anexar al menos 10
     const responseCurso = await fetch('../BBDD-temporal/cursos.json');
     curso = await responseCurso.json();
     cargarCurso();
@@ -26,7 +29,8 @@ async function obtenerDatosCursos() {
 
 async function obtenerDatosResenia() {
   try {
-    //Accedemos a la base de datos local
+    //Accedemos a la base de datos local de reseñas, hay 6 pero es 1 copiada 5 veces cambiando el nombre del usuario
+    // !Pendiente anexar al menos 10
     const response = await fetch('../BBDD-temporal/resenias.json');
     resenia = await response.json();
     cargarResenia();
@@ -35,9 +39,11 @@ async function obtenerDatosResenia() {
   }
 }
 
+//Funciones para obtener los dato de las bases de datos
 function cargarResenia() {
   console.log("Inicia función de crear resenia");
 
+  // Esto es para solucionar lo del inshi bootstrap y sus carruseles >:c
   let nombre = resenia[0].nombre;
   // TODO Ver como asignar el numero de estrellas de las reseñas
   let estrellas;
@@ -45,7 +51,8 @@ function cargarResenia() {
 
   const primerItemCarruselCreado = document.createElement("div");
   primerItemCarrusel.classList.add('resenias-carrusel');
-
+  
+  // Manipulacion del DOM
   primerItemCarruselCreado.innerHTML = `
   
       <div class="encabezado-resenia">
@@ -70,12 +77,11 @@ function cargarResenia() {
   // Esto es para solucionar lo del inshi bootstrap y sus carruseles >:c
   resenia.slice(1).forEach(function (iteracionResenias) {
     nombre = iteracionResenias.nombre;
+    // TODO Ver como asignar el numero de estrellas de las reseñas
     estrellas = iteracionResenias.estrellas;
     reseniaPersonal = iteracionResenias.resenia;
 
-    // console.log(nombre);
-    // console.log(estrellas);
-    // console.log(reseniaPersonal);
+    // Manipulacion del DOM
     const itemCarrusel = document.createElement("div");
     itemCarrusel.classList.add('carousel-item');
 
@@ -114,11 +120,14 @@ function cargarCurso() {
   let aprendizaje;
   let estrellas;
 
+
+//   Asignación de datos de la BBDD
   curso.forEach(function (iteracionCurso) {
     id = iteracionCurso.id;
     titulo = iteracionCurso.titulo;
     src = iteracionCurso.src;
     descripcion = iteracionCurso.descripcion;
+    // !Esta pendiente ver como pintar detalles y aprendizaje debido a como estan hechos (listas)
     detalles = iteracionCurso.detalles;
     aprendizaje = iteracionCurso.aprendizaje;
     estrellas = iteracionCurso.estrellas;
@@ -126,6 +135,7 @@ function cargarCurso() {
     const itemDescripcion = document.createElement("div");
     itemDescripcion.classList.add('descripcion-curso');
 
+    // Manipulacion del DOM
     itemDescripcion.innerHTML = `
     <h2 class="titulo-curso">${titulo}</h2>
                 <img class="img-curso"
