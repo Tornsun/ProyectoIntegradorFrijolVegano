@@ -4,6 +4,7 @@
 }
 
 .descripcionCompleta-curso{
+    margin-top: 120px;
     padding: 20px;
     display: flex;
     flex-direction: column;
