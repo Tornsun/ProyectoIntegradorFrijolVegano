@@ -1,0 +1,96 @@
+
+/*Inicia contenido*/
+
+.contenido{
+    padding-top: 150px;
+}
+
+
+/*Subtítulo de la sección productos*/
+.contenedor-subtitulo{
+    text-align: center;
+    margin-top: 0px;
+}
+
+.subtitulo{
+    font-size: 50px;
+}
+
+/*Aquí empieza codigo del body del tutorial*/
+
+.terceraSeccion{
+    margin-right:50px;
+}
+
+.contenedor-tarjetas{
+    width:100%;
+    max-width:1000px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    margin:auto;
+
+}
+
+.contenedor-tarjetas .card{
+    width:200px;
+    height:430px;
+    border-radius:8px;
+    box-shadow: 0 2px 2ox rgba(0,0,0,0.2);
+    overflow: hidden;
+    margin: 20px;
+    text-align:center;
+    transition:all 0.25s;
+    background-color: F0F0F0;
+    align-items: center;
+}
+
+.contenedor-tarjetas .card:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0,0,0,0.2);
+}
+
+.contenedor-tarjetas .card img{
+    width: 150px;
+    height:170px;
+}
+
+.contenedor-tarjetas .card p{
+    font-weight:600;
+    padding: 0 1rem;
+    font-size:16px;
+}
+
+.contenedor-tarjetas .card button{
+    font-weight:500;
+    text-decoration:none;
+    background: #F50087;
+    color:white;
+    border:none;
+    border-radius: 5px;
+    width:150px;
+    height:50px;
+} 
+/*Aqui termina el codigo del body del tutorial*/
+
+
+@media screen and (max-width:991.00px){
+
+    .contenido{
+        padding-top: 50px;
+        display:block;
+        /*Falta agregar un bloqueo de la pantalla de fondo*/
+    }
+
+    .contenedor-carrusel{
+        margin: 75px 100px 25px 100px;
+    }
+ 
+}
+
+@media screen and (max-width:700px){
+
+}
+
+
+
