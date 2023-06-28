@@ -28,10 +28,13 @@ font-family: 'Nunito', sans-serif;*/
     body{
         font-size: 17px;
         font-family: 'Nunito', sans-serif;
-        padding-inline-start: 20px;
+         /*padding-inline-start: 20px;
         padding-inline-end: 20px;
-        padding-top: 20px;
+        padding-top: 20px; */
     } 
+    .ContenedorFormularioContacto{
+        margin-top: 140px;
+    }
 
     
     
@@ -67,3 +70,7 @@ font-family: 'Nunito', sans-serif;*/
     padding-left: 20px;
 }
    
+.card-text{
+    text-align: justify;
+    
+}

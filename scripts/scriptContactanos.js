@@ -1,9 +1,11 @@
 const botonEnviar = document.getElementById("botonEnviar");
-const objeto = {
+
+
+let objeto = {
     nombre:  "",
-    telefono:"",
+    telefono: "",
     email: "",
-    mensaje:""
+    mensaje:  "",
 };
 
 
@@ -40,7 +42,7 @@ console.log(arrayConValores);
   
  botonEnviar.addEventListener("click", (e) => {
     e.preventDefault(); //prevenir que el navegador se actualice
-    tomarValores(); //ejecuta la funcion t
+    tomarValores(); //ejecuta la funcion 
 }
 );
 
