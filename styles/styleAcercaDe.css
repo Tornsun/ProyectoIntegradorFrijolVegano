@@ -5,6 +5,10 @@
     text-align: center;
 }
 
+.contenido p{
+    text-align:justify ;
+    padding: 5%;
+}
 .mision,
 .vision,
 .valores {
@@ -59,6 +63,9 @@ h1 {
     text-align: center;
     font-size: 30px;
 }
+li{
+    font-size: 30px;
+}
 
 @media (max-width: 576px) {
 
@@ -80,15 +87,8 @@ Aqui empieza la modificaion de la card para que haga el zoom */
 .contenedor {
     height: 100%;
     width: 100%;
-    /*Aqui vamos a declarar un maximo y un minimo a nuestras imagenes*/
-    /* max-height: 800px;
-    max-width: 1280px;
-    min-height: 400px; /*Aqui exclusivamente le damos el ALTURA a la imagen*/
-    /* min-width: 1500px; Aqui exclusivamente le damos el ANCHO a la imagen */
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: space-around;
-  align-items: start; Me alinea mi item al principio */
     gap: 20px;
     align-items: center;
     margin: 50px;

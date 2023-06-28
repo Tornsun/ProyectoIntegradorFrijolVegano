@@ -1,0 +1,55 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- Aqui empezaos con el formulario de agregar un Curso -->
+        <div class="contenedorCurso" display="none" ;>
+            <form action="">
+                <p> ID del Curso</p>
+                <input type="text">
+                <p>Nombre del Curso</p>
+                <input type="text">
+                <p>Categoria</p>
+                <select name="categorias" id="categoria">
+                    <option value="chile">Chiles</option>
+                    <option value="Plato">Platos Fuertes</option>
+                    <option value="congelados">Alimentos Congelados</option>
+                    <option value="preparados">Alimentos Preparados</option>
+                    <option value="mexicanisimos">Platos Tipicos</option>
+                    <option value="lacteos">preparados</option>
+                </select>
+    
+                Empezamos con la modificacion de la imagen previa del producto
+                <p>Imagen Previa</p>
+                <input type="file" id="inputdelCurso" accept="image/*">
+                <div id="divCurso"></div>
+    
+                <p>Descripcion del Curso</p>
+                <input type="text">
+                <p>Detalles del Curso</p>
+                <input type="text">
+                <p>Que aprenderas en el Curso</p>
+                <input type="text">
+                <p>Costo del producto</p>
+                <input type="text">
+    
+                <p>Video del curso</p>
+                <input type="file" id="videoCurso" accept="video/*, image/*">
+                <div id="videoTotalCurso"></div>
+    
+            </form>
+        </div> 
+        Cierre del formulario de los cursos 
+    </div>  Cierre de mi contenedor
+
+    <div class="Agregado"> 
+          <input type="submit" id="botonAgregar" value="Agregar">
+    </div>
+
+    </body>
+    </html>
+    

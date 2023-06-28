@@ -27,7 +27,12 @@ main{
     text-decoration: none;
 }
 
+.contenedorPadreProductos{
+    margin-top: 140px;
+}
+
 .section-products{
+    margin-top: 120px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -77,7 +82,10 @@ main{
     border-radius: 5px;
     background-color: #4af500;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
     color: black;
     font-weight: 700;
 }
@@ -102,7 +110,10 @@ main{
     padding: 10px;
     border-radius: 5px;
     background-color: #b36414;
+<<<<<<< HEAD
 >>>>>>> 1a9b968d06629ca8a6637fc4140622641a13c860
+=======
+>>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
     color: white;
     font-weight: 700;
 }

@@ -2,10 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Nunito:wght@500&display=swap');
 
 
-body{
+body {
     font-size: 15px;
     font-family: 'Nunito', sans-serif;
-    
+
 
 }
 
@@ -15,15 +15,16 @@ body{
 font-family: 'Montserrat', sans-serif;
 font-family: 'Nunito', sans-serif;*/
 
-.boton{
+.boton {
     background-color: #F50087;
     font-family: 'Montserrat', sans-serif;
     width: 148px;
     height: 46px;
     border-radius: 45px;
     border-style: none;
-    font-size: 20px; 
+    font-size: 20px;
 }
+<<<<<<< HEAD
    
     body{
         font-size: 17px;
@@ -35,42 +36,60 @@ font-family: 'Nunito', sans-serif;*/
     .ContenedorFormularioContacto{
         margin-top: 140px;
     }
+=======
+>>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
 
-    
-    
-    /*font-family: 'Nunito', sans-serif;
+body {
+    font-size: 17px;
+    font-family: 'Nunito', sans-serif;
+    /* padding-inline-start: 20px;
+    padding-inline-end: 20px;
+    padding-top: 20px; */
+}
+
+.contenedorFormularioContacto{
+    margin-top: 140px;
+}
+
+/*font-family: 'Nunito', sans-serif;
     
     font-family: 'Montserrat', sans-serif;
     font-family: 'Nunito', sans-serif;*/
-    
-    .boton{
-        background-color: #F50087;
-        font-family: 'Montserrat', sans-serif;
-        width: 148px;
-        height: 46px;
-        border-radius: 9px;
-        border-style: none;
-        font-size: 20px; 
-          color: white;
-    }
-    #boton-container{
-        margin: 30px;
-    
-    }
 
-.titulo-dudas{
-  padding-left: 20px;
-    
+.boton {
+    background-color: #F50087;
+    font-family: 'Montserrat', sans-serif;
+    width: 148px;
+    height: 46px;
+    border-radius: 9px;
+    border-style: none;
+    font-size: 20px;
+    color: white;
 }
-.titulo-contactanos{
+
+#boton-container {
+    margin: 30px;
+
+}
+
+.titulo-dudas {
     padding-left: 20px;
-    
+
 }
-.titulo-escribenos{
+
+.titulo-contactanos {
     padding-left: 20px;
+
 }
+<<<<<<< HEAD
    
 .card-text{
     text-align: justify;
     
 }
+=======
+
+.titulo-escribenos {
+    padding-left: 20px;
+}
+>>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
