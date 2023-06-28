@@ -16,11 +16,17 @@ let divProduct;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 // INSTANCIAS
 // ? Supongo para los usuarios???
 
 >>>>>>> 1a9b968d06629ca8a6637fc4140622641a13c860
+=======
+// INSTANCIAS
+// ? Supongo para los usuarios???
+
+>>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
 =======
 // INSTANCIAS
 // ? Supongo para los usuarios???
@@ -67,8 +73,11 @@ const btnDownProduct = document.querySelectorAll(".btn-disminuir");//Boton para 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const btnVaciarProducts = document.querySelectorAll(".btn-void");//Boton para disminuir un producto
 =======
+=======
+>>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
 =======
 >>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
 =======
@@ -92,7 +101,10 @@ const btnCleanLocalStorage = document.querySelectorAll(".btn-cleanLocalStorage")
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 1a9b968d06629ca8a6637fc4140622641a13c860
+=======
+>>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
 =======
 >>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
 =======
@@ -129,11 +141,17 @@ let shopingCar = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 let shoppingCartObject = [];
 let shoppingCartJSON = [];
 
 >>>>>>> 1a9b968d06629ca8a6637fc4140622641a13c860
+=======
+let shoppingCartObject = [];
+let shoppingCartJSON = [];
+
+>>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
 =======
 let shoppingCartObject = [];
 let shoppingCartJSON = [];
@@ -257,9 +275,13 @@ let productsArray = [   //10 objetos JavaScript de muestra
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 // ? Investigar delegación de eventos
 >>>>>>> 1a9b968d06629ca8a6637fc4140622641a13c860
+=======
+// ? Investigar delegación de eventos
+>>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
 =======
 // ? Investigar delegación de eventos
 >>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
@@ -299,9 +321,12 @@ btnAddProduct.forEach(function (boton) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         enviarDatos();
 =======
 >>>>>>> 1a9b968d06629ca8a6637fc4140622641a13c860
+=======
+>>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
 =======
 >>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
 =======
@@ -332,10 +357,14 @@ btnVaciarProducts.forEach(function (boton) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         vaciarProductos(); //ejecuta la funcion eliminar
 =======
         vaciarProductos(); //ejecuta la funcion vaciar carrito
 >>>>>>> 1a9b968d06629ca8a6637fc4140622641a13c860
+=======
+        vaciarProductos(); //ejecuta la funcion vaciar carrito
+>>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
 =======
         vaciarProductos(); //ejecuta la funcion vaciar carrito
 >>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
@@ -365,7 +394,10 @@ btnVaciarProducts.forEach(function (boton) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
 =======
 >>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
 =======
@@ -410,7 +442,10 @@ btnCleanLocalStorage.forEach(function (boton) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 1a9b968d06629ca8a6637fc4140622641a13c860
+=======
+>>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
 =======
 >>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
 =======
@@ -469,6 +504,7 @@ function conversionJSON(){
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 function enviarDatos(){
     console.log("Esto es un objeto serializado,");
     console.log(conversionJSON());
@@ -479,6 +515,12 @@ function converToObjetc(){
     let converToObject = (JSON.parse(getLocalStorage()));
     return converToObject;
 }
+=======
+function converToObjetc(){
+    let converToObject = (JSON.parse(getLocalStorage()));
+    return converToObject;
+}
+>>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
 =======
 function converToObjetc(){
     let converToObject = (JSON.parse(getLocalStorage()));
@@ -550,7 +592,10 @@ function recibirDatos(){
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 1a9b968d06629ca8a6637fc4140622641a13c860
+=======
+>>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
 =======
 >>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
 =======
@@ -651,6 +696,7 @@ function crearProducto() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     let productsAdd = productsArray[idProduct];
 =======
     // let productsAdd = productsArray[idProduct];
@@ -673,10 +719,14 @@ function crearProducto() {
 =======
     // let productsAdd = productsArray[idProduct];
 >>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
+=======
+    // let productsAdd = productsArray[idProduct];
+>>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
     //Obtengo las propiedades del objeto en variables temporales
     // let srcImg = productsAdd.src;
     // let h3Product = productsAdd.nombre;
     // let pPrice = productsAdd.precio;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -749,6 +799,14 @@ function crearProducto() {
     // let h3Product = "Nombre producto de prueba GMG";
     // let pPrice = 100;
 >>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
+=======
+    // let id = 2;
+    // let cantidad = 10;
+
+    // let srcImg = "https://images.pexels.com/photos/4281821/pexels-photo-4281821.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
+    // let h3Product = "Nombre producto de prueba GMG";
+    // let pPrice = 100;
+>>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
 
     //!Verificar si la cantidad debe ir aqui
     // let inputNumber = productsAdd.cantidad;
@@ -764,7 +822,10 @@ function crearProducto() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
 =======
 >>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
 =======
@@ -791,6 +852,10 @@ function crearProducto() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    // shopingCar.forEach(function(iteracionProductos){
+>>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
 =======
     // shopingCar.forEach(function(iteracionProductos){
 >>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
@@ -822,7 +887,10 @@ function crearProducto() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 1a9b968d06629ca8a6637fc4140622641a13c860
+=======
+>>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
 =======
 >>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
 =======
@@ -869,6 +937,7 @@ function crearProducto() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     containerShopingCar.appendChild(h2);
     containerShopingCar.appendChild(productContainer);
 =======
@@ -876,6 +945,11 @@ function crearProducto() {
     containerShopingCar.appendChild(productContainer);
 });
 >>>>>>> 1a9b968d06629ca8a6637fc4140622641a13c860
+=======
+    // containerShopingCar.appendChild(h2);
+    containerShopingCar.appendChild(productContainer);
+});
+>>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
 =======
     // containerShopingCar.appendChild(h2);
     containerShopingCar.appendChild(productContainer);
@@ -918,6 +992,7 @@ function modificarProducto() {
     //? Se necesita hacer una comparación de la cantidad actual de productos y se suma 1
     // Creamos una variable temporal que va almacenar el valor ACTUAL del producto(objeto) en el carrito
     // Independientemente del valor que haya (inicialmente 0), se aumentará en 1
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1120,10 +1195,37 @@ function modificarProducto() {
     }
 
 >>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
+=======
+    // 
+    let indiceProductoAEliminar = shopingCar.findIndex(function (producto) {
+        //Esto nos devolverá un true o false 
+        return producto.id === idProduct;
+    });
+    let productsAdd;
+    //Si el resultado es -1 significa que el carrito esta VACIO
+    //Si el resultado es cualquier otra cosa entonces eliminamos del carrito el producto usando su posición especificada con el idProduct
+    if (indiceProductoAEliminar != -1) {
+        productsAdd = shopingCar[indiceProductoAEliminar];
+        if (aumento) {
+            productsAdd.cantidad++;
+            console.log("Se aumentó");
+            
+        } else if (decremento) {
+            if (productsAdd.cantidad > 1) {
+                productsAdd.cantidad--;
+                console.log("Se disminuyó");
+            } else {
+                productsAdd.cantidad = 1;
+            }
+        }
+    }
+
+>>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
     // seteamos las variables para usarse en la proxima iteración
     aumento = false;
     decremento = false;
     // Sobreescribimos la cantidad existente del carrito con esta modificación
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1140,6 +1242,12 @@ function modificarProducto() {
 
     // console.log("Cantidad actual del producto " + (shopingCar[idProduct].id) + " es : " + (shopingCar[idProduct].cantidad));
 >>>>>>> 1a9b968d06629ca8a6637fc4140622641a13c860
+=======
+    // !Esta faltando que se itere sobre los elementos del carrito, o sea el find index 
+    shopingCar[indiceProductoAEliminar].cantidad = productsAdd.cantidad;
+
+    // console.log("Cantidad actual del producto " + (shopingCar[idProduct].id) + " es : " + (shopingCar[idProduct].cantidad));
+>>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
 =======
     // !Esta faltando que se itere sobre los elementos del carrito, o sea el find index 
     shopingCar[indiceProductoAEliminar].cantidad = productsAdd.cantidad;
@@ -1265,7 +1373,10 @@ containerShopingCar.addEventListener("click", function (e) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
 =======
 >>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
 =======
@@ -1291,7 +1402,10 @@ containerShopingCar.addEventListener("click", function (e) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 1a9b968d06629ca8a6637fc4140622641a13c860
+=======
+>>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
 =======
 >>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
 =======
@@ -1334,6 +1448,7 @@ containerShopingCar.addEventListener("click", function (e) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 btnDeletProduct.forEach(function (boton) {
 boton.addEventListener("click", (e) => {
     e.preventDefault(); //prevenir que el navegador se actualice
@@ -1342,6 +1457,8 @@ boton.addEventListener("click", (e) => {
 })
 });
 =======
+=======
+>>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
 =======
 >>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
 =======
@@ -1366,8 +1483,12 @@ boton.addEventListener("click", (e) => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // });
 >>>>>>> 1a9b968d06629ca8a6637fc4140622641a13c860
+=======
+// });
+>>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
 =======
 // });
 >>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
