@@ -26,6 +26,7 @@ font-family: 'Nunito', sans-serif;*/
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
    
     body{
         font-size: 17px;
@@ -37,6 +38,8 @@ font-family: 'Nunito', sans-serif;*/
     .ContenedorFormularioContacto{
         margin-top: 140px;
     }
+=======
+>>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
 =======
 >>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
 =======
@@ -69,6 +72,7 @@ body {
     font-size: 20px;
     color: white;
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 #boton-container {
@@ -91,6 +95,29 @@ body {
     text-align: justify;
     
 }
+=======
+
+.titulo-escribenos {
+=======
+}
+
+#boton-container {
+    margin: 30px;
+
+}
+
+.titulo-dudas {
+    padding-left: 20px;
+
+}
+
+.titulo-contactanos {
+>>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
+    padding-left: 20px;
+
+}
+<<<<<<< HEAD
+>>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
 =======
 
 .titulo-escribenos {

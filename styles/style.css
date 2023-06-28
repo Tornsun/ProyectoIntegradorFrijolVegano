@@ -50,6 +50,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 .barra-buscar, .barra-buscar-menu-hamburguesa {
 =======
 .contenedor-barra-busqueda {
@@ -60,6 +61,10 @@
 
 .barra-buscar {
 >>>>>>> 1a9b968d06629ca8a6637fc4140622641a13c860
+=======
+.barra-buscar,
+.barra-buscar-menu-hamburguesa {
+>>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
 =======
 .barra-buscar,
 .barra-buscar-menu-hamburguesa {
@@ -82,10 +87,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 .boton-buscar, .boton-buscar-menu-hamburguesa {
 =======
 .boton-buscar {
 >>>>>>> 1a9b968d06629ca8a6637fc4140622641a13c860
+=======
+.boton-buscar,
+.boton-buscar-menu-hamburguesa {
+>>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
 =======
 .boton-buscar,
 .boton-buscar-menu-hamburguesa {
@@ -115,6 +125,7 @@
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 .menu-hamburguesa {
     display: none;
@@ -160,6 +171,8 @@
     align-items: center;
 }
 
+=======
+>>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
 .menu-hamburguesa {
     display: none;
 }
@@ -196,6 +209,9 @@
     filter: drop-shadow(0px 5px 2px rgba(0, 0, 0, 0.3));
 }
 
+<<<<<<< HEAD
+=======
+>>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
 =======
 >>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
 /*Termina navbar superior*/
@@ -219,6 +235,7 @@
     list-style: none;
     text-decoration: none;
     color: black;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -253,6 +270,11 @@ body{
 
 }
 
+=======
+
+}
+
+>>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
 .nav-links li {
     list-style-type: none;
 }
@@ -277,11 +299,15 @@ body{
 
 /*Subtítulo de la sección productos*/
 .contenedor-subtitulo {
+<<<<<<< HEAD
+>>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
+=======
 >>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
     text-align: center;
     margin-top: 50px;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 .container{
     width:100%;
@@ -290,6 +316,8 @@ body{
     display:flex;
     flex-wrap:wrap;
 =======
+=======
+>>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
 .subtitulo {
     font-size: 50px;
 }
@@ -302,11 +330,15 @@ body{
     /*height:430px; esto es lo que hace que se sobrepongan los elementos*/
     display: flex;
     flex-wrap: wrap;
+<<<<<<< HEAD
+>>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
+=======
 >>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
     justify-content: center;
     margin: auto;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 .container .card{
     width:200px;
@@ -314,11 +346,16 @@ body{
     border-radius:8px;
     box-shadow: 0 2px 2ox rgba(0,0,0,0.2);
 =======
+=======
+>>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
 .contenedor-tarjetas .card {
     width: 200px;
     height: 430px;
     border-radius: 8px;
     box-shadow: 0 2px 2ox rgba(0, 0, 0, 0.2);
+<<<<<<< HEAD
+>>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
+=======
 >>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
     overflow: hidden;
     margin: 20px;
@@ -329,7 +366,11 @@ body{
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .container .card:hover{
+=======
+.contenedor-tarjetas .card:hover {
+>>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
 =======
 .contenedor-tarjetas .card:hover {
 >>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
@@ -338,7 +379,11 @@ body{
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .container .card img{
+=======
+.contenedor-tarjetas .card img {
+>>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
 =======
 .contenedor-tarjetas .card img {
 >>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
@@ -347,8 +392,13 @@ body{
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .container .card p{
     font-weight:600;
+=======
+.contenedor-tarjetas .card p {
+    font-weight: 600;
+>>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
 =======
 .contenedor-tarjetas .card p {
     font-weight: 600;
@@ -358,9 +408,15 @@ body{
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .container .card button{
     font-weight:500;
     text-decoration:none;
+=======
+.contenedor-tarjetas .card button {
+    font-weight: 500;
+    text-decoration: none;
+>>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
 =======
 .contenedor-tarjetas .card button {
     font-weight: 500;
@@ -370,6 +426,7 @@ body{
     color: white;
     border: none;
     border-radius: 5px;
+<<<<<<< HEAD
 <<<<<<< HEAD
     width:150px;
     height:50px;
@@ -508,6 +565,8 @@ li {
     border-radius: 5px;
 =======
 >>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
+=======
+>>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
     width: 150px;
     height: 50px;
 }
@@ -544,6 +603,7 @@ li {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 .contenedorRedes {
     position: relative;
 }
@@ -555,12 +615,17 @@ li {
 =======
 =======
 >>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
+=======
+>>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
 .textoIzquierda a,
 .textoIzquierda p,
 .textoDerecha p {
     padding-top: 15px;
     padding-bottom: 15px;
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
+=======
 >>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
 =======
 >>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
@@ -686,6 +751,7 @@ li {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -741,6 +807,8 @@ li {
     right: 0;
 }
 >>>>>>> 1a9b968d06629ca8a6637fc4140622641a13c860
+=======
+>>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
 =======
 >>>>>>> 756e93ecff23e84e19dae6aaa4c0085534398730
 =======
