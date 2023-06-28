@@ -1,15 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap');
+
 *{
     margin: 0;
     padding: 0px;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
+/* * Estilos para la sección del contenedor general  */
 .descripcionCompleta-curso{
     padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 35px;
 }
-
+/* * Estilos para el contenedor de la info del curso SIN considerar el carrusel de reseñas */
 .descripcion-curso{
     display: flex;
     flex-direction: column;
@@ -23,6 +27,7 @@
     font-weight: 900;
 }
 
+/* * Se le da estilo a la imagen del curso */
 .descripcion-curso img{
     /* Verás que el valor cover actúa igual que al usarse en la propiedad background-size: reescala la imagen según el tamaño indicado por su anchura y/o altura realizando un recorte del sobrante desde el centro. Todo ello sin que haya deformaciones de la imagen. */
     /* https://escss.blogspot.com/2015/01/recorte-centrado-automatico-imagen.html */
@@ -36,26 +41,25 @@
     align-self: center;
 }
 
+/* * Estilo para adornar el boton grande para adquiri el curso */
 .btn-adquirirCurso button{
-    border: none;
-    border-radius: 12px;
+    border: solid rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
     background-color: #F50087;
     color: white;
-    padding: 8px 30px;
+    padding: 11px 30px;
+    box-shadow: 0px 5px 5px rgba(0,0,0,0.8);
 }
 .btn-adquirirCurso span{
     font-size: 45px;
 }
 
+/* * Se pone la disposición en 2 columnas a los textos de descripción y aprendizaje */
 .detalleYAprendizaje-curso{
-    /* background-color: blueviolet; */
     display: flex;
-    /* align-content: stretch; */
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    /* flex-flow: row wrap; */
-    /* gap: 10px; */
 }
 
 .detalleYAprendizaje-curso h5{
@@ -69,12 +73,7 @@
     margin-bottom: 4px;
 }
 
-.detalles-curso .aprendizaje-curso{
-    
-    /* padding-right: 32px;
-    margin-bottom: 4px; */
-}
-
+/* * Distribución de los componentes del carrusel */
 .resenias-curso{
     display: flex;
     flex-direction: column;
@@ -84,12 +83,6 @@
 }
 
 .calificacion-curso{
-    /* display: flex; */
-    /* flex-direction: row; */
-    /* flex-wrap: wrap; */
-    /* align-items: center; */
-    /* align-self: center; */
-    /* align-content: center; */
     gap: 10px;
 }
 
@@ -99,6 +92,7 @@
     /* ? Est factible? */
 }
 
+/* * Creación de estrellas */
 .estrellas-curso input{
     width: 55px;
     height: 40px;
@@ -125,44 +119,40 @@
     justify-content: center;
 }
 
+/* * Manipulación del dato de la calificación general */
 #califiacion-curso{
-    /* Esto es solo para verificar que se manipule individualmente */
-    /* font-style: italic; */
-    /* color: blue; */
     text-align: left;
 }
 
+/* * Configuración del carrusel */
 #carouselExampleFade button{
-    width: 50px;
-    /* height: 50px; */
-    /* position: absolute; */
+    width: 95px;
     z-index: 3;
     border: none;
-    /* background: url("../assets/img/hojaIzquierda.svg"); */
     background-repeat: no-repeat;
-    /* background-size: 100%; */
+    background-size: 100%;
     background-position: center;
     display: flex;
-    /* align-self: center; */
 }
 
 /* Aqui esta el detalle que en la versión movil queda muy pequeño */
 .carousel-control-prev{
     background: url("../assets/img/hojaIzquierda.svg");
-    margin-left: -38px;
+    margin-left: -120px;
     /* left: 14% */
 }
 
 .carousel-control-next{
     background: url("../assets/img/hojaDerecha.svg");
-    margin-right: -38px;
+    margin-right: -120px;
     /* right: 14% */
 }
 
-
 .resenias-carrusel{
     /* Aqui le estamos poniendo una altura FIJA para que no se vea un cambio brusco entre reseñas que tengan diferente tamaño. */
-    height: 300px;
+    /* height: 500px; */
+    /* Se le colocó auto ya que si las reseñas son largas NO alcanzaran a visualizarse completas si le dejamos un ALTO FIJO */
+    height: auto;
     border: solid 3px black;
     border-radius: 35px;
     padding: 15px;
@@ -176,6 +166,25 @@
     /* gap: 35px; */
 }
 
+/* * Estilo ESPECIAL Y ESPECIFICO para trabajar en pantallas pequeñas y las hojas queden a buena proporción */
+@media (max-width: 576px) {
+    #carouselExampleFade button{
+        width: 70px;
+    }
+    .carousel-control-prev{
+        margin-left: -60px;
+    }
+    
+    .carousel-control-next{
+        margin-right: -60px;
+    }
+    .resenias-carrusel{
+        /* Aqui le estamos poniendo una altura FIJA para que no se vea un cambio brusco entre reseñas que tengan diferente tamaño. */
+        height: 500px;
+    }
+}
+
+/* * Estilos y decoración de la tarjeta de reseña */
 .carousel{
     display: flex;
     align-self: center;
@@ -186,11 +195,8 @@
     
 }
 
-
-
-.resenias-carrusel-izquierda p{
+.resenias-carrusel p{
     display: flex;
-    /* align-self: stretch; */
     align-self: center;
 }
 
@@ -202,12 +208,9 @@
 .valoracion-resenia{
     text-align: justify;
     align-self: center;
-    /* align-items: center;
-    align-content: center; */
 }
 
 .estrellas-resenia{
-    /* text-align: center; */
     text-align: left;
 }
 

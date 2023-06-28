@@ -109,6 +109,7 @@ function cargarResenia() {
   console.log("Finaliza función cargar reseña");
 }
 
+//Funciones para obtener los dato de las bases de datos
 function cargarCurso() {
   console.log("entramos a cargar los datos del curso");
   let id;

@@ -5,25 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curso</title>
-    <!-- Enlace con estilos CSS externos bootstrap -->
+    <!-- * Enlace con estilos CSS externos bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <!-- Finaliza conexión con Bootstrap -->
-    <!-- Enlace a libreria de Slick, verificar recurso: -->
-    <!-- https://kenwheeler.github.io/slick/#getting-started -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <!-- Finaliza conexión -->
-    <!-- Enlace a libreria para iconos de uso libre -->
+    <!-- * Enlace a libreria para iconos de uso libre -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Finaliza conexión con libreria -->
-    <!-- Conexión con JQuery -->
-    <!-- !Se tuvo que colocar al principio antes de la hoja de estilos y el script.js para que se aplique de primero -->
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-    <!-- Finaliza conexión con JQuery -->
-    <!-- Enlace con estilos CSS internos -->
+    <!-- * Enlace con estilos CSS internos -->
     <link rel="stylesheet" href="../styles/plantillaCursos.css">
+    <!-- * Le ponemos el elemento ico del logo -->
+    <link href="../assets/img/iconoFrijolVegano.ico" rel="icon" />
 
     <!-- Finaliza conexión con estilos internos -->
 </head>
@@ -34,19 +26,19 @@
     </header>
 
     <main>
-        <!-- Aqui inicia la sección de la descripción del curso incluyendo reseñas -->
+        <!-- * Aqui inicia la sección de la descripción del curso incluyendo reseñas -->
         <section class="descripcionCompleta-curso">
 
-            <!-- Aqui insertamos un carrusel de bootstrap para las reseñas, se jugó con las columnas para responsive viewer -->
-            <div id="carouselExampleFade" class="carousel slide carousel-fade col-lg-6">
+            <!-- * Aqui insertamos un carrusel de bootstrap para las reseñas, se jugó con las columnas para responsive viewer -->
+            <div id="carouselExampleFade" class="carousel slide carousel-fade col-9 col-sm-9 col-lg-6">
                 <div class="carousel-inner">
                     
                     <div class="carousel-item active">
-                        <!-- Debido a las configuraciones de bootstrap se tuvo que mantener este div para el primer elemento del carrusel -->
+                        <!-- * Debido a las configuraciones de bootstrap se tuvo que mantener este div para el primer elemento del carrusel -->
                     </div>
                 </div>
                 
-                <!-- Sección de botones para ir pasando de reseña en reseña -->
+                <!-- * Sección de botones para ir pasando de reseña en reseña -->
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
                     data-bs-slide="prev">
                 </button>
@@ -57,18 +49,16 @@
 
         </section>
     </main>
-    <!-- Conexión con JS externo Bootstrap -->
+    <!-- * Conexión con JS externo Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
         integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
         crossorigin="anonymous"></script>
-    <!-- Finaliza conexión de JS Bootstrap -->
-    <!-- Conexión JS externo Slick -->
+    <!-- * Conexión JS externo Slick -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <!-- Finaliza conexión Slick -->
-    <!-- Conexión con JS interno -->
+    <!-- *Conexión con JS interno -->
     <script src="../scripts/plantillaCursos.js"></script>
 
 </body>
