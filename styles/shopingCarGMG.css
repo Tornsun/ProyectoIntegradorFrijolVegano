@@ -31,7 +31,12 @@ main{
     margin-top: 140px;
 }
 
+.contenedorPadreProductos{
+    margin-top: 140px;
+}
+
 .section-products{
+    margin-top: 120px;
     margin-top: 120px;
     display: flex;
     flex-direction: column;

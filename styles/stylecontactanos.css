@@ -7,6 +7,7 @@ body {
     font-family: 'Nunito', sans-serif;
 
 
+
 }
 
 
@@ -23,6 +24,15 @@ font-family: 'Nunito', sans-serif;*/
     border-radius: 45px;
     border-style: none;
     font-size: 20px;
+    font-size: 20px;
+}
+
+body {
+    font-size: 17px;
+    font-family: 'Nunito', sans-serif;
+    /* padding-inline-start: 20px;
+    padding-inline-end: 20px;
+    padding-top: 20px; */
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -95,6 +105,9 @@ body {
     margin: 30px;
 
 }
+
+.titulo-dudas {
+    padding-left: 20px;
 
 .titulo-dudas {
     padding-left: 20px;
