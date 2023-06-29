@@ -134,6 +134,10 @@
     background-position: center;
     display: flex;
 }
+#carouselExampleFade button:hover{
+    transform: translateY(-15px);
+    background-position: center;
+}
 
 /* Aqui esta el detalle que en la versión movil queda muy pequeño */
 .carousel-control-prev{
@@ -158,18 +162,18 @@
     padding: 15px;
     background-color: rgba(238, 105, 42, 0.15);
     display: flex;
-    /* flex-wrap: wrap; */
     align-items: stretch;
-    /* align-self: stretch; */
     flex-direction: column;
-    /* justify-content: center; */
-    /* gap: 35px; */
 }
 
 /* * Estilo ESPECIAL Y ESPECIFICO para trabajar en pantallas pequeñas y las hojas queden a buena proporción */
 @media (max-width: 576px) {
     #carouselExampleFade button{
         width: 70px;
+    }
+    #carouselExampleFade button:hover{
+        transform: translateY(-15px);
+        background-position: center;
     }
     .carousel-control-prev{
         margin-left: -60px;
