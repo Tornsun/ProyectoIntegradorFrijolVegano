@@ -184,7 +184,7 @@
     }
     .resenias-carrusel{
         /* Aqui le estamos poniendo una altura FIJA para que no se vea un cambio brusco entre reseñas que tengan diferente tamaño. */
-        height: 500px;
+        height: 550px;
     }
 }
 
