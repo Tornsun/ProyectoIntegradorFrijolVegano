@@ -9,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles/styleProductos.css">
+    <link rel="stylesheet" href="../styles/styleTarjetaProducto.css">
     <link rel="stylesheet" href="../styles/styleNavbarFooter.css">
 </head>
 
@@ -121,18 +122,24 @@
     
            <div class="checkBoxMarca">
             <p>Marca</p>
-            <div class="contenedor-Colpac">
+            <div class="contenedor-marca">
                 <label for="colpac">Colpac</label>
                 <input class="marca" id="colpac" name="marca" value="colpac" type="radio">
             </div>
-            <div class="contenedor-Meathical">
+
+            <div class="contenedor-marca">
+                <label for="beyondMeat">Beyond Meat</label>
+                <input class="marca" id="beyondMeat" name="marca" value="beyondMeat" type="radio">
+            </div>
+
+            <div class="contenedor-marca">
                 <label for="meathical">Meathical</label>
                 <input class="marca" id="meathical" name="marca" value="meathical" type="radio">
             </div>
            </div>
 
            <div class="checkBoxEnOferta">
-            <div class="contenedor-EnOferta">
+            <div class="contenedor-enOferta">
                 <label for="enOferta">En oferta</label>
                 <input class="enOferta" id="enOferta" name="enOferta" value="enOferta" type="checkbox">
             </div>
@@ -146,59 +153,59 @@
         <!--Tarjetas de productos-->
         <div class="contenedor-tarjetas">
             <div class="card">
-                <img src="../assets/img/producto 1.png">
-                <p class="producto-precio">$99.99</p>
-                <p class="producto-descripcion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-                <button>AGREGAR</button>
+                <div class="contenedor-imagen"><img src="../assets/img/Imagenes Productos/beyond-meat-burguer.png"></div>
+                <div class="contenedor-precio"><p class="producto-precio">$125</p></div>
+                <div class="contenedor-descripcion"><p class="producto-descripcion">2 Patties de hamburguesa basada en proteína de chícharo</p></div>
+                <div class="contenedor-boton"><button>AGREGAR</button> </div>
             </div>
 
             <div class="card">
-                <img src="../assets/img/producto 1.png">
-                <p class="producto-precio">$99.99</p>
-                <p class="producto-descripcion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-                <button>AGREGAR</button>
+                <div class="contenedor-imagen"><img src="../assets/img/Imagenes Productos/Beyond-meat-salchicha.JPG"></div>
+                <div class="contenedor-precio"><p class="producto-precio">$189</p></div>
+                <div class="contenedor-descripcion"><p class="producto-descripcion">4 Salchichas basadas en proteína de chícharo</p></div>
+                <div class="contenedor-boton"><button>AGREGAR</button> </div>
             </div>
 
             <div class="card">
-                <img src="../assets/img/producto 1.png">
-                <p class="producto-precio">$99.99</p>
-                <p class="producto-descripcion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-                <button>AGREGAR</button>
+                <div class="contenedor-imagen"><img src="../assets/img/Imagenes Productos/bolonga280-mini.png"></div>
+                <div class="contenedor-precio"><p class="producto-precio">$56</p></div>
+                <div class="contenedor-descripcion"><p class="producto-descripcion">Mezcla de proteínas vegetales estilo bologna.</p></div>
+                <div class="contenedor-boton"><button>AGREGAR</button> </div>
             </div>
 
             <div class="card">
-                <img src="../assets/img/producto 1.png">
-                <p class="producto-precio">$99.99</p>
-                <p class="producto-descripcion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-                <button>AGREGAR</button>
+                <div class="contenedor-imagen"><img src="../assets/img/Imagenes Productos/CHICHARON-mini.png"></div>
+                <div class="contenedor-precio"><p class="producto-precio">$59</p></div>
+                <div class="contenedor-descripcion"><p class="producto-descripcion">Mezcla de proetínas vegetales estilo chicharrón.</p></div>
+                <div class="contenedor-boton"><button>AGREGAR</button> </div>
             </div>
 
             <div class="card">
-                <img src="../assets/img/producto 1.png">
-                <p class="producto-precio">$99.99</p>
-                <p class="producto-descripcion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-                <button>AGREGAR</button>
+                <div class="contenedor-imagen"><img src="../assets/img/Imagenes Productos/chicken-tenders-beyond-meat.JPG"></div>
+                <div class="contenedor-precio"><p class="producto-precio">$99.99</p></div>
+                <div class="contenedor-descripcion"><p class="producto-descripcion">Tiras de no-pollo basadas en proteína de habas </p></div>
+                <div class="contenedor-boton"><button>AGREGAR</button> </div>
             </div>
 
             <div class="card">
-                <img src="../assets/img/producto 1.png">
-                <p class="producto-precio">$99.99</p>
-                <p class="producto-descripcion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-                <button>AGREGAR</button>
+                <div class="contenedor-imagen"><img src="../assets/img/Imagenes Productos/deshebrada-mini.png"></div>
+                <div class="contenedor-precio"><p class="producto-precio">$59</p></div>
+                <div class="contenedor-descripcion"><p class="producto-descripcion">Mezcla de proteínas vegetales estilo deshebrada </p></div>
+                <div class="contenedor-boton"><button>AGREGAR</button> </div>
             </div>
 
             <div class="card">
-                <img src="../assets/img/producto 1.png">
-                <p class="producto-precio">$99.99</p>
-                <p class="producto-descripcion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-                <button>AGREGAR</button>
+                <div class="contenedor-imagen"><img src="../assets/img/Imagenes Productos/hamburguesa-mini.png"></div>
+                <div class="contenedor-precio"><p class="producto-precio">$80</p></div>
+                <div class="contenedor-descripcion"><p class="producto-descripcion">Mezcla de proteínas vegetales estilo hamburguesa</p></div>
+                <div class="contenedor-boton"><button>AGREGAR</button> </div>
             </div>
 
             <div class="card">
-                <img src="../assets/img/producto 1.png">
-                <p class="producto-precio">$99.99</p>
-                <p class="producto-descripcion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-                <button>AGREGAR</button>
+                <div class="contenedor-imagen"><img src="../assets/img/Imagenes Productos/Imitación Pepperoni Meathical 250.png"></div>
+                <div class="contenedor-precio"><p class="producto-precio">$70</p></div>
+                <div class="contenedor-descripcion"><p class="producto-descripcion">Imitación Pepperoni basado en proteína vegetal</p></div>
+                <div class="contenedor-boton"><button>AGREGAR</button> </div>
             </div>
         </div>
         <!--Termina Tarjetas de productos-->
