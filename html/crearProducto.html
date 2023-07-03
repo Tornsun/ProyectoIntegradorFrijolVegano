@@ -90,21 +90,31 @@
 
 <body>
 
+    <div class="HiperVinculoDeProducto">
+        <div class="vinculo">
+            <a class="nuevoProducto" href="./crearProducto.html" target="_blank">Agregar un nuevo producto</a>
+        </div>
+        <div class="vinculoDos">
+            <a class="nuevoCurso" href="./crearUnNuevoCurso.html" target="_blank">Agregar un nuevo curso</a>
+        </div><!--Cierre del segundo boton -->
+    </div>
+
+
     <div class="contenedorProductos"> <!--Div que contiene toda la tarjeta de agregar producto-->
+
         <div class="titulo">
             <h1>Agregar un nuevo producto</h1>
         </div> <!--Cierre del segundo boton -->
 
-        <!--Aqui empezaos con el formulario de agregar un producto-->
-
+        <!--Aqui empezamos con el formulario de agregar un producto-->
+        <form class="formulario">
         <div class="camposProducto"> <!--Aqui empezaos con el formulario de agregar un producto-->
-            <form action="">
+            
                 <div class="idproducto">
                     <p> ID del producto</p>
                     <input type="text" maxlength="10" name="identificador" class="inputDelProducto"
                         placeholder="ID del producto">
                 </div>
-            </form>
         </div><!--Cierre del campo de llenado -->
         <div class="divnombreProducto">
             <p>Nombre del producto</p>
@@ -113,16 +123,52 @@
         <div class="categoriaDeProductos">
             <p>Categoria</p>
             <select name="categorias" class="categoria">
+                <option value="categoria">Categorias</option>
                 <option value="chile">Chiles</option>
                 <option value="Plato">Platos Fuertes</option>
                 <option value="congelados">Alimentos Congelados</option>
                 <option value="preparados">Alimentos Preparados</option>
                 <option value="mexicanisimos">Platos Tipicos</option>
-                <option value="lacteos">Categorias</option>
             </select>
         </div>
+
+        <div class="marcaDeProductos">
+            <p>Marca</p>
+            <select name="marca" class="marcas">
+                <option value="Marcas">Marca</option>
+                <option value="Gardein">Gardein</option>
+                <option value="Field">Field Roast</option>
+                <option value="Tofurky">Tofurky</option>
+                <option value="Beyond">Beyond</option>
+                <option value="Heura">Heura</option>
+                <option value="Asante">Asante</option>
+            </select>
+        </div>
+        <div class="superDescripcionProductos">
+        <div class="titulodescripcionProducto">
+            <p>Descripcion del Producto</p>
+            </div>
+            <div class="descripcionDelProducto">
+            <textarea type="text" maxlength="300" name="descripcion" class="inputDescripcionProducto"
+                placeholder="Descripcion del producto">
+            </textarea>
+        </div>
+    </div>
+
+        <!-- <div class="contenedor-tarjetas">
+        <div class="card">
+            <img src="../assets/img/producto 1.png">
+            <p class="producto-precio">$99.99</p>
+            <p class="producto-descripcion"></p>
+           
+        </div>
+    </div> -->
+
+
         <div class="centrarImagenPrevia"> <!-- con este div pretendemos que se centre nuestra imagen -->
-            <div id="imagenPrevisualizada"></div>
+            <div id="imagenPrevisualizada" class="col-sm-12 col-md-3 col-lg-3">
+            <img src="../assets/img/producto 1.png" alt="producto" id="etiquetaDeImagen" class="img"> 
+        </div>
             <!--! En este div solo alojaremos la imagen previa del producto importante NO MOVER -->
         </div>
         <div class="informacionFile">
@@ -131,12 +177,7 @@
             <input type="file" id="imagenPrevia" accept="image/*">
         </div>
 
-        <div class="descripcionDelProducto">
-            <p>Descripcion del Producto</p>
-            <input type="text" maxlength="300" name="descripcion" class="inputDescripcionProducto"
-                placeholder="Descripcion del producto">
-        </div>
-
+        
         <div class="costosYExistencias">
             <div class="row">
                 <div class="col-sm-12 col-md-3 col-lg-3">
@@ -149,17 +190,24 @@
                 <div class=" col-sm-12 col-md-3 col-lg-3">
                     <li class="textoLista">Existencias de producto</li>
                 </div>
-                    <div class="col-sm-12 col-md-3 col-lg-3">
-                        <input type="text" maxlength="300" name="existencias" class="inputExistenciasProducto"
-                            placeholder="Existencias del producto">
+                <div class="col-sm-12 col-md-3 col-lg-3">
+                    <input type="text" maxlength="300" name="existencias" class="inputExistenciasProducto"
+                        placeholder="Existencias del producto">
                 </div>
+            </div>
+            <div class=" col-sm-12 col-md-3 col-lg-3">
+                <li class="textoLista">Presentacion de producto</li>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <input type="text" maxlength="300" name="presentacion" class="inputPresentacionProducto"
+                    placeholder="Presentacion en gramaje del producto">
+            </div>
+
         </div>
+        <div class="agregado">
+        <input type="submit" class="botonEnviar" value="Enviar">
     </div>
-
-
-    <div class="Agregado">
-        <input type="submit" class="botonAgregar" value="Agregar">
-    </div>
+    </form>
     </div>
 
 
@@ -199,5 +247,6 @@
 
     <script src="../scripts/crearProductos.js"></script>
 </body>
+
 
 </html>

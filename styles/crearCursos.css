@@ -1,3 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Nunito:wght@500&display=swap');
+
+*{
+    font-family: 'Nunito Sans', sans-serif;
+}
+.HiperVinculoDeProducto{
+    display: flex;  
+    justify-content: center;
+    text-align: center; 
+  margin: auto; 
+    margin-top: 140px;
+    height: 40%;
+
+}
+.contenedorProductos{
+margin-left: 20%;
+margin-right: 20%;
+}
+          /*TODO: Aqui vamos a modificar todo lo que sea respecto al titulo */
+.titulo,
+.tituloDos{
+    width: 40%; 
+    height: 40%;
+}
+.titulo a{
+    font-size: 32px;
+    width: 40%; 
+    height: 40%;
+}
+.tituloDos .nuevoCurso{
+    font-size: 32px;
+    text-align: center;
+    width: 40%; 
+    height: 40%;
+
+}
+
 #imagenPrevisualizada, #divCurso, #videoTotalCurso {
     width: 300px;
     height: 300px;

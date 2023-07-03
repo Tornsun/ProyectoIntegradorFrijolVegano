@@ -1,129 +1,73 @@
-//Aqui colocamos la funcion de que cuando de clic en un boton le aparesca otro formulario, y a su vez desaparesca
-//  const contenedorDeProducto = document.getElementsByClassName('contenedorProductos')
-//  const contenedorDeCurso = document.getElementsByClassName('contenedorCurso')
-//  const cambioBoton =document.getElementsByClassName('button2')
-
-
-
-//  function cambioBoton() {
-//     var formulario1 = document.getElementById("contenedorProductos");
-//      var formulario2 = document.getElementById("contenedorCurso");
-  
-//      // Ocultar formulario 1
-//      formulario1.style.display = "inline";
-//      // Mostrar formulario 2
-//      formulario2.style.display = "inline";
-//   }
-
-
-
+//!Aqui colocamos el default de la imagen para que nos de la funcion de que nos regrese la imagen o que se muestre en la pagina una vez que se cargue
 
 const defaultFile = '../assets/img/producto1.png';//Si no cargan una imagen nos va a devolver una imagen random de algun producto
 const $imagenPrevia = document.getElementById('imagenPrevia');//Creamos una variable que nos traiga del HTML la imagen que el cliente selecciono
 const $imagenPrevisualizada = document.getElementById('imagenPrevisualizada');//Traemos el img de nuestra imagen para que nos la pinte el DOM
+const $img = document.getElementById('etiquetaDeImagen');
 
 $imagenPrevia.addEventListener('change', e => { //Hacemos un evento que cuando encuentre un cambio se haga algo
-  const archivos = e.target.files;
-  if (archivos.length > 0) { // Limpiar cualquier vista previa anterior
-    $imagenPrevisualizada.innerHTML = '';
-    for (let i = 0; i < archivos.length; i++) {
-      const archivo = archivos[i];
-      const reader = new FileReader();
-      reader.onload = function (e) {
-        const src = e.target.result;
+  e.preventDefault();
 
-        // Crear un elemento de imagen para mostrar la vista previa
-        const img = document.createElement('img');
-        img.src = src;
-        img.classList.add('vistaPreviaProducto');
-
-        // Agregar el elemento de imagen a la vista previa
-        $imagenPrevisualizada.appendChild(img);
-      };
-
-      reader.readAsDataURL(archivo);
-    }
-  } else { // Si no hay archivos salimos de la función y quitamos la imagen
-    // Si no se seleccionan archivos, mostrar la imagen por defecto
-    $imagenPrevisualizada.innerHTML = `<img src="${defaultFile}" alt="Vista previa">`;
+  if (e.target.files[0]) {
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      $img .src = e.target.result;
   }
-});//Cierre de mi EvenListener
+  reader.readAsDataURL(e.target.files[0]) //todos los archivos que son base:64
+}else{
+  $img.src=defaultFile;
+}
+})  
 
+//!Aqui empezamos con el arreglo para que nos traiga todos los datos y colocarlos en un arreglo.
 
+var formulario = document.querySelector(".formulario");
+formulario.onsubmit = function(e) {
+  e.preventDefault();
 
+  var $inputDelProducto = document.querySelector(".inputDelProducto").value;
+  var $inputNombreProducto = document.querySelector(".inputNombreProducto").value;
+  var $inputDelProducto = document.querySelector(".inputDelProducto").value;
+  var $inputNombreProducto = document.querySelector(".inputNombreProducto").value;
+  var $categoria = document.querySelector(".categoria").value;
+  var $marcas = document.querySelector(".marcas").value;
+  //!Ojo aqui que solo es una variable para que guarde la imagen
+  // var $$img = document.getElementById('imagenPrevia').value;
+  var $$img = $img.src;
+  var $inputDescripcionProducto = document.querySelector(".inputDescripcionProducto").value;
+  var $inputCostoProducto = document.querySelector(".inputCostoProducto").value;
+  var $inputExistenciasProducto = document.querySelector(".inputExistenciasProducto").value;
+  var $inputPresentacionProducto = document.querySelector(".inputPresentacionProducto").value;
 
-const defaultFileCurso = '../assets/img/producto1.png';//Si no cargan una imagen nos va a devolver una imagen random de algun producto
-const $inputdelCurso = document.getElementById('inputdelCurso');//Creamos una variable que nos traiga del HTML la imagen que el cliente selecciono
-const $divCurso = document.getElementById('divCurso');//Traemos el img de nuestra imagen para que nos la pinte el DOM
+//   console.log("El Id es", $inputDelProducto);
+//   console.log("El nombre es", $inputNombreProducto);
+//   console.log("La Categoria es", $categoria);
+//   console.log("Su marca es", $marcas);
+//   console.log("La imagen es", $$img);
+//   console.log("La Descripcion es", $inputDescripcionProducto);
+//   console.log("Su costo es", $inputCostoProducto);
+//   console.log("El numero de existencias  es", $inputExistenciasProducto);
+//   console.log("Su presentacion es de", $inputPresentacionProducto);
+// alert("si entra prra");
 
-$inputdelCurso.addEventListener('change', e => { //Hacemos un evento que cuando encuentre un cambio se haga algo, ene este caso el cambio de imagen
+//Creamos una objeto que nos guarde toda la informacion
 
-  const archivos = e.target.files; //Entra cuando LA " e " tiene modificaciones entra al tipo de archivo que es un file
-  if (archivos.length > 0) { // Limpiar cualquier vista previa anterior
-    $divCurso.innerHTML = '';
-    for (let i = 0; i < archivos.length; i++) {
-      const archivo = archivos[i];
-      const reader = new FileReader();
-      reader.onload = function (e) {
-        const src = e.target.result;
-
-        // Crear un elemento de imagen para mostrar la vista previa
-                                                     // !Desde aqui mandamos a que se manipule el DOM
-        const img = document.createElement('img');
-        img.src = src;
-        img.classList.add('inputdelCurso');
-
-        // Agregar el elemento de imagen a la vista previa
-        $divCurso.appendChild(img);
-      };
-
-      reader.readAsDataURL(archivo);
-    }
-  } else { // Si no hay archivos salimos de la función y quitamos la imagen
-    // Si no se seleccionan archivos, mostrar la imagen por defecto
-    $divCurso.innerHTML = `<img src="${defaultFileCurso}" alt="Vista previa">`;
-  }
-});//Cierre de mi EvenListener
-
-
-
-
-
-
-const defaultFileVideo = '../assets/img/producto1.png';
-const $videoCurso = document.getElementById('videoCurso');
-const $videoTotalCurso = document.getElementById('videoTotalCurso');
-
-$videoCurso.addEventListener('change', e => {
-  const archivos = e.target.files;
-
-  if (archivos.length > 0) {
-    // Limpiar cualquier vista previa anterior
-    $videoTotalCurso.innerHTML = '';
-
-    for (let i = 0; i < archivos.length; i++) {
-      const archivo = archivos[i];
-
-      const reader = new FileReader();
-      reader.onload = function (e) {
-        const src = e.target.result;
-
-        // Crear un elemento de imagen para mostrar la vista previa
-        const img = document.createElement('img');
-        img.src = src;
-        img.classList.add('vistaPreviaVideo');
-
-        // Agregar el elemento de imagen a la vista previa
-        $videoTotalCurso.appendChild(img);
-      };
-
-      reader.readAsDataURL(archivo);
-    }
-  } else {
-    // Si no se seleccionan archivos, mostrar la imagen por defecto
-    $videoTotalCurso.innerHTML = `<img src="${defaultFileVideo}" alt="Vista previa">`;
-  }
-});
+var guardarProducto={
+  id:$inputDelProducto,
+  nombre: $inputNombreProducto,
+  categoria:$categoria,
+  marca:$marcas,
+  imagen:$$img,
+  descripcion:$inputDescripcionProducto,
+  costo:$inputCostoProducto,
+  existencias:$inputExistenciasProducto,
+  presentacion:$inputPresentacionProducto,
+  };
+  
+  //Convierte los productos en un formtao JSON
+var datosProducto=JSON.stringify(guardarProducto);
+console.log(datosProducto)
+}
 
 
 
