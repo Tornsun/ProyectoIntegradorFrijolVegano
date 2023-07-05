@@ -7,19 +7,12 @@
 
 }
 
-body{
-    font-size: 15px;
+body {
+    font-size: 17px;
     font-family: 'Nunito', sans-serif;
-
 }
 
-
-/*font-family: 'Nunito', sans-serif;
-
-font-family: 'Montserrat', sans-serif;
-font-family: 'Nunito', sans-serif;*/
-
-.boton{
+.boton {
     background-color: #F50087;
     font-family: 'Montserrat', sans-serif;
     width: 148px;
@@ -32,27 +25,29 @@ font-family: 'Nunito', sans-serif;*/
 #boton-container{
     margin: 9px;
 
-}
-.titulo-dudas{
-    margin-top: 20px;
-}
-
-.main-container{
-   /* border: 1px solid;*/
-    width: 325px;
-    margin: 87px auto 40px;
-    margin-bottom: 150px;
-}
-article{
-    width: 100%;
-    height: 440px;
-    padding: 48px;
+.contenedorFormularioContacto{
+    margin-top: 140px;
 }
 
-#carta-1{
+
+
+.textoTarjetas{
+    text-align: justify;
 }
-#carta-2{
-   
+
+.boton {
+    background-color: #F50087;
+    font-family: 'Montserrat', sans-serif;
+    width: 148px;
+    height: 46px;
+    border-radius: 9px;
+    border-style: none;
+    font-size: 20px;
+    color: white;
+}
+
+.contenedorCajaDudas{
+    margin-bottom: 45px;
 }
 h3{font-family: 'Nunito', sans-serif;
     margin-bottom: 25px;
@@ -64,30 +59,45 @@ h3{font-family: 'Nunito', sans-serif;
    }
 
 
-   #borde-parrafo1{
-    border: 1px solid black;
-    border-radius: 10px;
- 
-   }
+.titulo-dudas {
+    text-align: center;
+}
 
-   
-   #borde-parrafo2{
-    border: 1px solid black;
-    border-radius: 15px;
-   }
+.contenedorDudas{
+    margin-left: 6%;
+    margin-right: 6%;
+}
 
+.contenedorCajaContacto{
+    margin-bottom: 45px;
+}
 
- @media(min-width:964px){
-    .main-container{
-        width: 924px;
-        display: flex;
-        margin-top: 170px;
+.titulo-contactanos {
+    padding-left: 20px;
+    text-align: center;
+}
 
-    }
-    article{
-        height: 500px;
-    }
-    p{
-        margin-bottom: 80px;
-    }
- }
+.contenedorContactanos{
+    margin-left: 6%;
+    margin-right: 6%;
+}
+
+.titulo-escribenos {
+    text-align: center;
+}
+
+.contenedorFormularioContactanos{
+    margin-left: 6%;
+    margin-right: 6%;
+}
+
+.contendorBotonContactanos{
+    margin-top: 10px;
+}
+
+.boton{
+    margin: 30px;
+    margin-left: 0;
+    width: 80%;
+    height: 60px;
+}

@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap');
+
+* {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@media (min-width: 768px) and (max-width: 5000px){
+
+.navBarSuperior {
+    background-color: #EE692A;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    padding: 5px 10%;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+}
+
+.logo img {
+    width: 100px;
+}
+
+.form-control {
+    width: 430px;
+}
+
+.btn {
+    border-color: #FBE0D3;
+}
+
+.btn:hover {
+    background-color: #FBE0D3;
+    border-color: #FBE0D3;
+}
+
+/* .posicionNavBar row col-sm-12 navBarInferior{
+    display:none;
+} */
+
+.logos {
+    align-items: end;
+    display: flex;
+    align-items: center;
+}
+
+.menu-hamburguesa {
+    display: none;
+}
+
+.menu-hamburguesa svg {
+    width: 100px;
+    height: 100px;
+    padding: 25px;
+    color: white;
+}
+
+.logoCentral img {
+    width: 100px;
+}
+
+.logos .logo-usuario {
+    color: white;
+    filter: drop-shadow(0px 5px 2px rgba(0, 0, 0, 0.3));
+    height: 50px;
+    width: 50px;
+}
+
+.logos .logo-carrito {
+    color: white;
+    filter: drop-shadow(0px 5px 2px rgba(0, 0, 0, 0.3));
+    height: 42px;
+    width: 50px;
+}
+
+.logos svg {
+    width: 45px;
+    height: 45px;
+    color: white;
+    filter: drop-shadow(0px 5px 2px rgba(0, 0, 0, 0.3));
+}
+
+/*Termina navbar superior*/
+
+/*Inicia Navbar inferior*/
+.navBarInferior {
+    background-color: #FBE0D3;
+    top: 85px;
+    right: 0px;
+    left: 0px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10%;
+
+}
+
+.nav-links a {
+    list-style: none;
+    text-decoration: none;
+    color: black;
+
+}
+
+.nav-links li {
+    list-style-type: none;
+}
+}
+.contenido {
+    margin-top: 145px;
+}
+
+.footer {
+    background-color: #EE692A;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: space-between;
+    /* position: fixed;
+    bottom: 0px;
+    right: 0px;
+    left: 0px; */
+}
+
+.footer .textoIzquierda,
+.footer .textoDerecha {
+    display: flex;
+    flex-direction: column;
+    margin-right: 75px;
+    margin-left: 75px;
+    text-align: center;
+    padding: 12px;
+}
+
+.contenedorRedes {
+    position: relative;
+}
+
+.redesSociales {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    /* vertical-align: middle; */
+    /* flex-direction: row; */
+    justify-content: center;
+}
+
+.textoDerecha {
+    display: flex;
+    align-items: center;
+    height: 150px;
+    flex-direction: column;
+    color: white;
+    justify-content: center;
+}

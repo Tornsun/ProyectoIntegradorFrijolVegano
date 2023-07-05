@@ -78,22 +78,19 @@ h1 {
 /*
 Aqui empieza la modificaion de la card para que haga el zoom */
 .contenedor {
-    height: 100%;
-    width: 100%;
-    /*Aqui vamos a declarar un maximo y un minimo a nuestras imagenes*/
-    /* max-height: 800px;
-  max-width: 1280px;
-  min-height: 400px; /*Aqui exclusivamente le damos el ALTURA a la imagen*/
-    /* min-width: 1500px; Aqui exclusivamente le damos el ANCHO a la imagen */
+    /* height: 100%;
+    width: 100%; */
     display: flex;
     flex-wrap: wrap;
     /* justify-content: space-around;
   align-items: start; Me alinea mi item al principio */
     gap: 20px;
     align-items: center;
-    margin: 50px;
+    /* margin: 50px; */
     justify-content: space-evenly;
     align-items: center;
+    margin-left: 10%;
+margin-right: 10%;
 
 }
 
@@ -258,24 +255,7 @@ a {
     opacity: 1;
 }
 
-/*Aqui empieza la creacion de la card 6 */
-.carta6 {
-    background: url("../assets/img/Carlos.png") center center no-repeat;
-    background-size: 300px;
-}
 
-.carta6:hover {
-    background: url("../assets/img/Carlos.png") left center no-repeat;
-    background-size: 600px;
-}
-
-.carta6:hover h2 {
-    opacity: 1;
-}
-
-.carta6:hover .fa {
-    opacity: 1;
-}
 
 
 /*Aqui finaliza la creacion de la card  */

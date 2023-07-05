@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Nunito:wght@500&display=swap');
+
+* {
+    font-family: 'Nunito Sans', sans-serif;
+}
+.row{
+    margin-left: 8%;
+    margin-right: 10%;
+}
+.HiperVinculoDeProducto {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    margin-top: 140px;
+    height: 40%;
+}
+
+/*TODO: Aqui vamos a modificar todo lo que sea respecto al titulo */
+.vinculo,
+.vinculoDos {
+    width: 40%;
+    height: 40%;
+}
+
+.vinculo,
+.nuevoProducto {
+    color: black;
+    text-decoration: none;
+    font-size: 32px;
+    width: 40%;
+    height: 40%;
+}
+
+.vinculoDos,
+ .nuevoCurso {
+    color: black;
+    text-decoration: none;
+    font-size: 32px;
+    text-align: center;
+    width: 40%;
+    height: 40%;
+
+}
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+}
+
+.titulo h1 {
+    margin: 5%;
+    font-size: 32px;
+    text-align: center;
+}
+
+
+
+/*! todo lo que va aqui es respecto a los input */
+
+
+.idproducto,
+.divnombreProducto,
+.categoriaDeProductos,
+.marcaDeProductos,
+.informacionFile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Se acomodan verticalmente     */
+    margin: 5%;
+
+}
+
+.descripcionDelProducto {
+    justify-content: center;
+    align-items: center;
+    margin-left: 0%;
+}
+
+
+/* todo lo que va aqui es respecto a los parrafos */
+.contenedorProductos {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.contenedorProductos p {
+    height: 50%;
+    /*altura de nuestro primer parrafo*/
+    width: 40%;
+    /*Ancho de los parrafos*/
+    text-align: start;
+}
+
+
+/*!Esto es todo respecto a los inputs del formulario*/
+
+
+/*Todo este bloque hace que los input tengan esa forma redonda*/
+.inputDelProducto,
+.inputNombreProducto,
+.categoria,
+.marcas,
+.inputCostoProducto,
+.inputExistenciasProducto,
+.inputPresentacionProducto {
+
+    text-align: center;
+    border-radius: 5px;
+    border: 1.4px solid #000;
+    background: #FFF;
+    transition: background 0.8s;
+    /* box-shadow: 0 -70px -63px -60px #000; */
+    justify-content: center;
+
+}
+
+.inputDescripcionProducto {
+    text-align: start;
+    border-radius: 5px;
+    border: 1.4px solid #000;
+    background: #FFF;
+    transition: background 0.8s;
+    /* box-shadow: 0 -70px -63px -60px #000; */
+    justify-content: center;
+}
+
+.inputDelProducto,
+.inputNombreProducto,
+.categoria,
+.marcas {
+    width: 400px;
+    height: 50px;
+}
+
+option {
+    text-align: center;
+}
+
+.inputDescripcionProducto {
+    /*!Estp es de la descripcion del prudcto*/
+    width: 78%;
+    height: 150px;
+    display: block; /* Convierte el elemento de entrada en un bloque para que ocupe todo el ancho disponible */
+    margin: auto;/* Centra horizontalmente el elemento de entrada dentro del contenedor */
+    margin-top: 0%;
+    overflow-wrap: break-word; /* Nueva propiedad añadida */
+    resize: vertical;  /* Permite redimensionar verticalmente el campo de texto */
+}
+
+.titulodescripcionProducto p {
+    margin-left: 100px;
+    margin-right: auto;
+    margin-bottom: 0%;
+    align-items: center;
+    justify-content: center;
+}
+
+/*todo lo que va aqui es para la imagen*/
+
+.centrarImagenPrevia {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+/* !Importante recordar que si son clases y que estan pintadas en javascript */
+#imagenPrevisualizada {
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    flex-shrink: 0;
+    max-width: 100%;
+    /* La imagen se ajustará al ancho máximo del contenedor */
+    height: 100%;
+    /* La altura se ajustará automáticamente para mantener la proporción */
+
+}
+
+#etiquetaDeImagen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 200px;
+    min-width: 200px;
+    max-height: 200px;
+    min-height: 200px;
+}
+
+.vistaPreviaProducto {
+    max-width: 100%;/* La imagen se ajustará al ancho máximo del contenedor */
+    height: auto;/* La altura se ajustará automáticamente para mantener la proporción */
+    align-items: center;
+    justify-content: center;
+}
+
+/* ?        Aqui comenzamos con la modicacion de los inputs despues de la imagen */
+
+.inputCostoProducto,
+.inputExistenciasProducto,
+.inputPresentacionProducto {
+    width: 100%;
+    height: 100%;
+}
+.costosYExistencias {
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+
+.textoLista {  /*Le damos un estilo a la lista*/
+    height: 100%;    /*altura de nuestro primer parrafo*/
+    width: 100%;    /*Ancho de los parrafos*/
+    text-align: center;
+    list-style: none;
+}
+
+.costosYExistencias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.presentacion{
+    margin-top: 5%;
+}
+
+.presentacionProducto{
+
+    margin: 5%;
+    
+}
+
+/*! Aqui agregamos los formatos al boton */
+
+/* .agregado {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+} */
+
+.agregado {
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+}
+
+
+
+.botonEnviar {
+    background-color: #F50087;
+    font-family: 'Montserrat', sans-serif;
+    /* font-weight:900; */
+    width: 200px;
+    height: 70px;
+    border-radius: 9px;
+    border-style: none;
+    font-size: 20px;
+    color: white;
+}
+
+@media screen and (max-width: 767px) {
+    .inputDescripcionProducto {
+        width: 80%;
+        height: 80%;
+        /* Tamaño más pequeño para dispositivos móviles */
+    }
+    .titulo h1{
+        font-size: 20px;
+    }
+    .contenedorProductos {
+        margin-left: 0%;
+        margin-right:0%;
+    }
+    .contenedorProductos p {
+        font-size: 13px;
+        /* text-align: start; */
+        /* align-items: center; */
+    }
+
+    .inputDelProducto,
+    .inputNombreProducto,
+    .categoria,
+    .marcas,
+    .inputCostoProducto,
+    .inputExistenciasProducto,
+    .inputPresentacionProducto {
+        width: 100%;
+        height: 40px;
+        /* Tamaño más pequeño para dispositivos móviles */
+    }
+
+
+  .titulodescripcionProducto p{
+    margin: 0%;
+    width: 100%;
+  }
+  .HiperVinculoDeProducto {
+    display: flex;
+    margin-top: 100px;
+    margin-left: 0%;
+    margin-right:0%;
+
+}
+.vinculo,.vinculoDos {
+
+height: 50%;
+}
+
+     .vinculo .nuevoProducto{
+    text-decoration: none;
+    font-size: 13px;
+    text-align: center;
+
+    }
+
+    .vinculoDos .nuevoCurso {
+        text-align: center;
+        font-size: 13px;
+        text-align: center;
+    }
+    .presentacion{
+        margin:0%;
+    }
+}

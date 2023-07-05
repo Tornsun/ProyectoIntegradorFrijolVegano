@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Nunito:wght@500&display=swap');
+
+*{
+    font-family: 'Nunito Sans', sans-serif;
+}
+/*!Aqui va la informacion del contenedor de cursos*/
+
+.contenedorProductos {
+    margin-left: 15%;
+    margin-right: 15%;
+    /* display: flex;
+ justify-content: center;
+    align-items: center; */
+
+}
+/* .row{
+    margin-left: 8%;
+    margin-right: 10%;
+} */
+.HiperVinculoDeProducto {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    margin-top: 140px;
+    height: 40%;
+}
+
+/*TODO: Aqui vamos a modificar todo lo que sea respecto al titulo */
+.vinculo,
+.vinculoDos {
+    width: 40%;
+    height: 40%;
+}
+
+.vinculo,
+.nuevoProducto {
+    color: black;
+    text-decoration: none;
+    font-size: 32px;
+    width: 40%;
+    height: 40%;
+}
+
+.vinculoDos,
+ .nuevoCurso {
+    color: black;
+    text-decoration: none;
+    font-size: 32px;
+    text-align: center;
+    width: 40%;
+    height: 40%;
+
+}
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 5%;
+    margin-top: 0%;
+    margin-bottom: 1%;
+}
+.titulo h1 {
+    margin: 5%;
+    font-size: 32px;
+    text-align: center;
+}
+
+
+#imagenPrevisualizada, #divCurso, #videoTotalCurso {
+    width: 300px;
+    height: 300px;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+      /* !Importante recordar que si son clases y que estan pintadas en javascript */
+
+   .vistaPreviaProducto,.inputdelCurso,.vistaPreviaVideo{
+    width: 300px;
+    height: 300px;
+    margin: 0%; 
+  } 
+
+  /* todo lo que va aqui es respecto a los parrafos */
+
+
+
+.contenedorProductos p {
+    height: 50%;    /*altura de nuestro primer parrafo*/
+    width: 40%;    /*Ancho de los parrafos*/
+    text-align: start;
+}
+
+.idproducto, /*Hace que nuestos items se acomoden en una sola fila*/
+ .divnombreProducto,
+.categoriaDeProductos { 
+    
+    height: 50%;    /*altura de nuestro primer parrafo*/
+    width: 90%;    /*Ancho de los parrafos*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Se acomodan verticalmente     */
+     margin: 5%; 
+}
+.descripcionDelProducto {
+    justify-content: center;
+    align-items: center;
+}
+.inputDescripcionProducto {
+    text-align: start;
+    border-radius: 5px;
+    border: 1.4px solid #000;
+    background: #FFF;
+    transition: background 0.8s;
+    /* box-shadow: 0 -70px -63px -60px #000; */
+    justify-content: center;
+}
+.inputDescripcionProducto {
+    /*!Estp es de la descripcion del prudcto*/
+    width: 78%;
+    height: 150px;
+    display: block; /* Convierte el elemento de entrada en un bloque para que ocupe todo el ancho disponible */
+    margin: auto;/* Centra horizontalmente el elemento de entrada dentro del contenedor */
+    margin-top: 0%;
+    overflow-wrap: break-word; /* Nueva propiedad añadida */
+    resize: vertical;  /* Permite redimensionar verticalmente el campo de texto */
+}
+.titulodescripcionProducto p {
+    margin-left: 140px;
+    margin-right: auto;
+    margin-bottom: 0%;
+    align-items: center;
+    justify-content: center;
+}
+.input1{
+    width: 78%;
+    height: 40px;
+}
+.informacionCursos{
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+/*!Aqui va la primera parte del los productos*/
+
+
+.inputDelProducto,
+.inputNombreProducto,
+.categoria,
+.marcas,
+.inputCostoProducto,
+.inputExistenciasProducto,
+.inputPresentacionProducto {
+
+    text-align: center;
+    border-radius: 5px;
+    border: 1.4px solid #000;
+    background: #FFF;
+    transition: background 0.8s;
+    /* box-shadow: 0 -70px -63px -60px #000; */
+    justify-content: center;
+
+}
+.inputDelProducto,
+.inputNombreProducto,
+.categoria,
+.marcas {
+    width: 400px;
+    height: 50px;
+}
+
+/* ?        Aqui comenzamos con la modicacion de los inputs despues de la imagen */
+
+.inputCostoProducto,
+.inputExistenciasProducto,
+.inputPresentacionProducto {
+    width: 100%;
+    height: 100%;
+}
+.costosYExistencias {
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+
+.textoLista {  /*Le damos un estilo a la lista*/
+    height: 100%;    /*altura de nuestro primer parrafo*/
+    width: 100%;    /*Ancho de los parrafos*/
+    text-align: center;
+    list-style: none;
+}
+
+.costosYExistencias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/*!Aqui va lo del boton*/
+
+.agregado {
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+}
+
+.botonAgregar {
+    background-color: #F50087;
+    font-family: 'Montserrat', sans-serif;
+    width: 148px;
+    height: 46px;
+    border-radius: 9px;
+    border-style: none;
+    font-size: 20px;
+    color: white;
+}
+
+.botonEnviar {
+    background-color: #F50087;
+    font-family: 'Montserrat', sans-serif;
+    width: 148px;
+    height: 46px;
+    border-radius: 9px;
+    border-style: none;
+    font-size: 20px;
+    color: white;
+}
