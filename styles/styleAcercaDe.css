@@ -5,6 +5,12 @@
     text-align: center;
 }
 
+.contenido{
+    margin-top:150px;
+    margin-bottom:150px;
+
+}
+
 .mision,
 .vision,
 .valores {

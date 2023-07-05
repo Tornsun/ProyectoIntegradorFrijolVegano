@@ -6,6 +6,10 @@
     font-family: 'Nunito Sans', sans-serif;
 }
 
+.margen{
+    margin-top:150px;
+}
+
 /* * Estilos para la sección del contenedor general  */
 .descripcionCompleta-curso{
     padding: 20px;

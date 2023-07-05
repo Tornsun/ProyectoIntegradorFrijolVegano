@@ -1,0 +1,11 @@
+[
+    {
+        "id": "0",
+        "titulo": "Bases de la comida vegana",
+        "src": "../assets/img/ImagenesCursos/Banner1.png",
+        "descripcion": "Aprenderás a crear deliciosos platillos veganos desde cero. Aprenderás a combinar verduras, frutas, hongos, especias y aceites para explotar el sabor en tus creaciones culinarias.",
+        "detalles": "Duración: 3 horas (divididas en una sesión única). Módulos: El curso consta de 4 módulos temáticos que cubren los fundamentos de la cocina vegana y la preparación de diversos tipos de platos. Requisitos: No se requieren conocimientos previos, ya que este curso está abierto a principiantes y a cualquier persona interesada en la cocina vegana. Material proporcionado: Se te proporcionará un manual con las recetas y consejos prácticos para que puedas seguir practicando en casa.",
+        "aprendizaje": "Introducción al veganismo y sus beneficios para la salud y el medio ambiente. Conocimiento de los ingredientes esenciales en la cocina vegana y cómo utilizarlos. Técnicas de preparación de alimentos veganos, incluyendo cortes, marinados y sazonado. Recetas básicas para desayunos, almuerzos, cenas y postres veganos. Consejos sobre la planificación de comidas y la incorporación de una alimentación vegana en tu estilo de vida diario.",
+        "estrellas": "4"
+    }
+]
