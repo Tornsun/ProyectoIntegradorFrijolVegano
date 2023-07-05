@@ -3,17 +3,9 @@
 
 
 body {
-    font-size: 15px;
+    font-size: 17px;
     font-family: 'Nunito', sans-serif;
-
-
 }
-
-
-/*font-family: 'Nunito', sans-serif;
-
-font-family: 'Montserrat', sans-serif;
-font-family: 'Nunito', sans-serif;*/
 
 .boton {
     background-color: #F50087;
@@ -25,22 +17,15 @@ font-family: 'Nunito', sans-serif;*/
     font-size: 20px;
 }
 
-body {
-    font-size: 17px;
-    font-family: 'Nunito', sans-serif;
-    /* padding-inline-start: 20px;
-    padding-inline-end: 20px;
-    padding-top: 20px; */
-}
-
 .contenedorFormularioContacto{
     margin-top: 140px;
 }
 
-/*font-family: 'Nunito', sans-serif;
-    
-    font-family: 'Montserrat', sans-serif;
-    font-family: 'Nunito', sans-serif;*/
+
+
+.textoTarjetas{
+    text-align: justify;
+}
 
 .boton {
     background-color: #F50087;
@@ -53,21 +38,49 @@ body {
     color: white;
 }
 
-#boton-container {
-    margin: 30px;
-
+.contenedorCajaDudas{
+    margin-bottom: 45px;
 }
 
 .titulo-dudas {
-    padding-left: 20px;
+    text-align: center;
+}
 
+.contenedorDudas{
+    margin-left: 6%;
+    margin-right: 6%;
+}
+
+.contenedorCajaContacto{
+    margin-bottom: 45px;
 }
 
 .titulo-contactanos {
     padding-left: 20px;
+    text-align: center;
+}
 
+.contenedorContactanos{
+    margin-left: 6%;
+    margin-right: 6%;
 }
 
 .titulo-escribenos {
-    padding-left: 20px;
+    text-align: center;
+}
+
+.contenedorFormularioContactanos{
+    margin-left: 6%;
+    margin-right: 6%;
+}
+
+.contendorBotonContactanos{
+    margin-top: 10px;
+}
+
+.boton{
+    margin: 30px;
+    margin-left: 0;
+    width: 80%;
+    height: 60px;
 }
