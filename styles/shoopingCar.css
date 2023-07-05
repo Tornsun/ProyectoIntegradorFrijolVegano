@@ -1,9 +1,20 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap');
+
+* {
+    font-family: 'Nunito Sans', sans-serif;
+    
+}
 
 
 h1 {
     margin-left: 30px;
     /* Ajusta el valor del margen */
+}
+
+.contenido{
+    margin-top:150px;
+    margin-bottom:150px;
 }
 
 .imagen-izquierda {
@@ -17,12 +28,6 @@ h1 {
 
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap');
-
-* {
-    font-family: 'Nunito Sans', sans-serif;
-    
-}
 
 .boton-item {
     background-color: #F50087;
