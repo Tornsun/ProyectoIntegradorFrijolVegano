@@ -3,39 +3,183 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>Crear un nuevo Curso </title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/crearCursos.css">
     </head>
-    <body>
-        <!-- Aqui empezaos con el formulario de agregar un Curso -->
-        <div class="contenedorCurso" display="none" ;>
-            <form action="">
-                <p> ID del Curso</p>
-                <input type="text">
-                <p>Nombre del Curso</p>
-                <input type="text">
-                <p>Categoria</p>
-                <select name="categorias" id="categoria">
-                    <option value="chile">Chiles</option>
-                    <option value="Plato">Platos Fuertes</option>
-                    <option value="congelados">Alimentos Congelados</option>
-                    <option value="preparados">Alimentos Preparados</option>
-                    <option value="mexicanisimos">Platos Tipicos</option>
-                    <option value="lacteos">preparados</option>
-                </select>
+    <header>
+        <nav class="navBar">
+            <div class="navBarSuperior">
+                <!--Menú hamburguesa-->
+                <div class="menu-hamburguesa">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list"
+                        viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                    </svg>
+                </div>
+                <!--Termina menú hamburguesa-->
     
-                Empezamos con la modificacion de la imagen previa del producto
+                <!--Logo Frijol Vegano-->
+                <div class="logo">
+                    <a href="../index.html"><img src="../assets/img/logo.png"></a>
+                </div>
+                <!--TerminaLogo Frijol Vegano-->
+    
+                <!--Barra de búsqueda-->
+                <div class="contenedor-barra-busqueda">
+                    <input class="barra-buscar" type="textbox" placeholder="Buscar">
+                    <div class="boton-buscar">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-search" viewBox="0 0 16 16">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                        </svg>
+                    </div>
+                </div>
+                <!--Termina Barra de búsqueda-->
+    
+                <!--Logo usuario y carrito-->
+                <div class="logos">
+                    <a href="./login.html" target="_blank">
+                        <svg class="logo-usuario" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                            class="bi bi-person-fill" viewBox="0 0 16 16">
+                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                        </svg>
+                    </a>
+                    <a href="../html/productosGMG.html">
+                        <svg class="logo-carrito" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-cart3"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                        </svg>
+                    </a>
+                </div>
+                <!--Termina Logo usuario y carrito-->
+            </div>
+            <!--Termina navbar superior-->
+    
+            <!--Navbar secundaria-->
+            <div class="navBarInferior"> <!--No es responsiva-->
+                <ul class="nav-links">
+                    <li id="id-barra-buscar-menu-hamburguesa">
+                        <div class="contenedor-barra-busqueda-menu-hamburguesa">
+                            <input class="barra-buscar-menu-hamburguesa" type="textbox" placeholder="Buscar">
+                            <div class="boton-buscar-menu-hamburguesa">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-search" viewBox="0 0 16 16">
+                                    <path
+                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="./productos.html">Productos</a></li>
+                    <li><a href="./acercaDeNosotros.html"> Nosotros</a></li>
+                    <li><a href="./contactanos.html">Contacto</a></li>
+                    <li><a href="./crearProducto.html">Nuevo Producto</a></li>
+                </ul>
+            </div>
+            <!--Termina Navbar secundaria-->
+        </nav>
+    </header>
+    <body>
+        <body>
+            <div class="HiperVinculoDeProducto">
+                <div class="vinculo">
+                    <a class="nuevoProducto" href="./crearProducto.html" target="_blank">Agregar un nuevo producto</a>
+                </div>
+                <div class="vinculoDos">
+                    <a class="nuevoCurso" href="./crearUnNuevoCurso.html" target="_blank">Agregar un nuevo curso</a>
+                </div><!--Cierre del segundo boton -->
+            </div>
+                <!--Aqui empezaos con el formulario de agregar un producto-->
+       
+          
+
+     <!--Div que contiene toda la tarjeta de agregar producto-->
+        <div class="titulo">
+            <h1>Agregar un nuevo Curso</h1>
+        </div> <!--Cierre titulo -->
+        <div class="contenedorProductos">
+<div class="a">
+    <!--Aqui empezamos con el formulario de agregar un producto-->
+    <form class="formulario">
+        <!-- <div class="camposProducto"> Aqui empezaos con el formulario de agregar un producto -->
+                <div class="idproducto">
+                    <p> ID del producto</p>
+                    <input type="text" maxlength="10" name="identificador" class="inputDelProducto"
+                        placeholder="ID del producto">
+                </div>
+        <!-- </div>Cierre del campo de llenado -->
+        <div class="divnombreProducto">
+            <p>Nombre del producto</p>
+            <input type="text" name="nombreProducto" class="inputNombreProducto" placeholder="Nombre del producto">
+        </div>
+        <div class="categoriaDeProductos">
+            <p>Categoria</p>
+            <select name="categorias" class="categoria">
+                <option value="categoria">Categorias</option>
+                <option value="chile">Chiles</option>
+                <option value="Plato">Platos Fuertes</option>
+                <option value="congelados">Alimentos Congelados</option>
+                <option value="preparados">Alimentos Preparados</option>
+                <option value="mexicanisimos">Platos Tipicos</option>
+            </select>
+        </div>
+        <div class="superDescripcionProductos">
+            <div class="titulodescripcionProducto">
+                <p>Descripcion del Producto</p>
+                </div>
+                <div class="descripcionDelProducto">
+                <textarea type="text" maxlength="300" name="descripcion" class="inputDescripcionProducto"
+                    placeholder="Descripcion del producto"></textarea>
+            </div>
+        </div>
+    
+    
+    
+                <!-- !Empezamos con la modificacion de la imagen previa del producto -->
                 <p>Imagen Previa</p>
                 <input type="file" id="inputdelCurso" accept="image/*">
                 <div id="divCurso"></div>
     
-                <p>Descripcion del Curso</p>
-                <input type="text">
+
+                <div class="costosYExistencias">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-3 col-lg-3">
+                            <li class="textoLista">Costo del curso</li>
+                        </div>
+                        <div class="col-sm-12 col-md-3 col-lg-3">
+                            <input type="text" name="costo" class="inputCostoProducto" placeholder="Costo del curso">
+                        </div>
+        
+                        <div class=" col-sm-12 col-md-3 col-lg-3">
+                            <li class="textoLista">Horas del curso</li>
+                        </div>
+                        <div class="col-sm-12 col-md-3 col-lg-3">
+                            <input type="text" maxlength="300" name="existencias" class="inputExistenciasProducto"
+                                placeholder="">
+                        </div>
+                </div>
+            </div>
+               <div class="informacionCursos">
                 <p>Detalles del Curso</p>
-                <input type="text">
+                <li class="listaDeinputDetalles1"><input type="text"  class="input1" placeholder="duracion"></li>
+                <li class="listaDeinputDetalles2"><input type="text" class="input1" placeholder="modulos"></li>
+                <li class="listaDeinputDetalles3"><input type="text" class="input1" placeholder="requisitos"></li>
+                <li class="listaDeinputDetalles4"><input type="text"class="input1" placeholder="material"></li>
+                <li class="listaDeinputDetalles5"><input type="text"class="input1" ></li>
                 <p>Que aprenderas en el Curso</p>
-                <input type="text">
-                <p>Costo del producto</p>
-                <input type="text">
+                <li class="listaQueAprenderas1"><input type="text"class="input1" placeholder="duracion"></li>
+                <li class="listaQueAprenderas2"><input type="text"class="input1" placeholder="modulos"></li>
+                <li class="listaQueAprenderas3"><input type="text"class="input1" placeholder="requisitos"></li>
+                <li class="listaQueAprenderas4"><input type="text"class="input1" placeholder="material"></li>
+                <li class="listaQueAprenderas5"><input type="text"class="input1" ></li>
+          </div>
     
                 <p>Video del curso</p>
                 <input type="file" id="videoCurso" accept="video/*, image/*">
@@ -43,11 +187,12 @@
     
             </form>
         </div> 
-        Cierre del formulario de los cursos 
-    </div>  Cierre de mi contenedor
+    </div>
+        <!-- Cierre del formulario de los cursos  -->
+    <!-- </div>  Cierre de mi contenedor -->
 
-    <div class="Agregado"> 
-          <input type="submit" id="botonAgregar" value="Agregar">
+    <div class="agregado">
+        <input type="submit" class="botonEnviar" value="Agregar Producto">
     </div>
 
     </body>
