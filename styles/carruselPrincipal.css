@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0px;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.carrusel-principal{
+    text-align: center;
+}
+
+/* Elementos que UNICAMENTE afectan al componente del carrusel */
+/* * Se centran los elementos */
+.carrusel-individual{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* * Se le da estilo a los botones */
+.carousel-control-prev{
+    background: url("../assets/img/hojaIzquierda.svg");
+    margin-left: -120px;
+}
+
+.carousel-control-next{
+    background: url("../assets/img/hojaDerecha.svg");
+    margin-right: -120px;
+}
+
+/* * Se requiero trabajar con medidas especificas debido a que las posiones de las hojas(botones) son diferentes */
+/* * La configuración es la misma en ambos sin embargo los valores son diferentes por lo que se tuvo que duplicar estilos */
+
+/* * Estilos aplicables para versiones tablet y pc */
+@media (min-width: 450px) and (max-width: 1599px) {
+    #carouselExampleControls button{
+        /* * Se le da la apariencia al boton y se configura la imagen de la hoja */
+        z-index: 3;
+        border: none;
+        background-repeat: no-repeat;
+        background-size: 50%;
+        background-position: center;
+        opacity: 100%;
+    }
+    /* * Se le da una animación al boton */
+    #carouselExampleControls button:hover{
+        transform: translateY(-15px);
+        background-position: center;
+    }
+    /* * Se configura el tamaño de la imagen, esta configuración puede irse modificadno ya que se implemente el componente en la página principal */
+    .carousel-item, .active{
+        height: 200px;
+        overflow: hidden;
+        position: relative;
+    }
+    /* * Se especifica la separación de las de las hojas en relación a las imagenes del carrusel */
+    .carousel-control-prev{
+        margin-left: -70px;
+    }
+    
+    .carousel-control-next{
+        margin-right: -70px;
+    }
+}
+/* * Estilos aplicables para versiones móviles */
+@media (max-width: 450px) {
+    .carousel-item, .active{
+        width: 300px;
+        height: 300px;
+        overflow: hidden;
+        position: relative;
+    }
+    #carouselExampleControls button{
+        z-index: 3;
+        border: none;
+        width: 70px;
+        background-repeat: no-repeat;
+        background-size: 50%;
+        background-position: center;
+        opacity: 100%;
+    }
+    #carouselExampleControls button:hover{
+        transform: translateY(-15px);
+        background-position: center;
+    }
+    
+    .carousel-control-prev{
+        margin-left: -60px;
+    }
+    
+    .carousel-control-next{
+        margin-right: -60px;
+    }
+}
