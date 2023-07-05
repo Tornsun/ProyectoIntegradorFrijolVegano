@@ -183,7 +183,6 @@
     .checkBoxEnOferta, .checkBoxPrecio{
         display:flex;
         flex-wrap:wrap;
-
     }
 
     .checkBoxPrecio,

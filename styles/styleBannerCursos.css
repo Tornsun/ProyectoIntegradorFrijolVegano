@@ -1,0 +1,51 @@
+.contenedor-cursos{
+    display: flex;
+}
+
+.descripcion-curso{
+    margin-bottom: 0px;
+}
+
+.contenedor-banner img{
+    position:relative;
+}
+
+.etiqueta-promo{
+    position:absolute;
+}
+
+.contenedor-estrellas{
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+}
+
+.estrellas{
+    margin:3px;
+    color:rgb(182, 157, 17);
+}
+
+.contenedor-calificacion{
+    display:flex;
+    align-items: center;
+}
+
+.calificacion{
+    margin-bottom:0px;
+    padding-left:10px;
+    color:rgb(182, 157, 17);
+}
+
+.contenedor-precio-curso{
+    align-items: center;
+}
+
+.precio-cantidad, .precio-cantidad-descuento{
+    text-decoration: none;
+    color:black;
+}
+
+.precio-cantidad-descuento{
+    font-size: 15px;;
+    
+}
