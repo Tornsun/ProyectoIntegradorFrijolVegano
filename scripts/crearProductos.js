@@ -33,7 +33,7 @@ formulario.onsubmit = function(e) {
   var $marcas = document.querySelector(".marcas").value;
   //!Ojo aqui que solo es una variable para que guarde la imagen
   // var $$img = document.getElementById('imagenPrevia').value;
-  var $$img = $img.src;
+   var $$img = $img.src;
   var $inputDescripcionProducto = document.querySelector(".inputDescripcionProducto").value;
   var $inputCostoProducto = document.querySelector(".inputCostoProducto").value;
   var $inputExistenciasProducto = document.querySelector(".inputExistenciasProducto").value;
@@ -48,7 +48,7 @@ formulario.onsubmit = function(e) {
 //   console.log("Su costo es", $inputCostoProducto);
 //   console.log("El numero de existencias  es", $inputExistenciasProducto);
 //   console.log("Su presentacion es de", $inputPresentacionProducto);
-// alert("si entra prra");
+// alert("si entra ");
 
 //Creamos una objeto que nos guarde toda la informacion
 

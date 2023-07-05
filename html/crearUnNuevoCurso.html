@@ -7,7 +7,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles/style.css">
-    <link rel="stylesheet" href="../styles/crearProducto.css">
+    <link rel="stylesheet" href="../styles/crearCursos.css">
     </head>
     <header>
         <nav class="navBar">
@@ -89,44 +89,97 @@
     <body>
         <body>
             <div class="HiperVinculoDeProducto">
-                <div class="titulo">
+                <div class="vinculo">
                     <a class="nuevoProducto" href="./crearProducto.html" target="_blank">Agregar un nuevo producto</a>
-                </div> 
-                <div class="tituloDos"> 
+                </div>
+                <div class="vinculoDos">
                     <a class="nuevoCurso" href="./crearUnNuevoCurso.html" target="_blank">Agregar un nuevo curso</a>
                 </div><!--Cierre del segundo boton -->
             </div>
                 <!--Aqui empezaos con el formulario de agregar un producto-->
-        <div class="contenedorProductos"> <!--Div que contiene toda la tarjeta de agregar producto-->
-        
-            <form action="">
-                <p> ID del Curso</p>
-                <input type="text">
-                <p>Nombre del Curso</p>
-                <input type="text">
-                <p>Categoria</p>
-                <select name="categorias" id="categoria">
-                    <option value="chile">Chiles</option>
-                    <option value="Plato">Platos Fuertes</option>
-                    <option value="congelados">Alimentos Congelados</option>
-                    <option value="preparados">Alimentos Preparados</option>
-                    <option value="mexicanisimos">Platos Tipicos</option>
-                    <option value="lacteos">preparados</option>
-                </select>
+       
+          
+
+     <!--Div que contiene toda la tarjeta de agregar producto-->
+        <div class="titulo">
+            <h1>Agregar un nuevo Curso</h1>
+        </div> <!--Cierre titulo -->
+        <div class="contenedorProductos">
+<div class="a">
+    <!--Aqui empezamos con el formulario de agregar un producto-->
+    <form class="formulario">
+        <!-- <div class="camposProducto"> Aqui empezaos con el formulario de agregar un producto -->
+                <div class="idproducto">
+                    <p> ID del producto</p>
+                    <input type="text" maxlength="10" name="identificador" class="inputDelProducto"
+                        placeholder="ID del producto">
+                </div>
+        <!-- </div>Cierre del campo de llenado -->
+        <div class="divnombreProducto">
+            <p>Nombre del producto</p>
+            <input type="text" name="nombreProducto" class="inputNombreProducto" placeholder="Nombre del producto">
+        </div>
+        <div class="categoriaDeProductos">
+            <p>Categoria</p>
+            <select name="categorias" class="categoria">
+                <option value="categoria">Categorias</option>
+                <option value="chile">Chiles</option>
+                <option value="Plato">Platos Fuertes</option>
+                <option value="congelados">Alimentos Congelados</option>
+                <option value="preparados">Alimentos Preparados</option>
+                <option value="mexicanisimos">Platos Tipicos</option>
+            </select>
+        </div>
+        <div class="superDescripcionProductos">
+            <div class="titulodescripcionProducto">
+                <p>Descripcion del Producto</p>
+                </div>
+                <div class="descripcionDelProducto">
+                <textarea type="text" maxlength="300" name="descripcion" class="inputDescripcionProducto"
+                    placeholder="Descripcion del producto"></textarea>
+            </div>
+        </div>
     
-                Empezamos con la modificacion de la imagen previa del producto
+    
+    
+                <!-- !Empezamos con la modificacion de la imagen previa del producto -->
                 <p>Imagen Previa</p>
                 <input type="file" id="inputdelCurso" accept="image/*">
                 <div id="divCurso"></div>
     
-                <p>Descripcion del Curso</p>
-                <input type="text">
+
+                <div class="costosYExistencias">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-3 col-lg-3">
+                            <li class="textoLista">Costo del curso</li>
+                        </div>
+                        <div class="col-sm-12 col-md-3 col-lg-3">
+                            <input type="text" name="costo" class="inputCostoProducto" placeholder="Costo del curso">
+                        </div>
+        
+                        <div class=" col-sm-12 col-md-3 col-lg-3">
+                            <li class="textoLista">Horas del curso</li>
+                        </div>
+                        <div class="col-sm-12 col-md-3 col-lg-3">
+                            <input type="text" maxlength="300" name="existencias" class="inputExistenciasProducto"
+                                placeholder="">
+                        </div>
+                </div>
+            </div>
+               <div class="informacionCursos">
                 <p>Detalles del Curso</p>
-                <input type="text">
+                <li class="listaDeinputDetalles1"><input type="text"  class="input1" placeholder="duracion"></li>
+                <li class="listaDeinputDetalles2"><input type="text" class="input1" placeholder="modulos"></li>
+                <li class="listaDeinputDetalles3"><input type="text" class="input1" placeholder="requisitos"></li>
+                <li class="listaDeinputDetalles4"><input type="text"class="input1" placeholder="material"></li>
+                <li class="listaDeinputDetalles5"><input type="text"class="input1" ></li>
                 <p>Que aprenderas en el Curso</p>
-                <input type="text">
-                <p>Costo del producto</p>
-                <input type="text">
+                <li class="listaQueAprenderas1"><input type="text"class="input1" placeholder="duracion"></li>
+                <li class="listaQueAprenderas2"><input type="text"class="input1" placeholder="modulos"></li>
+                <li class="listaQueAprenderas3"><input type="text"class="input1" placeholder="requisitos"></li>
+                <li class="listaQueAprenderas4"><input type="text"class="input1" placeholder="material"></li>
+                <li class="listaQueAprenderas5"><input type="text"class="input1" ></li>
+          </div>
     
                 <p>Video del curso</p>
                 <input type="file" id="videoCurso" accept="video/*, image/*">
@@ -134,11 +187,12 @@
     
             </form>
         </div> 
-        Cierre del formulario de los cursos 
-    </div>  Cierre de mi contenedor
+    </div>
+        <!-- Cierre del formulario de los cursos  -->
+    <!-- </div>  Cierre de mi contenedor -->
 
-    <div class="Agregado"> 
-          <input type="submit" id="botonAgregar" value="Agregar">
+    <div class="agregado">
+        <input type="submit" class="botonEnviar" value="Agregar Producto">
     </div>
 
     </body>

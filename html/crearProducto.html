@@ -89,7 +89,7 @@
 </header>
 
 <body>
-
+<div>
     <div class="HiperVinculoDeProducto">
         <div class="vinculo">
             <a class="nuevoProducto" href="./crearProducto.html" target="_blank">Agregar un nuevo producto</a>
@@ -150,8 +150,7 @@
             </div>
             <div class="descripcionDelProducto">
             <textarea type="text" maxlength="300" name="descripcion" class="inputDescripcionProducto"
-                placeholder="Descripcion del producto">
-            </textarea>
+                placeholder=" Descripcion del producto"></textarea>
         </div>
     </div>
 
@@ -181,10 +180,10 @@
         <div class="costosYExistencias">
             <div class="row">
                 <div class="col-sm-12 col-md-3 col-lg-3">
-                    <li class="textoLista">Costo del producto</li>
+                    <li class="textoLista">Precio del producto</li>
                 </div>
                 <div class="col-sm-12 col-md-3 col-lg-3">
-                    <input type="text" name="costo" class="inputCostoProducto" placeholder="Costo/Precio del producto">
+                    <input type="text" name="costo" class="inputCostoProducto" placeholder="Precio">
                 </div>
 
                 <div class=" col-sm-12 col-md-3 col-lg-3">
@@ -192,20 +191,20 @@
                 </div>
                 <div class="col-sm-12 col-md-3 col-lg-3">
                     <input type="text" maxlength="300" name="existencias" class="inputExistenciasProducto"
-                        placeholder="Existencias del producto">
+                        placeholder="Existencias">
                 </div>
-            </div>
-            <div class=" col-sm-12 col-md-3 col-lg-3">
+            
+            <div class="presentacionProducto col-sm-12 col-md-3 col-lg-3">
                 <li class="textoLista">Presentacion de producto</li>
             </div>
-            <div class="col-sm-12 col-md-6 col-lg-6">
+            <div  class=" presentacion  col-md-6 col-lg-6">
                 <input type="text" maxlength="300" name="presentacion" class="inputPresentacionProducto"
-                    placeholder="Presentacion en gramaje del producto">
+                    placeholder="Presentacion del producto">
             </div>
-
         </div>
+    </div>
         <div class="agregado">
-        <input type="submit" class="botonEnviar" value="Enviar">
+        <input type="submit" class="botonEnviar" value="Agregar Producto">
     </div>
     </form>
     </div>
