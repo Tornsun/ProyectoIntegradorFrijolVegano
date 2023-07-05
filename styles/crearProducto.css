@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Nunito:wght@500&display=swap');
+
+*{
+    font-family: 'Nunito Sans', sans-serif;
+}
+.contenedorProductos{
+margin-left: 20%;
+margin-right: 20%;
+}
+          /*TODO: Aqui vamos a modificar todo lo que sea respecto al titulo */
+.titulo{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    margin-top: 140px;
+
+}
+.titulo h1{
+    margin: 5%;
+    font-size: 32px;
+    text-align: center;
+}
+
+
+
+         /* todo lo que va aqui es respecto a los input */
+
+
+.idproducto,
+.divnombreProducto,
+.categoriaDeProductos,
+.informacionFile{
+    display: flex;
+    justify-content: center;
+     align-items: center; /* Se acomodan verticalmente     */
+    margin: 5%; 
+    
+}
+.descripcionDelProducto{
+    justify-content: center;
+     align-items: center;
+     margin: 8%;
+     margin-bottom: 5%; 
+}
+
+.inputDescripcionProducto{
+    width: 85%;
+    height: 200px;
+    display: block; /* Convierte el elemento de entrada en un bloque para que ocupe todo el ancho disponible */
+    margin: 5% auto; /* Centra horizontalmente el elemento de entrada dentro del contenedor */
+
+}
+
+
+
+
+
+
+/* todo lo que va aqui es respecto a los parrafos */
+p {
+    height: 50%; /*altura de nuestro primer parrafo*/
+    width: 40%; /*Ancho de los parrafos*/
+    text-align: start;
+      } 
+
+
+
+
+/*todo lo que va aqui es para la imagen*/
+
+.centrarImagenPrevia{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+/* !Importante recordar que si son clases y que estan pintadas en javascript */
+#imagenPrevisualizada{
+    border: 1px solid #ccc;
+    display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 600px;
+    height: 200px;
+flex-shrink: 0; 
+  }
+  
+  .vistaPreviaProducto{
+    width: 600px;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+
+  } 
+
+
+ /*Todo este bloque hace que los input tengan esa forma redonda*/
+ .inputDelProducto, 
+ .inputNombreProducto,
+ .categoria,
+ .inputDescripcionProducto,
+ .inputCostoProducto,
+ .inputExistenciasProducto{
+
+text-align: center;
+border-radius: 15px;
+border: 1.4px solid #000;
+background: #FFF;
+transition: background 0.8s;
+/* box-shadow: 0 -70px -63px -60px #000; */
+justify-content: center;
+
+} 
+option{
+    text-align: center;
+}
+.categoria{
+    width: 400px; 
+    height: 50px;
+}
+
+.inputDelProducto,
+.inputNombreProducto{
+    width: 400px; 
+    height: 70px; 
+
+}
+
+.inputCostoProducto,
+.inputExistenciasProducto{
+    width: 100%;
+    height: 100%;
+}
+
+
+   /* Con esto centramos el boton de agregar a nuestro documento */
+.agregado{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+} 
+.costosYExistencias{
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+
+.textoLista{
+    height: 50%; /*altura de nuestro primer parrafo*/
+    width: 100%; /*Ancho de los parrafos*/
+    text-align: center;
+    list-style: none;
+}
+.costosYExistencias{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+.Agregado{
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;    
+}
+.botonAgregar{
+    background-color: #F50087;
+    font-family: 'Montserrat', sans-serif;
+    width: 148px;
+    height: 46px;
+    border-radius: 9px;
+    border-style: none;
+    font-size: 20px; 
+      color: white;
+}

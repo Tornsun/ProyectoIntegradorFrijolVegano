@@ -8,8 +8,7 @@
     box-sizing: border-box;
 }
 
-/*Inicia navbar*/
-/*Inicia navbar superior*/
+/* /Inicia navbar/ /Inicia navbar superior/  */
 .navBar {
     top: 0;
     width: 100%;
@@ -34,7 +33,7 @@
     filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.3));
 }
 
-/*Inicia barra búsqueda*/
+/* /Inicia barra búsqueda/  */
 .contenedor-barra-busqueda {
     width: 50%;
     position: relative;
@@ -65,8 +64,7 @@
     top: 0;
 }
 
-/*Termina barra búsqueda*/
-
+/* /Termina barra búsqueda/  */
 .logos {
     align-items: end;
     display: flex;
@@ -109,9 +107,7 @@
     filter: drop-shadow(0px 5px 2px rgba(0, 0, 0, 0.3));
 }
 
-/*Termina navbar superior*/
-
-/*Inicia Navbar inferior*/
+/* /Termina navbar superior/ /Inicia Navbar inferior/  */
 .navBarInferior {
     background-color: #FBE0D3;
     top: 85px;
@@ -141,40 +137,81 @@
     display: none;
 }
 
-/*Termina navbar inferior*/
-/*Termina navbar*/
-
-/*Inicia contenido*/
-
+/* /Termina navbar inferior/ /Termina navbar/ /Inicia contenido/  */
 .contenido {
-    padding-top: 85px;
+    padding-top: 150px;
 }
 
-/*Carrusel*/
-.contenedor-carrusel {
-    margin: 150px 50px 50px 50px;
+/* /Inicia menu opciones/  */
+.menu-opciones {
+    display: flex;
+    margin-left: 250px;
+    gap: 50px;
 }
 
-/*Subtítulo de la sección productos*/
+.menu-opciones a {
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+}
+
+.primeraSeccion {
+    border-bottom: 2px solid black;
+
+}
+
+.segundaSeccion {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin-top: 25px;
+}
+
+
+.checkBoxPrecio,
+.checkBoxMarca,
+.checkBoxEnOferta {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+.checkBoxPrecio p,
+.checkBoxMarca p {
+    font-weight: bold;
+}
+
+.checkBoxEnOferta {
+    margin-top: 25px;
+}
+
+/*Termina menu opciones*/ /*Subtítulo de la sección productos*/ 
 .contenedor-subtitulo {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 0px;
 }
 
 .subtitulo {
     font-size: 50px;
 }
 
-/*Aquí empieza codigo del body del tutorial*/
+/*Aquí empieza codigo del body del tutorial*/ 
+.terceraSeccion {
+    margin-right: 50px;
+}
 
 .contenedor-tarjetas {
     width: 100%;
     max-width: 1000px;
-    /*height:430px; esto es lo que hace que se sobrepongan los elementos*/
+    /*height: 430px; esto es lo que hace que se sobrepongan los elementos*/ 
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin: auto;
+    border-left: 2px solid black;
+
 }
 
 .contenedor-tarjetas .card {
@@ -217,9 +254,7 @@
     height: 50px;
 }
 
-/*Aqui termina el codigo del body del tutorial*/
-
-/*Inicia footer*/
+/* /Aqui termina el codigo del body del tutorial/ /Inicia footer/  */
 .footer {
     background-color: #EE692A;
     color: white;
@@ -258,18 +293,16 @@
     min-width: 180px;
 }
 
-/*Termina footer*/
-
-@media screen and (max-width:991.00px) {
+/* /Termina footer/ */
+ @media screen and (max-width:991.00px) {
 
     .contenido {
         padding-top: 50px;
         display: block;
-        /*Falta agregar un bloqueo de la pantalla de fondo*/
+        /* /Falta agregar un bloqueo de la pantalla de fondo/ */
     }
 
-    /*Inicia navbar*/
-
+    /* /Inicia navbar/  */
     .navBarSuperior {
         position: relative;
     }
@@ -310,32 +343,25 @@
         display: none;
     }
 
-    /*Inicia Barra de búsqueda de menú hamburguesa*/
+    /* /Inicia Barra de búsqueda de menú hamburguesa/  */
     #id-barra-buscar-menu-hamburguesa {
-        display: block;
-        /*Muestra el elemento que estaba escondido*/
-        align-items: center;
+        display: block; /*Muestra el elemento que estaba escondido*/
+         align-items: center;
 
     }
 
     .contenedor-barra-busqueda-menu-hamburguesa {
-        position: relative;
-        /*Es necesario para que el botón de buscar se ancle correctamente*/
-        width: 300px;
-        /*Hace el input más ancho*/
+        position: relative; /*Es necesario para que el botón de buscar se ancle correctamente*/ 
+        width: 300px;/*Hace el input más ancho*/
     }
 
     .barra-buscar-menu-hamburguesa {
-        padding-inline-end: 30%;
-        /*Ayuda a que el texto no se pierda detrás del botón de búsqueda*/
+        padding-inline-end: 30%;/*Ayuda a que el texto no se pierda detrás del botón de búsqueda*/ 
         padding-inline-start: 3%;
 
     }
 
-    /*Termina Barra de búsqueda de menú hamburguesa*/
-
-    /*Termina navbar*/
-
+    /* /Termina Barra de búsqueda de menú hamburguesa/ /Termina navbar/  */
     .contenedor-carrusel {
         margin: 75px 100px 25px 100px;
     }
@@ -343,15 +369,12 @@
 }
 
 @media screen and (max-width:700px) {
-
-    /*Inicio menu hamburguesa*/
+    /* /Inicio menu hamburguesa/  */
     .nav-links {
         width: 100%;
     }
 
-    /*Termina menu hamburguesa*/
-
-    /*Inicia footer*/
+    /* /Termina menu hamburguesa/ /Inicia footer/  */
     .footer {
         display: flex;
         flex-direction: column;
@@ -369,5 +392,5 @@
     }
 
 
-    /*Termina footer*/
+    /* /Termina footer/ */
 }

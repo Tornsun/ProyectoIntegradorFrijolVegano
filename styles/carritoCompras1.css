@@ -1,0 +1,7 @@
+.imagen-izquierda {
+    float: left;
+    margin-right: 10px; /* Opcional: Agrega un margen a la derecha de la imagen */
+    width: 200px; /* Establece el ancho deseado para la imagen */
+  height: auto; /* Mantiene la proporción de aspecto original de la imagen */
+}
+  

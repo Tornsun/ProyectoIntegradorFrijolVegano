@@ -4,13 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LogIn</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" href="../styles/style.css">
-    <link rel="stylesheet" href="../styles/styleLogIn.css">
+    <title>Curso</title>
+    <!-- Enlace con estilos CSS externos bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!-- Finaliza conexión con Bootstrap -->
+    <!-- Enlace a libreria de Slick, verificar recurso: -->
+    <!-- https://kenwheeler.github.io/slick/#getting-started -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!-- Finaliza conexión -->
+    <!-- Enlace a libreria para iconos de uso libre -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Finaliza conexión con libreria -->
+    <!-- Conexión con JQuery -->
+    <!-- !Se tuvo que colocar al principio antes de la hoja de estilos y el script.js para que se aplique de primero -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <!-- Finaliza conexión con JQuery -->
+    <!-- Enlace con estilos CSS internos -->
+    <link rel="stylesheet" href="../styles/plantillaCursos.css">
+
+    <link rel="stylesheet" href="../styles/styleNavBar.css">
+
+    <!-- Finaliza conexión con estilos internos -->
 </head>
 
 <body>
+
     <header>
         <nav class="navBar">
             <div class="navBarSuperior">
@@ -88,62 +109,30 @@
         </nav>
     </header>
 
+    <main>
+        <!-- Aqui inicia la sección de la descripción del curso incluyendo reseñas -->
+        <section class="descripcionCompleta-curso">
 
-
-
-
-
-    <div class="container-fluid contenedorRegistro">
-        <div class="row">
-            <div class="col-md-6 col-lg-6 d-none d-lg-block d-md-block">
-                <img class="imagenRegistro" src="../assets/img/ChileRelleno.jpg">
-            </div>
-
-            <div class="col-sm-12 col-md-6 col-lg-6">
-                <div class="contenedorAlineadorRegistro">
-                    <h2 class="tituloRegistro">REGISTRATE</h2>
-                    <div class="contenedorFormulario">
-                        <br>
-                        <form id="formularioRegistro">
-                            <p>Nombre Completo</p>
-                            <input class="form-control propiedadesFormularioRegistro" type="text"
-                                placeholder="Nombre Completo" aria-label="default input example" required>
-                            <p>No. Telefono</p>
-                            <div class="displayTelefono">
-                                <span class="iconoBandera"></span>
-                                <span class="codigoPais">+52</span>
-                                <input class="form-control propiedadesFormularioRegistro" id="inputTelefono" type="text"
-                                    placeholder="No. Telefono" aria-label="default input example" required>
-                            </div>
-                            <p>Correo Electronico</p>
-                            <input class="form-control propiedadesFormularioRegistro" id="inputCorreo" type="email"
-                                placeholder="Correo Electronico" aria-label="default input example" required>
-                            <p>Contraseña</p>
-                            <input class="form-control propiedadesFormularioRegistro" id="inputContraseña" type="password"
-                                placeholder="Constraseña" aria-label="default input example" id="contraseña" required
-                                minlength="8">
-                            <p>Confirmar Contraseña</p>
-                            <input class="form-control propiedadesFormularioRegistro" type="password"
-                                placeholder="Confirmar Constraseña" aria-label="default input example" required>
-                            <label class="textoCheckBox"><input type="checkbox" class="checkboxRegistro" required> He
-                                leido y acepto los terminos y condiciones</label>
-                            <div class="contenedorBotonRegistro">
-                                <button type="submit" class="btn btn-primary colorBotonRegistro">Enviar</button>
-                            </div>
-                        </form>
+            <!-- Aqui insertamos un carrusel de bootstrap para las reseñas, se jugó con las columnas para responsive viewer -->
+            <div id="carouselExampleFade" class="carousel slide carousel-fade col-lg-6">
+                <div class="carousel-inner">
+                    
+                    <div class="carousel-item active">
+                        <!-- Debido a las configuraciones de bootstrap se tuvo que mantener este div para el primer elemento del carrusel -->
                     </div>
-
-
                 </div>
+                
+                <!-- Sección de botones para ir pasando de reseña en reseña -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                    data-bs-slide="prev">
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                    data-bs-slide="next">
+                </button>
             </div>
 
-        </div>
-    </div>
-
-
-
-
-
+        </section>
+    </main>
 
     <footer>
         <div class="footer"> <!--Ayuda a que el footer tome el ancho correcto en pantalla-->
@@ -172,11 +161,21 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+
+    <!-- Conexión con JS externo Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
-    <script src="../scripts/script.js"></script>
-    <script src="../scripts/scriptRegistro.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+        integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+        crossorigin="anonymous"></script>
+    <!-- Finaliza conexión de JS Bootstrap -->
+    <!-- Conexión JS externo Slick -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- Finaliza conexión Slick -->
+    <!-- Conexión con JS interno -->
+    <script src="../scripts/plantillaCursos.js"></script>
+
 </body>
 
 </html>

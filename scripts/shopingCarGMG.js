@@ -9,6 +9,9 @@ let divProduct;
 
 // productos 
 
+// INSTANCIAS
+// ? Supongo para los usuarios???
+
 //Selectores de Id && Clases
 //Principal Productos
 let container = document.querySelector(".product-container");//Contenedor de espacio del carrito de compras
@@ -18,7 +21,11 @@ const btnShopingCar = document.querySelector(".btn-shopingCar");//Vamos al carri
 const btnDeletProduct = document.querySelectorAll(".btn-delet");//Boton para eliminar producto
 const btnUpProduct = document.querySelectorAll(".btn-aumentar");//Boton para aumentar un producto
 const btnDownProduct = document.querySelectorAll(".btn-disminuir");//Boton para disminuir un producto
-const btnVaciarProducts = document.querySelectorAll(".btn-void");//Boton para disminuir un producto
+const btnVaciarProducts = document.querySelectorAll(".btn-void");//Boton para vaciar carrito
+// *Estos 2 son para hacer pruebas
+const btnGetLocalStorage = document.querySelectorAll(".btn-getLocalStorage");//Boton para obtener objetos JSON
+const btnSetLocalStorage = document.querySelectorAll(".btn-setLocalStorage");//Boton para enviar objetos JSON
+const btnCleanLocalStorage = document.querySelectorAll(".btn-cleanLocalStorage");//Boton para limpiar la local storage
 
 // carrito
 let aumento = false;
@@ -35,6 +42,9 @@ let shopingCar = [
 //         cantidad: 0
 // }
 ];    //Vacio al inicio
+
+let shoppingCartObject = [];
+let shoppingCartJSON = [];
 
 console.log("Datos de inicio del carrito compras");
 console.log(shopingCar);
@@ -122,6 +132,7 @@ let productsArray = [   //10 objetos JavaScript de muestra
 ];
 
 //EVENTOS
+// ? Investigar delegación de eventos
 //Vamos al carrito de compras para ver las tarjetas de productos
 btnShopingCar.addEventListener("click", (e) => {
     e.preventDefault(); //prevenir que el navegador se actualice
@@ -136,7 +147,6 @@ btnAddProduct.forEach(function (boton) {
     boton.addEventListener("click", (e) => {
         e.preventDefault(); //prevenir que el navegador se actualice
         agregarProducto(); //llama al carrito para modificarlo
-        enviarDatos();
         console.log("Se presionó boton para agregar producto");
     })
 });
@@ -148,9 +158,35 @@ btnAddProduct.forEach(function (boton) {
 btnVaciarProducts.forEach(function (boton) {
     boton.addEventListener("click", (e) => {
         e.preventDefault(); //prevenir que el navegador se actualice
-        vaciarProductos(); //ejecuta la funcion eliminar
+        vaciarProductos(); //ejecuta la funcion vaciar carrito
         console.log("Se presionó boton para vaciar carrito");
     })
+});
+
+//Enviar datos
+btnSetLocalStorage.forEach(function (boton) {
+    boton.addEventListener("click", (e) => {
+        e.preventDefault(); //prevenir que el navegador se actualice
+        enviarDatos();
+        console.log("Se presionó boton para enviar datos del carrito");
+    })
+});
+
+//Recibir datos
+btnGetLocalStorage.forEach(function (boton) {
+    boton.addEventListener("click", (e) => {
+        e.preventDefault(); //prevenir que el navegador se actualice
+        recibirDatos();
+        console.log("Se presionó boton para recibir datos del carrito");
+    })
+});
+
+btnCleanLocalStorage.forEach(function (boton) {
+    boton.addEventListener("click", (e) => {
+    e.preventDefault(); //prevenir que el navegador se actualice
+    limpiarLocalStorage();
+    console.log("Se presionó boton para ir al carrito");
+})
 });
 
 //FUNCIONES ESPECIALES
@@ -192,11 +228,39 @@ function conversionJSON(){
     return converToJSON;
 }
 
-function enviarDatos(){
-    console.log("Esto es un objeto serializado,");
-    console.log(conversionJSON());
-    console.log("Se hizo conversión a JSON");
+function converToObjetc(){
+    let converToObject = (JSON.parse(getLocalStorage()));
+    return converToObject;
 }
+// TODO anexado el  19/06/23
+function setLocalStorage(){
+    // Guardar la cadena JSON en localStorage
+    localStorage.setItem("shoppingCar", conversionJSON());
+    // console.log(localStorage.setItem('shoppingCar', conversionJSON()));
+}
+// TODO anexado el  19/06/23
+function getLocalStorage(){
+    let shoppingCarLocalStoragre = localStorage.getItem("shoppingCar");
+    // console.log(shoppingCarLocalStoragre);
+    return shoppingCarLocalStoragre
+}
+
+// TODO anexado el 20/06/23
+function limpiarLocalStorage(){
+    localStorage.removeItem("shoppingCar")
+}
+
+function enviarDatos(){
+    // console.log(conversionJSON());
+    setLocalStorage();
+    console.log("Se enviaron datos como un String");
+}
+
+function recibirDatos(){
+    console.log(converToObjetc());
+    console.log("Se recibieron datos como un Objeto");
+}
+
 /* -----------------------------------------------------------------------------------------------------*/
 //FUNCIONES NO ESPECIALES
 // *Esta funcición ya se encuentra lista
@@ -278,20 +342,17 @@ function ANTIGUAagregarProducto() {
 function crearProducto() {
     console.log("Inicia función de crear producto");
     // TODO Hacer un foreach para obtener TODOS los datos del carrito, asignarlos a las variables y pintar
-    let productsAdd = productsArray[idProduct];
+    // let productsAdd = productsArray[idProduct];
     //Obtengo las propiedades del objeto en variables temporales
     // let srcImg = productsAdd.src;
     // let h3Product = productsAdd.nombre;
     // let pPrice = productsAdd.precio;
+    // let id = 2;
+    // let cantidad = 10;
 
-    
-
-    let id = 2;
-    let cantidad = 10;
-
-    let srcImg = "https://images.pexels.com/photos/4281821/pexels-photo-4281821.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
-    let h3Product = "Nombre producto de prueba GMG";
-    let pPrice = 100;
+    // let srcImg = "https://images.pexels.com/photos/4281821/pexels-photo-4281821.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
+    // let h3Product = "Nombre producto de prueba GMG";
+    // let pPrice = 100;
 
     //!Verificar si la cantidad debe ir aqui
     // let inputNumber = productsAdd.cantidad;
@@ -300,6 +361,22 @@ function crearProducto() {
     const h2 = document.createElement("h2");    //creo una etiqueta h2 para el titulo del carrito de compras
     h2.classList.add('h2-product'); //Le agregamos una clase a esta etiqueta del titulo para darle estilos
     h2.textContent = "Tu carrito de compras";
+    containerShopingCar.appendChild(h2);
+    let id;
+    let cantidad;
+    let srcImg;
+    let h3Product;
+    let pPrice;
+    // TODO Se cambio el objeto del carrito de compras por el objeto del local storage para pintar ahora con esta info
+    // !Al aumentar datos se me suma de 5 en 5
+    // shopingCar.forEach(function(iteracionProductos){
+    converToObjetc().forEach(function(iteracionProductos){
+        id = iteracionProductos.id;
+        srcImg = iteracionProductos.src;
+        h3Product = iteracionProductos.nombre;
+        pPrice = iteracionProductos.precio;
+        cantidad = iteracionProductos.cantidad;
+    
 
     const productContainer = document.createElement("div");
     productContainer.classList.add('product-container'); //Le agregamos una clase a este div que almacenará las tarjetas
@@ -327,8 +404,9 @@ function crearProducto() {
     `;
     //Colocamos el producto en el carrito
     //Pintamos el espacio del carrito donde se van a poner los productos
-    containerShopingCar.appendChild(h2);
+    // containerShopingCar.appendChild(h2);
     containerShopingCar.appendChild(productContainer);
+});
 
     console.log("Cantidad de elementos ACTUAL en carrito: ", shopingCar.length);
     console.log("Finaliza función crear producto");
@@ -341,26 +419,38 @@ function modificarProducto() {
     //? Se necesita hacer una comparación de la cantidad actual de productos y se suma 1
     // Creamos una variable temporal que va almacenar el valor ACTUAL del producto(objeto) en el carrito
     // Independientemente del valor que haya (inicialmente 0), se aumentará en 1
-    let productsAdd = shopingCar[idProduct];
-    if (aumento) {
-        productsAdd.cantidad++;
-        console.log("Se aumentó");
-        
-    } else if (decremento) {
-        if (productsAdd.cantidad > 1) {
-            productsAdd.cantidad--;
-            console.log("Se disminuyó");
-        } else {
-            productsAdd.cantidad = 1;
+    // 
+    let indiceProductoAEliminar = shopingCar.findIndex(function (producto) {
+        //Esto nos devolverá un true o false 
+        return producto.id === idProduct;
+    });
+    let productsAdd;
+    //Si el resultado es -1 significa que el carrito esta VACIO
+    //Si el resultado es cualquier otra cosa entonces eliminamos del carrito el producto usando su posición especificada con el idProduct
+    if (indiceProductoAEliminar != -1) {
+        productsAdd = shopingCar[indiceProductoAEliminar];
+        if (aumento) {
+            productsAdd.cantidad++;
+            console.log("Se aumentó");
+            
+        } else if (decremento) {
+            if (productsAdd.cantidad > 1) {
+                productsAdd.cantidad--;
+                console.log("Se disminuyó");
+            } else {
+                productsAdd.cantidad = 1;
+            }
         }
     }
+
     // seteamos las variables para usarse en la proxima iteración
     aumento = false;
     decremento = false;
     // Sobreescribimos la cantidad existente del carrito con esta modificación
-    shopingCar[idProduct].cantidad = productsAdd.cantidad;
+    // !Esta faltando que se itere sobre los elementos del carrito, o sea el find index 
+    shopingCar[indiceProductoAEliminar].cantidad = productsAdd.cantidad;
 
-    console.log("Cantidad actual del producto " + (shopingCar[idProduct].id) + " es : " + (shopingCar[idProduct].cantidad));
+    // console.log("Cantidad actual del producto " + (shopingCar[idProduct].id) + " es : " + (shopingCar[idProduct].cantidad));
     console.log(shopingCar);
     console.log("Finaliza función modificar producto");
 }
@@ -443,6 +533,13 @@ containerShopingCar.addEventListener("click", function (e) {
       console.log("Se presionó botón para aumentar cantidad de productos");
     }
   });
+  containerShopingCar.addEventListener("click", function (e) {
+    if (e.target.classList.contains("btn-delet")) {
+      e.preventDefault();
+      eliminarProducto(); //ejecuta la funcion eliminar
+      console.log("Se presionó boton para eliminar un productos");
+    }
+  });
 // *Este evento ya se encuentra listo
 // btnUpProduct.forEach(function (boton) {
 //     boton.addEventListener("click", (e) => {
@@ -466,10 +563,10 @@ containerShopingCar.addEventListener("click", function (e) {
 
 //Eliminar producto
 // *Este evento ya se encuentra listo
-btnDeletProduct.forEach(function (boton) {
-boton.addEventListener("click", (e) => {
-    e.preventDefault(); //prevenir que el navegador se actualice
-    eliminarProducto(); //ejecuta la funcion eliminar
-    console.log("Se presionó boton para eliminar un productos");
-})
-});
+// btnDeletProduct.forEach(function (boton) {
+// boton.addEventListener("click", (e) => {
+//     e.preventDefault(); //prevenir que el navegador se actualice
+//     eliminarProducto(); //ejecuta la funcion eliminar
+//     console.log("Se presionó boton para eliminar un productos");
+// })
+// });

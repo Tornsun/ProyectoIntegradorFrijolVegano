@@ -1,0 +1,13 @@
+.contenedorSaludos {
+    text-align: center;
+  }
+  
+  .contenedorSaludos h3.titulo-Saludo,
+  .contenedorSaludos button {
+    margin: 0 auto;
+    
+  }
+  
+  .container-fluid {
+  border: 1px solid #000;
+  }

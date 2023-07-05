@@ -11,7 +11,6 @@ main{
 .h2-btn-shopingCar{
     display: flex;
     justify-content: center;
-    /* flex-wrap: wrap; */
     gap: 50px;
 }
 
@@ -27,18 +26,6 @@ main{
     text-decoration: none;
 }
 
-.contenedorPadreProductos{
-    margin-top: 140px;
-}
-
-.section-products{
-    margin-top: 120px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
 .section-products h2{
     text-align: center;
     font-weight: 900;
@@ -49,7 +36,7 @@ main{
     justify-content: center;
     /* align-content: flex-start; */
     flex-wrap: wrap;
-    width: 80%;
+    width: 100%;
     /* align-items: center; */
     gap: 35px;
 }
@@ -69,45 +56,7 @@ main{
     font-weight: 700;
 }
 
-.btn-data-product button{
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #F50087;
-    color: white;
-    font-weight: 700;
-}
 
-#id-btn-void{
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #4af500;
-    color: black;
-    font-weight: 700;
-}
-
-#id-btn-getLocalStorage{
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #143eb3;
-    color: white;
-    font-weight: 700;
-}
-
-#id-btn-setLocalStorage{
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #b31436;
-    color: white;
-    font-weight: 700;
-}
-
-#id-btn-cleanLocalStorage{
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #b36414;
-    color: white;
-    font-weight: 700;
-}
 
 .section-product-container{
     border: 1px solid greenyellow;
@@ -149,7 +98,6 @@ main{
     /* border: 1px solid black; */
     gap: 20px;
 }
-
 #img-carritoVacio{
     width: 10%;
     align-self: center;
