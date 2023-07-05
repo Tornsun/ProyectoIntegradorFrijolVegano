@@ -4,183 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/carritoCompras1.css">
     <title>Carrito de compras</title>
 
-    <style>
     
-
-        h1 {
-            margin-left: 30px;
-            /* Ajusta el valor del margen */
-        }
-
-        .imagen-izquierda {
-            float: left;
-            margin-right: 10px;
-            /* Opcional: Agrega un margen a la derecha de la imagen */
-            width: 200px;
-            /* Establece el ancho deseado para la imagen */
-            height: auto;
-            /* Mantiene la proporción de aspecto original de la imagen */
-
-        }
-
-        .boton-item {
-            background-color: #F50087;
-            color: #ffffff;
-            /* Cambia el color del texto */
-            font-size: 16px;
-            /* Cambia el tamaño de fuente a 16 píxeles */
-            padding: 7px 17px;
-            /* Opcional: Agrega un relleno interno de 5 píxeles vertical y 10 píxeles horizontal */
-            border: none;
-            /* Opcional: Quita el borde */
-            margin-block-end: 60px;
-            border-radius: 5px;
-        }
-
-        .boton-vaciar {
-            background-color: #F50087;
-            color: #ffffff;
-            /* Cambia el color del texto */
-            font-size: 16px;
-            /* Cambia el tamaño de fuente a 16 píxeles */
-            padding: 15px 25px;
-            /* Opcional: Agrega un relleno interno de 5 píxeles vertical y 10 píxeles horizontal */
-            border: none;
-            /* Opcional: Quita el borde */
-            margin-top: 100px;
-            margin-left: 210px;
-            margin-block-end: 60px;
-            border-radius: 5px;
-
-        }
-
-        .item {
-            margin-top: 60px;
-            margin-bottom: 60px;
-            /* Agrega un margen inferior entre los divs */
-        
-        }
-
-        .cantidad-item {
-            margin-bottom: 20px;
-        }
-
-        .contenedorProducto {
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: column;
-
-        }
-
-        .contenedorDescripcion {
-            flex-direction: column;
-        }
-
-        .contenedor-items {
-            flex-basis: 70%;
-            padding: 20px;
-            margin-bottom: 20px;
-            float: left;
-            margin-left: 80px;
-
-        }
-
-        /*Estilos de columna derecha */
-        .contenedor-subtotalPago {
-            flex-basis: 30%;
-            padding: 20px;
-            flex-direction: column;
-            justify-content: center;
-            text-align: right;
-            order: -1;
-            margin-top: -20px;
-        }
-
-        .titulo-subtotal {
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-
-        .titulo-total {
-            margin-right: 10px;
-            margin: 10px;
-        }
-
-        .boton-pago {
-            background-color: #F50087;
-            color: #ffffff;
-            font-size: 16px;
-            padding: 10px 12px;
-            border: none;
-            cursor: pointer;
-            width: 150px;
-            margin: 18px 18px 150px 18px;
-            border-radius: 5px;
-
-        }
-
-        /*Estilos de recomendaciones */
-        .subtotalRecomendaciones {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            text-align: center;
-            align-items: center;
-        }
-
-        .imagen-recomendaciones {
-            float: center;
-            margin-right: 0px;
-            /* Opcional: Agrega un margen a la derecha de la imagen */
-            width: 100px;
-            /* Establece el ancho deseado para la imagen */
-            height: 60px 60px;
-            /* Mantiene la proporción de aspecto original de la imagen */
-            margin-block-end: 40px;
-        }
-
-        .titulo-recomendaciones {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            text-align: center;
-            align-items: center;
-        }
-
-
-
-        .precio-recomendaciones {
-            margin-right: 10px;
-            margin: 10px;
-        }
-
-        .boton-recomendaciones {
-            background-color: #F50087;
-            color: #ffffff;
-            font-size: 16px;
-            padding: 10px 12px;
-            border: none;
-            cursor: pointer;
-            width: 150px;
-            margin: 18px;
-            border-radius: 5px;
-
-        }
-
-        .fila-botones {
-            margin-top: 30px;
-
-        }
-
-.contenedor {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-    </style>
 
 </head>
 
@@ -261,10 +88,11 @@
                         <button class="boton-vaciar">Vaciar carrito de compras</button>
 
                     </div>
+                </section>
 
 
 
-                    <div class="contenedor-subtotalPago">
+                    <section class="contenedor-subtotalPago">
                         <div class="titulo-subtotal"><strong>Subtotal (3 productos):</strong></div>
                         <div class="titulo-total">$251</div>
                         <button class="boton-pago">Proceder al pago</button>
@@ -273,6 +101,10 @@
 
 
                         <h2><strong></strong>Recomendaciones para ti</strong></h2>
+                        <br>
+                        <br>
+                        <br>
+                        <div class="cloumna2">
                         <div class="recomendaciones">
                             <img src="../assets/img/hamburguesaVegana.jpg" alt="Hamburguesa Vegana"
                                 class="imagen-recomendaciones">
@@ -295,9 +127,9 @@
                             <div class="precio-recomendaciones">$99.00</div>
                             <button class="boton-recomendaciones">Agregar al carrito</button>
                         </div>
-
                     </div>
-</section>
+                    </section>
+
 </body>
 
 </html>
