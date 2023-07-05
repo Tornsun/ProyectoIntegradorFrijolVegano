@@ -1,0 +1,32 @@
+.contenedorSaludos {
+    text-align: center;
+    margin-left: 60px;
+  }
+  
+
+  .container-fluid {
+  border: 1px solid #000;
+  }
+
+  .btn-primary {
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Cambiar el color de los botones a naranja */
+.btn-primary {
+    background-color: #EE692A;
+    border-color: #EE692A;
+}
+
+.btn-primary:hover {
+    background-color: #EE692A;
+    /* Cambia el color de fondo a azul al pasar el cursor sobre el botón */
+    border-color: #EE692A;
+    /* Cambia el color del borde a azul al pasar el cursor sobre el botón */
+}
+/* Centrar el boton de cerrar sesión */
+.center-button {
+    text-align: center;
+}
