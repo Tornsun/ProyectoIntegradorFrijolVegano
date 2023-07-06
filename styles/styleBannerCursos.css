@@ -1,22 +1,42 @@
 .contenedor-cursos{
     display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
-.descripcion-curso{
-    margin-bottom: 0px;
+.tarjeta-curso{
+    border-radius: 25px;
+    display:flex;
+    flex-wrap: wrap;
+    max-width: fit-content;
+    margin:25px;
 }
 
-.contenedor-banner img{
+.contenedor-banner{
+    display:flex;
     position:relative;
+    height:fit-content;
+    max-width: fit-content;
+}
+
+.banner-curso{
+    width:100%;
 }
 
 .etiqueta-promo{
     position:absolute;
+    margin-bottom:0;
+    bottom:0;
+    right:0;
+    background-color: gold;
+}
+
+.descripcion-curso{
+    margin-bottom:0;
 }
 
 .contenedor-estrellas{
     display:flex;
-    flex-direction:row;
     align-items: center;
 }
 
@@ -47,5 +67,6 @@
 
 .precio-cantidad-descuento{
     font-size: 15px;;
+    color:gray;
     
 }
