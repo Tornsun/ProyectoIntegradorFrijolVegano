@@ -1,0 +1,372 @@
+//* Variables para almacenar datos de bases de datos
+let endPoint = '../BBDD-temporal/carritoCompras.json';
+//* Varibles para el carrito
+let carritoCompras = [];
+let aumento = false;
+let decremento = false;
+let eliminar = false;
+// *VARIABLES && CONSTANTES
+let idProduct; //Aqui debe ir el id del producto seleccionado para hacer match con el carrito de compras
+let inputNumProduct; //Input de tipo number (valor en carrito minimo 1) para que el usuario MODIFIQUE PRODUCTOS
+let cantidadEnCarrito = 0; //Aqui para saber cuantos objetos hay en el carrito, aunque podriamos saberlo con el metodo .length
+
+//* Selectores para manipulación del DOM
+const contenidoCarrito = document.querySelector(".carritoCompras");//Contenedor de espacio del carrito de compras
+
+// let container = document.querySelector(".product-container");//Contenedor de espacio del carrito de compras
+// let containerShopingCar = document.querySelector(".section-product-container");//Contenedor de productos del carrito
+
+const btnDeletProduct = document.querySelectorAll(".btn-delet");//Boton para eliminar producto
+const btnUpProduct = document.querySelectorAll(".btn-aumentar");//Boton para aumentar un producto
+const btnDownProduct = document.querySelectorAll(".btn-disminuir");//Boton para disminuir un producto
+const btnVaciarProducts = document.querySelectorAll(".btn-vaciar");//Boton para vaciar carrito
+
+/*--------------------------------------------------------------------------------------------------------------------- */
+//! Llamamos a las funciones para obtener los dato de las bases de datos, que a su vez pintan el DOM con los datos del carrito
+obtenerDatosCarrito();
+// * Esta función no se utiliza pq se llama al tener la conexión con la BBDD
+// pintarCarrito();
+/*--------------------------------------------------------------------------------------------------------------------- */
+//! FUNCIONES ESPECIALES
+// ? Cuando se usara??
+// * En caso de que se reciban los datos desde base de datos y NO desde local
+function obtenerDatosCarrito() {
+    fetch(endPoint)
+        .then((respuestaCarrito) => {
+            if (!respuestaCarrito.ok) {
+                throw new Error("Error HTTP: " + respuestaCarrito.status);
+            }
+            return respuestaCarrito.json();
+        })
+        .then((carrito) => {
+            // carritoCompras = carrito;
+            // console.log(carrito);
+            let converToJSON = JSON.stringify(carrito);
+            localStorage.setItem("carritoCompras", converToJSON);
+            let shoppingCarLocalStoragre = localStorage.getItem("carritoCompras");
+            carritoCompras = JSON.parse(shoppingCarLocalStoragre);
+            console.log(carritoCompras);
+            pintarCarrito(carritoCompras);
+        })
+        .catch((error) => {
+            console.log("Soy un error en conexión con los datos del carrito de compras: " + error);
+        });
+}
+//* Función para obtener el ID del producto segun el boton presionado
+function obtenerId(boton) {
+    idProduct = parseInt(boton.id); // Almacena el ID del botón en la variable idProduct, lo pasamos a int para utilizarlo como indice
+    //* Esto es para verificar en la consola que se obtenga el valor deseado
+    console.log('ID del botón:', idProduct);
+}
+//* Verificamos que exista el producto en el carrito y podemos hacer condiciones dependiendo del resultado (agregar producto o solo modificar cantidad)
+function verificarExistenciaProducto(idProduct) {
+    //* Creamos una variable temporal que almacena el resultaddo del metodo .find()
+    //* Creamos una función callback (function(productoSolicitado)) que retorna un valor booleano
+    //* Definimos el criterio de busqueda (que los id´s coincidad)
+    let productoExiste = carritoCompras.find(function (productoSolicitado) {
+        return productoSolicitado.id === idProduct; //nos devuelve true o false de si lo tiene o no
+    })
+
+    //* Retornamos true o falso, le pusimos que sea !Diferente de undefined para que no se despapaye
+    return productoExiste !== undefined;
+}
+//* Buscamos el indice del producto en el carrito y podemos hacer condiciones dependiendo del resultado (agregar producto o solo modificar cantidad)
+function verificarIndexProducto(idProduct) {
+    // https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex
+    //* Creamos una variable temporal que almacena el resultado del metodo .findIndex()
+    //* Creamos una función callback (function(productoSolicitado)) que retorna un valor booleano
+    let indiceProductoEncontrado = carritoCompras.findIndex(function (productoSolicitado) {
+        //* Definimos el criterio de busqueda (que los id´s coincidad)
+        return productoSolicitado.id === idProduct;   //Esto nos devolverá un true o false 
+    });
+    //* Obtenemos el índice en el array si un elemento pasa la prueba; en caso contrario, -1, Si el resultado es -1 significa que el producto NO existe en el carrito
+    console.log("Indice de producto encontrado EN EL CARRITO:", indiceProductoEncontrado);
+    return indiceProductoEncontrado;
+}
+function converToInt() {
+    // * Esta función nos puede servir a futuro dependiendo como recibamos los datos de la BBDD
+}
+
+/*--------------------------------------------------------------------------------------------------------------------- */
+//! Funciones de manejo obtención y manipulación de datos
+/*  Aqui iniciamos la parte del almacenamiento local que queda pendiente de usar */
+// ? Cuando se usara??
+//* Hacemos una conversión de datos.
+function conversionJSON() {
+    let converToJSON = JSON.stringify(shopingCar);
+    return converToJSON;
+}
+
+function converToObjetc() {
+    let converToObject = (JSON.parse(getLocalStorage()));
+    return converToObject;
+}
+//* Obtenemos los datos del local storage
+function setLocalStorage() {
+    // Guardar la cadena JSON en localStorage
+    localStorage.setItem("shoppingCar", conversionJSON());
+    // console.log(localStorage.setItem('shoppingCar', conversionJSON()));
+}
+
+function getLocalStorage() {
+    let shoppingCarLocalStoragre = localStorage.getItem("shoppingCar");
+    // console.log(shoppingCarLocalStoragre);
+    return shoppingCarLocalStoragre
+}
+
+function enviarDatos() {
+    setLocalStorage();
+    console.log("Se enviaron datos como un String");
+}
+
+function recibirDatos() {
+    console.log(converToObjetc());
+    console.log("Se recibieron datos como un Objeto");
+}
+/*  Aqui cerramos la parte del almacenamiento local que queda pendiente de usar */
+
+
+/*--------------------------------------------------------------------------------------------------------------------- */
+//! FUNCIONES GENERALES ESPECIALES
+// *Creación del carrito en el DOM
+// TODO Pendiente 
+function pintarCarrito(carrito) {
+    // ! Aqui requiero la estructura FINAL HTML de Itzel para poder pintarlo
+    carritoCompras = carrito;
+    console.log("Inicia función de crear productos del carrito");
+    let id;
+    let cantidad;
+    let srcImg;
+    let h3Product;
+    let pPrice;
+
+    if (carritoCompras.length != 0) {
+        carritoCompras.forEach(function (iteracionProductos) {
+            id = iteracionProductos.id;
+            srcImg = iteracionProductos.src;
+            h3Product = iteracionProductos.nombre;
+            pPrice = iteracionProductos.precio;
+            cantidad = iteracionProductos.cantidad;
+            const productContainer = document.createElement("div");
+            productContainer.classList.add("contenedor-items");
+            productContainer.setAttribute("id", `${id}`)
+            
+            // console.log(id);
+
+            productContainer.innerHTML = `
+            <div class="item" id="${id}">
+                <img src="${srcImg}" alt="ImagenProdcuto" class="imagen-izquierda">
+                <div class="contenedorProducto">
+                    <div class="contenedorDescripcion">
+                        <div class="titulo-item"><strong>${h3Product}</strong></div>
+                        <div class="presentación-item">500g</div>
+                        <div class="precio-item">$${pPrice}</div>
+                    </div>
+                    <div class="fila-botones">
+                        <div id="${id}">Cantidad: <p class="cantidad-item-${id}">${cantidad}</p></div>
+                        <button class="boton-item btn-disminuir" id="${id}" onclick="obtenerId(this)">-</button>
+                        <button class="boton-item btn-aumentar" id="${id}" onclick="obtenerId(this)">+</button>
+                        <button class="boton-item btn-delet" id="${id}" onclick="obtenerId(this)">Eliminar</button>
+                    </div>
+                </div>
+            </div>
+        `;
+            contenidoCarrito.appendChild(productContainer);
+        });
+    } else {
+        const productContainer = document.createElement("div");
+        productContainer.classList.add("contenedor-items");
+
+        productContainer.innerHTML = `
+    <div class = "div-product-container" >
+    <h3>Tu carrito vegano está vacío </h3>
+    <br>
+    <img src="../assets/img/carritoVacio.png" alt="carrito vacio">
+    </div>
+    `;
+        contenidoCarrito.appendChild(productContainer);
+    }
+
+
+    console.log("Finaliza función crear productos en el carrito");
+}
+// TODO Pendiente si sirve para eliminar un UNICO elemento ya que actualmente borra todo (vaciarCarrito)
+function despintarCarrito() {
+    const eliminarProductContainer = document.querySelector(".contenedor-items");
+    eliminarProductContainer.remove();
+    pintarCarrito(carritoCompras);
+}
+
+// TODO Pendiente 
+//Manipulación del carrito
+function modificarProducto() {
+    // carritoCompras = recibirDatos();
+    console.log("Inicia función de modificar producto");
+    console.log(carritoCompras);
+    let productsAdd;
+    let indiceProductoAModificar = verificarIndexProducto(idProduct);
+
+    //* Si el resultado es -1 significa que el carrito esta VACIO o NO EXISTE el producto a evaluar, de lo contrario modificamos en el carrito el producto usando su posición ESPECIFICA con el index obtenido
+    if (indiceProductoAModificar != -1) {
+        productsAdd = carritoCompras[indiceProductoAModificar];
+        if (aumento) {
+            productsAdd.cantidad++;
+            console.log("Se aumentó");
+            console.log("Cantidad del producto despues de aumentar en carrito es: ", productsAdd.cantidad);
+            //* Sobreescribimos la cantidad existente del carrito con esta modificación
+            // carritoCompras[indiceProductoAModificar].cantidad = productsAdd.cantidad;
+        } else if (decremento) {
+            if (productsAdd.cantidad > 1) {
+                productsAdd.cantidad--;
+                console.log("Se disminuyó");
+                console.log("Cantidad del producto despues de disminuir en carrito es: ", productsAdd.cantidad);
+            } else {
+                // productsAdd.cantidad = 1;
+                console.log("Aqui deberia ser 0 la cantidad");
+                eliminarProducto();
+                console.log("Aqui deberiamos tener un elemento menos en el carrito, es lo mismo que eliminar pq la cantidad es 0");
+            }
+        }
+    }
+
+    // seteamos las variables para usarse en la proxima iteración
+    aumento = false;
+    decremento = false;
+    //* Como nota, esta sobreescritura se movió dentro de la condición de a
+    carritoCompras[indiceProductoAModificar].cantidad = productsAdd.cantidad;
+    // ! Debemos ver como sobreescribir ESPECIFICAMENTE el item del carrito
+    const modificarProductoCarrito = document.getElementsByClassName(`cantidad-item-${idProduct}`)[0];
+    modificarProductoCarrito.textContent = carritoCompras[indiceProductoAModificar].cantidad;
+    // ! Creo que se debe aplicar un appendChild o sustituir
+    // despintarCarrito();
+    // pintarCarrito(carritoCompras);
+    console.log(carritoCompras);
+    console.log("Finaliza función modificar producto");
+}
+function modificarProductoAumento() {
+    // carritoCompras = recibirDatos();
+    console.log("Inicia función de modificar producto en aumento");
+    console.log(carritoCompras);
+    let productsAdd;
+    let indiceProductoAModificar = verificarIndexProducto(idProduct);
+
+    //* Si el resultado es -1 significa que el carrito esta VACIO o NO EXISTE el producto a evaluar, de lo contrario modificamos en el carrito el producto usando su posición ESPECIFICA con el index obtenido
+    if (indiceProductoAModificar != -1) {
+        productsAdd = carritoCompras[indiceProductoAModificar];
+        if (aumento) {
+            productsAdd.cantidad++;
+            console.log("Se aumentó");
+            console.log("Cantidad del producto despues de aumentar en carrito es: ", productsAdd.cantidad);
+            //* Sobreescribimos la cantidad existente del carrito con esta modificación
+            // carritoCompras[indiceProductoAModificar].cantidad = productsAdd.cantidad;
+        } else if (decremento) {
+            if (productsAdd.cantidad > 1) {
+                productsAdd.cantidad--;
+                console.log("Se disminuyó");
+                console.log("Cantidad del producto despues de disminuir en carrito es: ", productsAdd.cantidad);
+            } else {
+                // productsAdd.cantidad = 1;
+                console.log("Aqui deberia ser 0 la cantidad");
+                eliminarProducto();
+                console.log("Aqui deberiamos tener un elemento menos en el carrito, es lo mismo que eliminar pq la cantidad es 0");
+            }
+        }
+    }
+
+    // seteamos las variables para usarse en la proxima iteración
+    aumento = false;
+    decremento = false;
+    //* Como nota, esta sobreescritura se movió dentro de la condición de a
+    carritoCompras[indiceProductoAModificar].cantidad = productsAdd.cantidad;
+    // ! Debemos ver como sobreescribir ESPECIFICAMENTE el item del carrito
+    const modificarProductoCarrito = document.getElementsByClassName(`cantidad-item-${idProduct}`)[0];
+    modificarProductoCarrito.textContent = carritoCompras[indiceProductoAModificar].cantidad;
+    // ! Creo que se debe aplicar un appendChild o sustituir
+    // despintarCarrito();
+    // pintarCarrito(carritoCompras);
+    console.log(carritoCompras);
+    console.log("Finaliza función modificar producto");
+}
+// TODO Pendiente el envío de datos al local storage/BBDD
+function eliminarProducto() {
+    // https://lenguajejs.com/javascript/dom/insertar-elementos-dom/
+    console.log("Inicia función de eliminar producto");
+    let indiceProductoAEliminar = verificarIndexProducto(idProduct);
+
+    //? No se si sea necesario modificar el valor ya que se eliminará
+    // carritoCompras[indiceProductoAEliminar].cantidad = 0;
+
+    // * En realidad para que se pueda eliminar un producto debe existir SI o SI, esto es una corroboración extra
+    if (indiceProductoAEliminar != -1) {
+        carritoCompras.splice(indiceProductoAEliminar, 1);
+    }
+    const eliminarProductoCarrito = document.getElementById(`${idProduct}`);
+    eliminarProductoCarrito.remove();
+    if(carritoCompras.length == 0){
+        pintarCarrito(carritoCompras);
+    }
+    console.log("eliminarProducto Cantidad de elementos DESPUES DE ELIMINAR en carrito: ", carritoCompras.length);
+    console.log(carritoCompras);
+    console.log("Finaliza función eliminar producto");
+}
+
+function vaciarProductos() {
+    console.log("Inicia función de vaciar productos");
+    
+    for (let index = 0; index < carritoCompras.length; index++) {
+        const eliminarProductContainer = document.querySelector(".contenedor-items");
+        eliminarProductContainer.remove();
+    }
+
+    // Probar esta idea para ver si limpia el carrito
+    carritoCompras = [];
+    //Esto debería vaciar el carrito desde la posición 0 hasta la longitud del arreglo
+    carritoCompras.splice(0, carritoCompras.length);
+    //Probar esto tambien
+    carritoCompras.length = 0;
+    pintarCarrito(carritoCompras);
+    console.log("Cantidad de elementos despues de vaciarProductos() en carrito: ", carritoCompras.length);
+    console.log(carritoCompras);
+    console.log("Finaliza función vaciar productos");
+}
+
+/*--------------------------------------------------------------------------------------------------------------------- */
+//! Eventos para Modificar cantidad en el carrito
+//* Aumentar, Disminuir o Eliminar cantidad
+contenidoCarrito.addEventListener("click", function (e) {
+    if (e.target.classList.contains("btn-aumentar")) {
+        e.preventDefault();
+        aumento = true;
+        modificarProducto();
+        console.log("Se presionó botón para aumentar cantidad de productos");
+    }
+});
+contenidoCarrito.addEventListener("click", function (e) {
+    if (e.target.classList.contains("btn-disminuir")) {
+        e.preventDefault();
+        decremento = true;
+        modificarProducto();
+        console.log("Se presionó botón para disminuir cantidad de productos");
+    }
+});
+contenidoCarrito.addEventListener("click", function (e) {
+    if (e.target.classList.contains("btn-delet")) {
+        e.preventDefault();
+        eliminarProducto(); //ejecuta la funcion eliminar
+        console.log("Se presionó boton para eliminar un productos");
+    }
+});
+btnVaciarProducts.forEach(function (boton) {
+    boton.addEventListener("click", (e) => {
+        e.preventDefault();
+        if(carritoCompras.length != 0){
+        vaciarProductos();
+        }
+        console.log("Se presionó boton para vaciar carrito");
+    })
+});
+
+/*--------------------------------------------------------------------------------------------------------------------- */
+// https://lenguajejs.com/javascript/dom/insertar-elementos-dom/
+// https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex
+// https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/splice

@@ -1,0 +1,181 @@
+
+h1 {
+    margin-left: 30px;
+    /* Ajusta el valor del margen */
+}
+
+.imagen-izquierda {
+    float: left;
+    margin-right: 10px;
+    /* Opcional: Agrega un margen a la derecha de la imagen */
+    width: 200px;
+    /* Establece el ancho deseado para la imagen */
+    height: auto;
+    /* Mantiene la proporción de aspecto original de la imagen */
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap');
+
+* {
+    font-family: 'Nunito Sans', sans-serif;
+    
+}
+
+.boton-item {
+    background-color: #F50087;
+    color: #ffffff;
+    /* Cambia el color del texto */
+    font-size: 16px;
+    /* Cambia el tamaño de fuente a 16 píxeles */
+    padding: 7px 17px;
+    /* Opcional: Agrega un relleno interno de 5 píxeles vertical y 10 píxeles horizontal */
+    border: none;
+    /* Opcional: Quita el borde */
+    margin-block-end: 60px;
+    border-radius: 5px;
+}
+
+.boton-vaciar {
+    background-color: #F50087;
+    color: #ffffff;
+    /* Cambia el color del texto */
+    font-size: 16px;
+    /* Cambia el tamaño de fuente a 16 píxeles */
+    padding: 15px 25px;
+    /* Opcional: Agrega un relleno interno de 5 píxeles vertical y 10 píxeles horizontal */
+    border: none;
+    /* Opcional: Quita el borde */
+    margin-top: 0px;
+    margin-left: 210px;
+    margin-block-end: 60px;
+    border-radius: 5px;
+
+}
+
+.item {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    /* Agrega un margen inferior entre los divs */
+
+}
+
+.cantidad-item {
+    margin-bottom: 20px;
+}
+
+.contenedorProducto {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+}
+
+.contenedorDescripcion {
+    flex-direction: column;
+
+}
+
+.contenedor-items {
+    flex-basis: 70%;
+   
+    margin-bottom: 20px;
+    float: left;
+    margin-left: 80px;
+
+}
+
+/*Estilos de columna derecha */
+.contenedor-subtotalPago {
+    display: flexbox;
+    flex-basis: 30%;
+    flex-direction: column;
+    justify-content:center;
+    text-align: center;
+    order: -1;
+    margin-top: -1825px;
+    margin-right: 50px;
+    margin-left: 900px;
+}
+
+.titulo-subtotal {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.titulo-total {
+    margin-right: 10px;
+    margin: 10px;
+}
+
+.boton-pago {
+    background-color: #F50087;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 10px 12px;
+    border: none;
+    cursor: pointer;
+    width: 150px;
+    margin: 18px 18px 150px 18px;
+    border-radius: 5px;
+
+}
+
+/*Estilos de recomendaciones */
+.subtotalRecomendaciones {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.imagen-recomendaciones {
+    margin-right: 0px;
+    /* Opcional: Agrega un margen a la derecha de la imagen */
+    width: 100px;
+    /* Establece el ancho deseado para la imagen */
+    height: 60px 60px;
+    /* Mantiene la proporción de aspecto original de la imagen */
+    margin-block-end: 40px;
+}
+
+
+
+
+
+.precio-recomendaciones {
+    margin-right: 10px;
+    margin: 10px;
+}
+
+.boton-recomendaciones {
+    background-color: #F50087;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 10px 12px;
+    border: none;
+    cursor: pointer;
+    width: 150px;
+    margin-bottom: 150px;
+    border-radius: 5px;
+
+}
+
+.fila-botones {
+    margin-top: 30px;
+    margin-bottom: 150px;
+
+}
+
+.contenedor {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+  
+@media (max-width: 767px) {
+    .contenedor-subtotalPago {
+      display: none;
+    }
+  }

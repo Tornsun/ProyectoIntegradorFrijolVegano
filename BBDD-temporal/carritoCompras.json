@@ -1,0 +1,23 @@
+[
+    {
+        "id": 0,
+        "src": "../assets/imagenesProductos/Beyond-meat-salchicha.JPG",
+        "nombre": "Producto 1",
+        "precio": "15.50",
+        "cantidad": 1
+    },
+    {
+        "id": 4,
+        "src": "../assets/imagenesProductos/Beyond-meat-salchicha.JPG",
+        "nombre": "Producto 2",
+        "precio": "15.50",
+        "cantidad": 3
+    },
+    {
+        "id": 8,
+        "src": "../assets/imagenesProductos/Beyond-meat-salchicha.JPG",
+        "nombre": "Producto 3",
+        "precio": "15.50",
+        "cantidad": 4
+    }
+]
