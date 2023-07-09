@@ -1,0 +1,11 @@
+{
+  "name": "proyectointegradorfrijolvegano",
+  "version": "1.0.0",
+  "description": "Proyecto Integrador del BootCamp GENERATION MX E-commerce para Frijol Vegano\r Frijol Vegano 🌱🛒\r ¡Bienvenido/a a Frijol Vegano! Somos un equipo de desarrollo comprometido en ofrecerte una experiencia única en nuestra página web de e-commerce. Aquí encontrarás una amplia variedad de productos veganos de alta calidad para satisfacer tus necesidades alimenticias y cuidar del planeta.",
+  "main": "carritoCompras.js",
+  "scripts": {
+    "json:server": "json-server --watch BBDD-temporal/carritoCompras.json"
+  },
+  "author": "GMG",
+  "license": "ISC"
+}
