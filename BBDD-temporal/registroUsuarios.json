@@ -1,0 +1,32 @@
+[
+    {
+        "nombreCompleto": "GustavoMaldonado",
+        "telefono": "9991178822",
+        "correo": "magg959596@gmail.com",
+        "contraseña": "Abcd@1234"
+    },
+    {
+        "nombreCompleto": "HectorRangel",
+        "telefono": "8184592356",
+        "correo": "hector.rangel948@gmail.com",
+        "contraseña": "Abcd@1234"
+    },
+    {
+        "nombreCompleto": "AndreaAvila",
+        "telefono": "7131595695",
+        "correo": "andrea009795@gmail.com",
+        "contraseña": "Abcd@1234"
+    },
+    {
+        "nombreCompleto": "ItzelValle",
+        "telefono": "4921031325",
+        "correo": "itzel.vallemedina1@gmail.com",
+        "contraseña": "Abcd@1234"
+    },
+    {
+        "nombreCompleto": "RicardoDeHaro",
+        "telefono": "5548609841",
+        "correo": "elidharolpz@gmail.com",
+        "contraseña": "Abcd@1234"
+    }
+]
