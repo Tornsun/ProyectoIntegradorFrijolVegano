@@ -32,11 +32,11 @@ h1 {
     /* Opcional: Agrega un relleno interno de 5 píxeles vertical y 10 píxeles horizontal */
     border: none;
     /* Opcional: Quita el borde */
-    margin-block-end: 60px;
+    /* margin-block-end: 60px; */
     border-radius: 5px;
 }
 
-.boton-vaciar {
+.btn-vaciar {
     background-color: #F50087;
     color: #ffffff;
     /* Cambia el color del texto */
@@ -54,8 +54,8 @@ h1 {
 }
 
 .item {
-    margin-top: 60px;
-    margin-bottom: 60px;
+    margin-top: 10px;
+    /* margin-bottom: 60px; */
     /* Agrega un margen inferior entre los divs */
 
 }
@@ -79,7 +79,7 @@ h1 {
 .contenedor-items {
     flex-basis: 70%;
    
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     float: left;
     margin-left: 80px;
 
@@ -163,8 +163,8 @@ h1 {
 }
 
 .fila-botones {
-    margin-top: 30px;
-    margin-bottom: 150px;
+    /* margin-top: 30px;
+    margin-bottom: 150px; */
 
 }
 

@@ -1,6 +1,7 @@
-[
+{"Carrito":[
     {
         "id": 0,
+        "producto": true,
         "src": "../assets/imagenesProductos/Beyond-meat-salchicha.JPG",
         "nombre": "Producto 1",
         "precio": "15.50",
@@ -8,6 +9,7 @@
     },
     {
         "id": 4,
+        "producto": true,
         "src": "../assets/imagenesProductos/Beyond-meat-salchicha.JPG",
         "nombre": "Producto 2",
         "precio": "15.50",
@@ -15,9 +17,27 @@
     },
     {
         "id": 8,
+        "producto": true,
         "src": "../assets/imagenesProductos/Beyond-meat-salchicha.JPG",
         "nombre": "Producto 3",
         "precio": "15.50",
         "cantidad": 4
+    },
+    {
+        "id": 5,
+        "producto": true,
+        "src": "../assets/imagenesProductos/Beyond-meat-salchicha.JPG",
+        "nombre": "Producto 4",
+        "precio": "15.50",
+        "cantidad": 4
+    },
+    {
+        "id": 1,
+        "producto": false   ,
+        "src": "../assets/imagenesProductos/Beyond-meat-salchicha.JPG",
+        "nombre": "Producto 5",
+        "precio": "15.50",
+        "cantidad": 4
     }
-]
+
+]}
