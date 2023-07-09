@@ -61,7 +61,7 @@ var guardarProducto={
   descripcion:$inputDescripcionProducto,
   costo:$inputCostoProducto,
   existencias:$inputExistenciasProducto,
-  presentacion:$inputPresentacionProducto,
+  presentacion:$inputPresentacionProducto
   };
   
   //Convierte los productos en un formtao JSON
