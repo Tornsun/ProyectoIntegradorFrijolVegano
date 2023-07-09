@@ -22,9 +22,10 @@ let precioCarrito = 0; //calcular el total de la compra
 let cantidadEnCarrito = 0; //Aqui para saber cuantos objetos hay en el carrito, aunque podriamos saberlo con el metodo .length
 
 //* Selectores para manipulación del DOM
-const contenidoCarrito = document.querySelector(".carritoCompras");//Contenedor de espacio del carrito de compras
+const contenidoCarrito = document.querySelector(".contenedor-columna1");//Contenedor de espacio del carrito de compras
 const cantidadProductos = document.querySelector("#cantidad-productos");
 const precioProductos = document.querySelector("#precio-productos");
+const bienvenidaCarrito = document.querySelector("#bienvenida-carrito");
 
 // let container = document.querySelector(".product-container");//Contenedor de espacio del carrito de compras
 // let containerShopingCar = document.querySelector(".section-product-container");//Contenedor de productos del carrito
@@ -32,7 +33,8 @@ const precioProductos = document.querySelector("#precio-productos");
 const btnDeletProduct = document.querySelectorAll(".btn-delet");//Boton para eliminar producto
 const btnUpProduct = document.querySelectorAll(".btn-aumentar");//Boton para aumentar un producto
 const btnDownProduct = document.querySelectorAll(".btn-disminuir");//Boton para disminuir un producto
-const btnVaciarProducts = document.querySelectorAll(".btn-vaciar");//Boton para vaciar carrito
+const btnVaciarProducts = document.querySelector(".btn-vaciar");//Boton para vaciar carrito
+const btnPagar = document.querySelector(".boton-pago")//Boton para pagar
 
 /*--------------------------------------------------------------------------------------------------------------------- */
 //! Llamamos a las funciones para obtener los dato de las bases de datos, que a su vez pintan el DOM con los datos del carrito
@@ -186,7 +188,7 @@ function pintarCarrito(carrito) {
     // let h3Product;
     // let pPrice;
 
-    if (carritoCompras.length != 0) { 
+    if (carritoCompras.length != 0) {
         // cantidadEnCarrito = carritoCompras.length;
         carritoCompras.forEach(function (iteracionProductos) {
             id = iteracionProductos.id;
@@ -195,32 +197,36 @@ function pintarCarrito(carrito) {
             srcImg = iteracionProductos.src;
             h3Product = iteracionProductos.nombre;
             pPrice = parseFloat(iteracionProductos.precio);
+            pPrice = (Math.round(pPrice * 100) / 100).toFixed(2);
             cantidad = iteracionProductos.cantidad;
+
             const contenedorItems = document.createElement("div");
             contenedorItems.classList.add("contenedor-items");
             contenedorItems.classList.add(`${modelo}`);
             contenedorItems.setAttribute("id", `${modelo}-${id}`)
 
             contenedorItems.innerHTML = `
-            <div class="item ${modelo}" id="${id}">
+            
                 <img src="${srcImg}" alt="ImagenProdcuto" class="imagen-izquierda">
                 <div class="contenedorProducto">
                     <div class="contenedorDescripcion">
-                        <div class="titulo-item"><strong>${h3Product}</strong></div>
-                        <div class="presentación-item">500g</div>
-                        <div class="precio-item">$${pPrice}</div>
+                        <p class="titulo-item"><strong>${h3Product}</strong></p>
+                        <p class="descrpcion-item">¿Alguna descripción breve? NO PUEDE SER IGUAL QUE LA PLANTILLA DE PRODCUTO PQ QUEDARÍA MUY LARGO Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus ipsum ipsam eveniet assumenda, id rerum officiis quo mollitia praesentium sed, dolore alias eaque! Vero mollitia ex blanditiis rerum nemo quam!</p>
+                        <p class="precio-item">Precio: <strong>$ ${pPrice}</strong></p>
+                        <p>Cantidad: <strong><span id="${id}" class="cantidad-${modelo}-${id}">${cantidad}</span></strong></p>
                     </div>
                     <div class="fila-botones">
-                        <div id="${id}">Cantidad: <p class="cantidad-${modelo}-${id}">${cantidad}</p></div>
                         <button class="boton-item btn-disminuir ${modelo}" id="${id}" onclick="obtenerId(this)">-</button>
                         <button class="boton-item btn-aumentar ${modelo}" id="${id}" onclick="obtenerId(this)">+</button>
                         <button class="boton-item btn-delet ${modelo}" id="${id}" onclick="obtenerId(this)">Eliminar</button>
                     </div>
+                    <hr>
                 </div>
-            </div>
+                
+            
         `;
-        // precioCarrito = pPrice + precioCarrito;
-        // console.log(pPrice,precioCarrito);
+            // precioCarrito = pPrice + precioCarrito;
+            // console.log(pPrice,precioCarrito);
             contenidoCarrito.appendChild(contenedorItems);
         });
     } else {
@@ -229,12 +235,12 @@ function pintarCarrito(carrito) {
         contenedorItems.classList.add("contenedor-items");
 
         contenedorItems.innerHTML = `
-    <div class = "div-product-container" >
-    <h3>Tu carrito vegano está vacío </h3>
-    <br>
-    <img src="../assets/img/carritoVacio.png" alt="carrito vacio">
+    <div class = "contenedor-items" >
+    
+    <img src="../assets/img/carritoVacio.png" alt="carrito vacio" width = "300" class = "img-carrito">
     </div>
     `;
+        bienvenidaCarrito.textContent = "Tu carrito vegano está vacío :(";
         contenidoCarrito.appendChild(contenedorItems);
     }
     calcularSubtotalPago();
@@ -247,7 +253,7 @@ function despintarCarrito() {
     pintarCarrito(carritoCompras);
 }
 
-function calcularSubtotalPago(){
+function calcularSubtotalPago() {
     let precioSubtotalPago = 0;
     let cantidadSubtotalPago = 0;
     let totalPago = 0;
@@ -263,6 +269,10 @@ function calcularSubtotalPago(){
     totalPago = (Math.round(totalPago * 100) / 100).toFixed(2);
     cantidadProductos.textContent = cantidadEnCarrito;
     precioProductos.textContent = totalPago;
+}
+
+function pagar() {
+    console.log("Inicia función para pagar el monto del carrito");
 }
 
 //Manipulación del carrito
@@ -483,14 +493,30 @@ contenidoCarrito.addEventListener("click", function (e) {
         console.log("Se presionó boton para eliminar un productos");
     }
 });
-btnVaciarProducts.forEach(function (boton) {
-    boton.addEventListener("click", (e) => {
-        e.preventDefault();
-        if (carritoCompras.length != 0) {
-            vaciarProductos();
-        }
-        console.log("Se presionó boton para vaciar carrito");
-    })
+// btnVaciarProducts.forEach(function (boton) {
+//     boton.addEventListener("click", (e) => {
+//         e.preventDefault();
+//         if (carritoCompras.length != 0) {
+//             vaciarProductos();
+//         }
+//         console.log("Se presionó boton para vaciar carrito");
+//     })
+// });
+
+btnVaciarProducts.addEventListener("click", (e) => {
+    e.preventDefault();
+    if (carritoCompras.length != 0) {
+        vaciarProductos();
+    }
+    console.log("Se presionó boton para vaciar carrito");
+});
+
+btnPagar.addEventListener("click", (e) => {
+    e.preventDefault();
+    if (carritoCompras.length != 0) {
+        pagar();
+    }
+    console.log("Se presionó boton para pagar carrito");
 });
 
 /*--------------------------------------------------------------------------------------------------------------------- */
