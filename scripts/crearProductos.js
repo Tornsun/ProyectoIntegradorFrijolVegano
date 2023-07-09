@@ -25,48 +25,37 @@ var formulario = document.querySelector(".formulario");
 formulario.onsubmit = function(e) {
   e.preventDefault();
 
-  var $inputDelProducto = document.querySelector(".inputDelProducto").value;
-  var $inputNombreProducto = document.querySelector(".inputNombreProducto").value;
-  var $inputDelProducto = document.querySelector(".inputDelProducto").value;
-  var $inputNombreProducto = document.querySelector(".inputNombreProducto").value;
-  var $categoria = document.querySelector(".categoria").value;
-  var $marcas = document.querySelector(".marcas").value;
+
+  var $inputNombreProducto = document.querySelector(".inputNombresProducto").value;
+  var $inputMarcaProducto = document.querySelector(".inputMarcaProducto").value;
+  var $inputPresentacioProducto = document.querySelector(".inputPresentacioProducto").value;
+  var $inputFabricanteProducto = document.querySelector(".inputFabricanteProducto").value;
+  var $inputDePrecios = document.querySelector(".inputDePrecios").value;
+  var $inputDeExistencias = document.querySelector(".inputDeExistencias").value;
   //!Ojo aqui que solo es una variable para que guarde la imagen
   // var $$img = document.getElementById('imagenPrevia').value;
    var $$img = $img.src;
-  var $inputDescripcionProducto = document.querySelector(".inputDescripcionProducto").value;
-  var $inputCostoProducto = document.querySelector(".inputCostoProducto").value;
-  var $inputExistenciasProducto = document.querySelector(".inputExistenciasProducto").value;
-  var $inputPresentacionProducto = document.querySelector(".inputPresentacionProducto").value;
 
-//   console.log("El Id es", $inputDelProducto);
-//   console.log("El nombre es", $inputNombreProducto);
-//   console.log("La Categoria es", $categoria);
-//   console.log("Su marca es", $marcas);
-//   console.log("La imagen es", $$img);
-//   console.log("La Descripcion es", $inputDescripcionProducto);
-//   console.log("Su costo es", $inputCostoProducto);
-//   console.log("El numero de existencias  es", $inputExistenciasProducto);
-//   console.log("Su presentacion es de", $inputPresentacionProducto);
-// alert("si entra ");
+
+
 
 //Creamos una objeto que nos guarde toda la informacion
 
 var guardarProducto={
-  id:$inputDelProducto,
   nombre: $inputNombreProducto,
-  categoria:$categoria,
-  marca:$marcas,
+  marca:$inputMarcaProducto,
+  presentacion:$inputPresentacioProducto,
+  fabricante:$inputFabricanteProducto,
+  precio:$inputDePrecios,
+  existencias:$inputDeExistencias,
   imagen:$$img,
-  descripcion:$inputDescripcionProducto,
-  costo:$inputCostoProducto,
-  existencias:$inputExistenciasProducto,
-  presentacion:$inputPresentacionProducto,
   };
   
   //Convierte los productos en un formtao JSON
 var datosProducto=JSON.stringify(guardarProducto);
+localStorage.setItem('productos', datosProducto);
 console.log(datosProducto)
+alert("Se guardo el producto con exito")
 }
 
 

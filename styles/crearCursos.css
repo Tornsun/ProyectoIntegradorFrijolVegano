@@ -131,7 +131,7 @@
     resize: vertical;  /* Permite redimensionar verticalmente el campo de texto */
 }
 .titulodescripcionProducto p {
-    margin-left: 140px;
+    margin-left: 100px;
     margin-right: auto;
     margin-bottom: 0%;
     align-items: center;
@@ -234,4 +234,10 @@
     border-style: none;
     font-size: 20px;
     color: white;
+}
+.imagenPreviaDeCurso{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
 }

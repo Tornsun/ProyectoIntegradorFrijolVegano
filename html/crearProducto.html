@@ -81,7 +81,6 @@
                 <li><a href="./productos.html">Productos</a></li>
                 <li><a href="./acercaDeNosotros.html"> Nosotros</a></li>
                 <li><a href="./contactanos.html">Contacto</a></li>
-                <li><a href="./crearProducto.html">Nuevo Producto</a></li>
             </ul>
         </div>
         <!--Termina Navbar secundaria-->
@@ -110,60 +109,59 @@
         <form class="formulario">
         <div class="camposProducto"> <!--Aqui empezaos con el formulario de agregar un producto-->
             
-                <div class="idproducto">
-                    <p> ID del producto</p>
-                    <input type="text" maxlength="10" name="identificador" class="inputDelProducto"
-                        placeholder="ID del producto">
+<!-- ?------------------------------------------------------------------------------------------------------------->
+                <div class="divDelNombre">
+                    <p> Nombre</p>
+                    <div class="divDelInput">
+                    <input type="text" maxlength="10" name="identificador" class="inputNombresProducto"
+                        placeholder="Nombre del producto">
                 </div>
-        </div><!--Cierre del campo de llenado -->
-        <div class="divnombreProducto">
-            <p>Nombre del producto</p>
-            <input type="text" name="nombreProducto" class="inputNombreProducto" placeholder="Nombre del producto">
-        </div>
-        <div class="categoriaDeProductos">
-            <p>Categoria</p>
-            <select name="categorias" class="categoria">
-                <option value="categoria">Categorias</option>
-                <option value="chile">Chiles</option>
-                <option value="Plato">Platos Fuertes</option>
-                <option value="congelados">Alimentos Congelados</option>
-                <option value="preparados">Alimentos Preparados</option>
-                <option value="mexicanisimos">Platos Tipicos</option>
-            </select>
-        </div>
-
-        <div class="marcaDeProductos">
-            <p>Marca</p>
-            <select name="marca" class="marcas">
-                <option value="Marcas">Marca</option>
-                <option value="Gardein">Gardein</option>
-                <option value="Field">Field Roast</option>
-                <option value="Tofurky">Tofurky</option>
-                <option value="Beyond">Beyond</option>
-                <option value="Heura">Heura</option>
-                <option value="Asante">Asante</option>
-            </select>
-        </div>
-        <div class="superDescripcionProductos">
-        <div class="titulodescripcionProducto">
-            <p>Descripcion del Producto</p>
             </div>
-            <div class="descripcionDelProducto">
-            <textarea type="text" maxlength="300" name="descripcion" class="inputDescripcionProducto"
-                placeholder=" Descripcion del producto"></textarea>
+
+<!-- ?---------------------------------------------------------------------------------------------------------------->
+            <div class="divDeMarca">
+                <p> Marca</p>
+                <div class="divDelInputMarca">
+                <input type="text" maxlength="10" name="identificador" class="inputMarcaProducto"
+                    placeholder="Marca del producto">
+            </div>
+        </div>
+<!-- ?----------------------------------------------------------------------------------------------------------------->
+        <div class="divDePresentacion">
+            <p> Presentación</p>
+            <div class="divDelInputPresentacion">
+            <input type="text" maxlength="10" name="identificador" class="inputPresentacioProducto"
+                placeholder="Presentación del producto">
         </div>
     </div>
-
-        <!-- <div class="contenedor-tarjetas">
-        <div class="card">
-            <img src="../assets/img/producto 1.png">
-            <p class="producto-precio">$99.99</p>
-            <p class="producto-descripcion"></p>
-           
+<!-- ?----------------------------------------------------------------------------------------------------------------->
+    <div class="divDeFabricante">
+        <p> Fabricante</p>
+        <div class="divDelInputFabricante">
+        <input type="text" maxlength="10" name="identificador" class="inputFabricanteProducto"
+            placeholder="Fabricante del producto">
+    </div>
+</div>
+            <!-- ?------------------------------------------------------------------->
+            <div class="preciosYExistencias">
+                <div class="alin1">
+                <p>Precios</p>
+                <div class="divDePrecios">
+                <input type="text" maxlength="10" name="identificador" class="inputDePrecios"
+                    placeholder="Precio del producto">
+            </div>
         </div>
-    </div> -->
-
-
+        <div  class="alin2">
+            <p>Existencias</p>
+            <div class="divDeExistencias">
+            <input type="text" maxlength="10" name="identificador" class="inputDeExistencias"
+                placeholder="Existencia del producto">
+        </div>
+    </div>
+        </div>
+        <br>
+        <br>
+<!-- ?------------------------------------------------------------------------------------------------------------------->
         <div class="centrarImagenPrevia"> <!-- con este div pretendemos que se centre nuestra imagen -->
             <div id="imagenPrevisualizada" class="col-sm-12 col-md-3 col-lg-3">
             <img src="../assets/img/producto 1.png" alt="producto" id="etiquetaDeImagen" class="img"> 
@@ -171,37 +169,14 @@
             <!--! En este div solo alojaremos la imagen previa del producto importante NO MOVER -->
         </div>
         <div class="informacionFile">
-            <br>
-            <p>Imagen Previa</p>
+        
+            <label for="imagenPrevia">Subir Imagen</label>
+            <img src="../assets/img/archivo-de-respaldo.png" alt="subirimagen" for="imagenPrevia" class="imagenSubirArchivo">
             <input type="file" id="imagenPrevia" accept="image/*">
         </div>
 
-        
-        <div class="costosYExistencias">
-            <div class="row">
-                <div class="col-sm-12 col-md-3 col-lg-3">
-                    <li class="textoLista">Precio del producto</li>
-                </div>
-                <div class="col-sm-12 col-md-3 col-lg-3">
-                    <input type="text" name="costo" class="inputCostoProducto" placeholder="Precio">
-                </div>
+<!-- ?------------------------------------------------------------------------------------------------------------------->
 
-                <div class=" col-sm-12 col-md-3 col-lg-3">
-                    <li class="textoLista">Existencias de producto</li>
-                </div>
-                <div class="col-sm-12 col-md-3 col-lg-3">
-                    <input type="text" maxlength="300" name="existencias" class="inputExistenciasProducto"
-                        placeholder="Existencias">
-                </div>
-            
-            <div class="presentacionProducto col-sm-12 col-md-3 col-lg-3">
-                <li class="textoLista">Presentacion de producto</li>
-            </div>
-            <div  class=" presentacion  col-md-6 col-lg-6">
-                <input type="text" maxlength="300" name="presentacion" class="inputPresentacionProducto"
-                    placeholder="Presentacion del producto">
-            </div>
-        </div>
     </div>
         <div class="agregado">
         <input type="submit" class="botonEnviar" value="Agregar Producto">
