@@ -8,14 +8,7 @@
     box-sizing: border-box;
 }
 
-/*Inicia navbar*/
-/*Inicia navbar superior*/
-.navBar {
-    top: 0;
-    width: 100%;
-    position: fixed;
-    z-index: 1;
-}
+@media (min-width: 768px) and (max-width: 5000px){
 
 .navBarSuperior {
     background-color: #EE692A;
@@ -23,7 +16,8 @@
     justify-content: space-between;
     align-items: center;
     height: 85px;
-    padding: 2px 5%;
+    padding: 5px 10%;
+    position: fixed;
     top: 0px;
     right: 0px;
     left: 0px;
@@ -31,41 +25,24 @@
 
 .logo img {
     width: 100px;
-    filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.3));
 }
 
-/*Inicia barra búsqueda*/
-.contenedor-barra-busqueda {
-    width: 50%;
-    position: relative;
+.form-control {
+    width: 430px;
 }
 
-.barra-buscar,
-.barra-buscar-menu-hamburguesa {
-    width: 100%;
-    border: 0;
-    outline: none;
-    border-radius: 100px;
-    text-align: center;
-    padding: 7px;
-    padding-inline-end: 15%;
-    padding-inline-start: 3%;
-    filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.3));
+.btn {
+    border-color: #FBE0D3;
 }
 
-.boton-buscar,
-.boton-buscar-menu-hamburguesa {
-    position: absolute;
-    border: 0;
-    outline: none;
-    background: peachpuff;
-    border-radius: 100px;
-    padding: 7px 30px;
-    right: 0;
-    top: 0;
+.btn:hover {
+    background-color: #FBE0D3;
+    border-color: #FBE0D3;
 }
 
-/*Termina barra búsqueda*/
+/* .posicionNavBar row col-sm-12 navBarInferior{
+    display:none;
+} */
 
 .logos {
     align-items: end;
@@ -136,105 +113,20 @@
 .nav-links li {
     list-style-type: none;
 }
-
-#id-barra-buscar-menu-hamburguesa {
-    display: none;
 }
-
-/*Termina navbar inferior*/
-/*Termina navbar*/
-
-/*Inicia contenido*/
-
 .contenido {
-    padding-top: 85px;
+    margin-top: 145px;
 }
 
-/*Carrusel*/
-.contenedor-carrusel {
-    margin: 150px 50px 50px 50px;
-}
-
-/*Subtítulo de la sección productos*/
-.contenedor-subtitulo {
-    text-align: center;
-    margin-top: 50px;
-}
-
-.subtitulo {
-    font-size: 50px;
-}
-
-/*Aquí empieza codigo del body del tutorial*/
-
-.contenedor-tarjetas {
-    width: 100%;
-    max-width: 1000px;
-    /*height:430px; esto es lo que hace que se sobrepongan los elementos*/
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: auto;
-}
-
-.contenedor-tarjetas .card {
-    width: 200px;
-    height: 430px;
-    border-radius: 8px;
-    box-shadow: 0 2px 2ox rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    margin: 20px;
-    text-align: center;
-    transition: all 0.25s;
-    background-color: F0F0F0;
-    align-items: center;
-}
-
-.contenedor-tarjetas .card:hover {
-    transform: translateY(-15px);
-    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
-}
-
-.contenedor-tarjetas .card img {
-    width: 150px;
-    height: 170px;
-}
-
-.contenedor-tarjetas .card p {
-    font-weight: 600;
-    padding: 0 1rem;
-    font-size: 16px;
-}
-
-.contenedor-tarjetas .card button {
-    font-weight: 500;
-    text-decoration: none;
-    background: #F50087;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    width: 150px;
-    height: 50px;
-}
-
-/*Aqui termina el codigo del body del tutorial*/
-
-/*Inicia footer*/
 .footer {
     background-color: #EE692A;
-    color: white;
-    display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.footer a {
-    text-decoration: none;
-    color: white;
-}
-
-.footer .redesSocialesIzquierda {
-    display: none;
+    justify-content: space-between;
+    /* position: fixed;
+    bottom: 0px;
+    right: 0px;
+    left: 0px; */
 }
 
 .footer .textoIzquierda,
@@ -244,130 +136,27 @@
     margin-right: 75px;
     margin-left: 75px;
     text-align: center;
+    padding: 12px;
 }
 
-.textoIzquierda a,
-.textoIzquierda p,
-.textoDerecha p {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    max-width: 400px;
+.contenedorRedes {
+    position: relative;
 }
 
-.footer .redesSocialesCentral {
-    min-width: 180px;
+.redesSociales {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    /* vertical-align: middle; */
+    /* flex-direction: row; */
+    justify-content: center;
 }
 
-/*Termina footer*/
-
-@media screen and (max-width:991.00px) {
-
-    .contenido {
-        padding-top: 50px;
-        display: block;
-        /*Falta agregar un bloqueo de la pantalla de fondo*/
-    }
-
-    /*Inicia navbar*/
-
-    .navBarSuperior {
-        position: relative;
-    }
-
-    .navBarInferior {
-        visibility: hidden;
-        display: flex;
-        background-color: white;
-        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
-    }
-
-    .nav-links {
-        top: 85px;
-        flex-direction: column;
-        align-items: start;
-        background-color: #EE692A;
-        align-items: center;
-        height: auto;
-        position: absolute;
-        padding-bottom: 100%;
-    }
-
-    .nav-links li {
-        padding-top: 25px;
-        padding-bottom: 25px;
-    }
-
-    .nav-links a {
-        color: white;
-    }
-
-    .menu-hamburguesa {
-        display: flex;
-        cursor: pointer;
-    }
-
-    .contenedor-barra-busqueda {
-        display: none;
-    }
-
-    /*Inicia Barra de búsqueda de menú hamburguesa*/
-    #id-barra-buscar-menu-hamburguesa {
-        display: block;
-        /*Muestra el elemento que estaba escondido*/
-        align-items: center;
-
-    }
-
-    .contenedor-barra-busqueda-menu-hamburguesa {
-        position: relative;
-        /*Es necesario para que el botón de buscar se ancle correctamente*/
-        width: 300px;
-        /*Hace el input más ancho*/
-    }
-
-    .barra-buscar-menu-hamburguesa {
-        padding-inline-end: 30%;
-        /*Ayuda a que el texto no se pierda detrás del botón de búsqueda*/
-        padding-inline-start: 3%;
-
-    }
-
-    /*Termina Barra de búsqueda de menú hamburguesa*/
-
-    /*Termina navbar*/
-
-    .contenedor-carrusel {
-        margin: 75px 100px 25px 100px;
-    }
-
-}
-
-@media screen and (max-width:700px) {
-
-    /*Inicio menu hamburguesa*/
-    .nav-links {
-        width: 100%;
-    }
-
-    /*Termina menu hamburguesa*/
-
-    /*Inicia footer*/
-    .footer {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .footer .redesSocialesCentral {
-        display: none;
-
-    }
-
-    .footer .redesSocialesIzquierda {
-        display: flex;
-        min-width: 180px;
-        padding-top: 50px;
-    }
-
-
-    /*Termina footer*/
+.textoDerecha {
+    display: flex;
+    align-items: center;
+    height: 150px;
+    flex-direction: column;
+    color: white;
+    justify-content: center;
 }

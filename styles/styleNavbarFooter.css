@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap');
+
+* {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 20px;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+/*Inicia navbar*/
+/*Inicia navbar superior*/
+.navBar{
+    top:0;
+    width:100%;
+    position:fixed;
+    z-index:10;
+}
+
+.navBarSuperior {
+    background-color: #EE692A;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    padding: 2px 5%;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+}
+
+.logo img {
+    width: 100px;
+    filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.3));
+}
+
+/*Inicia barra búsqueda*/
+.contenedor-barra-busqueda {
+    width: 50%;
+    position: relative;
+}
+
+.barra-buscar, .barra-buscar-menu-hamburguesa {
+    width: 100%;
+    border: 0;
+    outline: none;
+    border-radius: 100px;
+    text-align: center;
+    padding: 7px;
+    padding-inline-end: 15%;
+    padding-inline-start: 3%;
+    filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.3));
+}
+
+.boton-buscar, .boton-buscar-menu-hamburguesa {
+    position: absolute;
+    border: 0;
+    outline: none;
+    background: peachpuff;
+    border-radius: 100px;
+    padding: 7px 30px;
+    right: 0;
+    top: 0;
+}
+/*Termina barra búsqueda*/
+
+.logos {
+    align-items: end;
+    display: flex;
+    align-items: center;
+}
+
+.menu-hamburguesa{
+    display:none;
+}
+
+.menu-hamburguesa svg {
+    width: 100px;
+    height: 100px;
+    padding: 25px;
+    color: white;
+}
+
+.logoCentral img {
+    width: 100px;
+}
+
+.logos .logo-usuario{
+    color: white;
+    filter: drop-shadow(0px 5px 2px rgba(0, 0, 0, 0.3));
+    height:50px;
+    width:50px;
+}
+
+.logos .logo-carrito{
+    color: white;
+    filter: drop-shadow(0px 5px 2px rgba(0, 0, 0, 0.3));
+    height:42px;
+    width:50px;
+}
+
+.logos svg {
+    width: 45px;
+    height: 45px;
+    color: white;
+    filter: drop-shadow(0px 5px 2px rgba(0, 0, 0, 0.3));
+}
+/*Termina navbar superior*/
+
+/*Inicia Navbar inferior*/
+.navBarInferior {
+    background-color: #FBE0D3;
+    top: 85px;
+    right: 0px;
+    left: 0px;
+}
+
+.nav-links {
+    display:flex;
+    justify-content: space-between;
+    padding: 5px 10%;
+
+}
+
+.nav-links a {
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    
+}
+
+.nav-links li{
+    list-style-type: none;
+}
+
+#id-barra-buscar-menu-hamburguesa{
+    display:none;
+}
+
+/*Termina navbar inferior*/
+/*Termina navbar*/
+
+
+/*Inicia footer*/
+.footer {
+    background-color:#EE692A;
+    color:white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer a {
+    text-decoration: none;
+    color:white;
+}
+
+.footer .redesSocialesIzquierda{
+    display:none;
+}
+.footer .textoIzquierda, .footer .textoDerecha {
+    display:flex;
+    flex-direction: column;
+    margin-right: 75px;
+    margin-left: 75px;
+    text-align: center;
+}
+
+.textoIzquierda a, .textoIzquierda p, .textoDerecha p {
+    padding-top:15px;
+    padding-bottom:15px;
+    max-width: 400px;
+}
+
+.footer .redesSocialesCentral{
+    min-width: 180px;
+}
+/*Termina footer*/
+
+@media screen and (max-width:991.00px){
+
+    /*Inicia navbar*/
+
+    .navBarSuperior{
+        position:relative;
+    }
+
+    .navBarInferior{
+        visibility:hidden;
+        display: flex;
+        background-color: white;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+    }
+
+    .nav-links{
+        top:85px;
+        flex-direction: column;
+        align-items: start;
+        background-color: #EE692A;
+        align-items: center;
+        height:auto;
+        position:absolute;
+        padding-bottom: 100%;
+    }
+
+    .nav-links li{
+        padding-top:25px;
+        padding-bottom: 25px;
+    }
+
+    .nav-links a {
+        color:white;
+    }
+
+    .menu-hamburguesa{
+        display:flex;
+        cursor:pointer;
+    }
+
+    .contenedor-barra-busqueda{
+        display:none;
+    }
+
+    /*Inicia Barra de búsqueda de menú hamburguesa*/
+    #id-barra-buscar-menu-hamburguesa{
+        display:block; /*Muestra el elemento que estaba escondido*/
+        align-items: center;
+
+    }
+
+    .contenedor-barra-busqueda-menu-hamburguesa{
+        position:relative; /*Es necesario para que el botón de buscar se ancle correctamente*/
+        width:300px; /*Hace el input más ancho*/
+    }
+
+    .barra-buscar-menu-hamburguesa{
+        padding-inline-end: 30%; /*Ayuda a que el texto no se pierda detrás del botón de búsqueda*/
+        padding-inline-start: 3%;
+        
+    }
+   
+    /*Termina Barra de búsqueda de menú hamburguesa*/
+
+    /*Termina navbar*/
+
+}
+
+@media screen and (max-width:700px){
+    /*Inicio menu hamburguesa*/
+    .nav-links{
+        width:100%;
+    }
+    /*Termina menu hamburguesa*/
+    
+    /*Inicia footer*/
+     .footer{
+        display:flex;
+        flex-direction: column;
+     }
+
+    .footer .redesSocialesCentral{
+        display:none;
+        
+    }
+
+    .footer .redesSocialesIzquierda{
+        display:flex;
+        min-width: 180px;
+        padding-top: 50px;
+    }
+
+
+    /*Termina footer*/
+}
+
+
+

@@ -1,0 +1,66 @@
+
+.contenido{
+    padding-top:120px;
+    margin:20px;
+    display:flex;
+    justify-content: center;
+}
+
+.contenedor-inputs{
+    display:flex;
+    flex-wrap: wrap;
+    width:40%;
+    flex-direction:column;
+
+}
+
+.seccion{
+    display: flex;
+    flex-direction: column;
+}
+
+#imagen{
+    margin:50px auto 50px auto ;
+    justify-items: center;
+}
+
+.contenedor-precio-existencias{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#contenedor-precio, #contenedor-existencias{
+    display:flex;
+    justify-content: space-around;
+    width:35%;
+}
+
+#contenedor-imagen{
+    margin: 50px auto 80px auto;
+}
+
+#contenedor-imagen label{
+    text-align: center;
+}
+
+#contenedor-imagen input{
+    display:none;
+}
+
+#contenedor-imagen #espacio-imagen{
+    height:250px;
+    width:350px;
+    border: 1px solid black;
+
+}
+
+.boton{
+    background-color:#F50087;
+    color:white;
+    border:none;
+    border-radius:5px;
+    width:300px;
+    height:80px;
+    margin:auto auto 100px auto ;
+}

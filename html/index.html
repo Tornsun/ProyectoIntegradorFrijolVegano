@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frijol Vegano</title>
+    <link rel="icon" type="image/x-icon" href="../assets/img/logo.png"> <!--Favicon improvisado-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/styleNavbarFooter.css">
+    <link rel="stylesheet" href="../styles/styleIndex.css">
+    <link rel="stylesheet" href="../styles/styleTarjetaProducto.css">
+    <link rel="stylesheet" href="../styles/carruselPrincipal.css">
+    <link rel="stylesheet" href="../styles/styleBannerCursos.css">
+</head>
+
+<body>
+    <div class="navBar">
+        <div class="navBarSuperior">
+            <!--Menú hamburguesa-->
+            <div class="menu-hamburguesa">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                </svg>
+            </div>
+            <!--Termina menú hamburguesa-->
+
+            <!--Logo Frijol Vegano-->
+            <div class="logo">
+                <a href="./index.html"><img src="../assets/img/logo.png"></a>
+            </div>
+            <!--TerminaLogo Frijol Vegano-->
+
+            <!--Barra de búsqueda-->
+            <div class="contenedor-barra-busqueda">
+                <input class="barra-buscar" type="textbox" placeholder="Buscar">
+                <div class="boton-buscar">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-search" viewBox="0 0 16 16">
+                        <path
+                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                    </svg>
+                </div>
+            </div>
+            <!--Termina Barra de búsqueda-->
+
+            <!--Logo usuario y carrito-->
+            <div class="logos">
+                <a href="./login.html" target="_blank">
+                    <svg class="logo-usuario" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                        class="bi bi-person-fill" viewBox="0 0 16 16">
+                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                    </svg>
+                </a>
+                <a href="./shoopingCar.html" target="_blank">
+                    <svg class="logo-carrito" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-cart3"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                    </svg>
+                </a>
+            </div>
+            <!--Termina Logo usuario y carrito-->
+        </div>
+        <!--Termina navbar superior-->
+
+        <!--Navbar secundaria-->
+        <div class="navBarInferior"> <!--No es responsiva-->
+            <ul class="nav-links">
+                <li id="id-barra-buscar-menu-hamburguesa">
+                    <div class="contenedor-barra-busqueda-menu-hamburguesa">
+                        <input class="barra-buscar-menu-hamburguesa" type="textbox" placeholder="Buscar">
+                        <div class="boton-buscar-menu-hamburguesa">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-search" viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                            </svg>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./productos.html">Productos</a></li>
+                <li><a href="./acercaDeNosotros.html"> Nosotros</a></li>
+                <li><a href="./contactanos.html">Contacto</a></li>
+            </ul>
+        </div>
+        <!--Termina Navbar secundaria-->
+    </div>
+
+
+    <div class="contenido">
+        <!--Carrusel-->
+        <section class="carrusel-principal">
+            <div class="carrusel-individual">
+                <div id="carouselExampleControls" class="carousel col-9 col-sm-9 col-lg-6">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://images.pexels.com/photos/4827131/pexels-photo-4827131.jpeg?auto=compress&cs=tinysrgb&w=600"
+                                alt="Imagen de carrusel">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://images.pexels.com/photos/3218467/pexels-photo-3218467.jpeg?auto=compress&cs=tinysrgb&w=600"
+                                alt="Imagen de carrusel">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://images.pexels.com/photos/5971874/pexels-photo-5971874.jpeg?auto=compress&cs=tinysrgb&w=600"
+                                alt="Imagen de carrusel">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://images.pexels.com/photos/9986228/pexels-photo-9986228.jpeg?auto=compress&cs=tinysrgb&w=600"
+                                alt="Imagen de carrusel">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://images.pexels.com/photos/2284166/pexels-photo-2284166.jpeg?auto=compress&cs=tinysrgb&w=600"
+                                alt="Imagen de carrusel">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="prev">
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="next">
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!--Termina Carrusel-->
+
+        <!--Subtitulo-->
+        <div class="contenedor-subtitulo">
+            <a href="./productos.html" class="subtitulo">Productos</a>
+        </div>
+        <!--Termina Subtitulo-->
+
+        <!--Tarjetas de productos-->
+        <div class="contenedor-tarjetas">
+            <div class="card">
+                <div class="contenedor-imagen"><img src="../assets/img/Imagenes Productos/beyond-meat-burguer.png">
+                </div>
+                <div class="contenedor-precio">
+                    <p class="producto-precio">$125</p>
+                </div>
+                <div class="contenedor-descripcion">
+                    <p class="producto-descripcion">2 Patties de hamburguesa basada en proteína de chícharo</p>
+                </div>
+                <div class="contenedor-boton"><button>AGREGAR</button> </div>
+            </div>
+
+            <div class="card">
+                <div class="contenedor-imagen"><img src="../assets/img/Imagenes Productos/Beyond-meat-salchicha.JPG">
+                </div>
+                <div class="contenedor-precio">
+                    <p class="producto-precio">$189</p>
+                </div>
+                <div class="contenedor-descripcion">
+                    <p class="producto-descripcion">4 Salchichas basadas en proteína de chícharo</p>
+                </div>
+                <div class="contenedor-boton"><button>AGREGAR</button> </div>
+            </div>
+
+            <div class="card">
+                <div class="contenedor-imagen"><img src="../assets/img/Imagenes Productos/bolonga280-mini.png"></div>
+                <div class="contenedor-precio">
+                    <p class="producto-precio">$56</p>
+                </div>
+                <div class="contenedor-descripcion">
+                    <p class="producto-descripcion">Mezcla de proteínas vegetales estilo bologna.</p>
+                </div>
+                <div class="contenedor-boton"><button>AGREGAR</button> </div>
+            </div>
+
+            <div class="card">
+                <div class="contenedor-imagen"><img src="../assets/img/Imagenes Productos/CHICHARON-mini.png"></div>
+                <div class="contenedor-precio">
+                    <p class="producto-precio">$59</p>
+                </div>
+                <div class="contenedor-descripcion">
+                    <p class="producto-descripcion">Mezcla de proetínas vegetales estilo chicharrón.</p>
+                </div>
+                <div class="contenedor-boton"><button>AGREGAR</button> </div>
+            </div>
+
+            <div class="card">
+                <div class="contenedor-imagen"><img
+                        src="../assets/img/Imagenes Productos/chicken-tenders-beyond-meat.JPG"></div>
+                <div class="contenedor-precio">
+                    <p class="producto-precio">$99.99</p>
+                </div>
+                <div class="contenedor-descripcion">
+                    <p class="producto-descripcion">Tiras de no-pollo basadas en proteína de habas </p>
+                </div>
+                <div class="contenedor-boton"><button>AGREGAR</button> </div>
+            </div>
+
+            <div class="card">
+                <div class="contenedor-imagen"><img src="../assets/img/Imagenes Productos/deshebrada-mini.png"></div>
+                <div class="contenedor-precio">
+                    <p class="producto-precio">$59</p>
+                </div>
+                <div class="contenedor-descripcion">
+                    <p class="producto-descripcion">Mezcla de proteínas vegetales estilo deshebrada </p>
+                </div>
+                <div class="contenedor-boton"><button>AGREGAR</button> </div>
+            </div>
+
+            <div class="card">
+                <div class="contenedor-imagen"><img src="../assets/img/Imagenes Productos/hamburguesa-mini.png"></div>
+                <div class="contenedor-precio">
+                    <p class="producto-precio">$80</p>
+                </div>
+                <div class="contenedor-descripcion">
+                    <p class="producto-descripcion">Mezcla de proteínas vegetales estilo hamburguesa</p>
+                </div>
+                <div class="contenedor-boton"><button>AGREGAR</button> </div>
+            </div>
+
+            <div class="card">
+                <div class="contenedor-imagen"><img
+                        src="../assets/img/Imagenes Productos/Imitación Pepperoni Meathical 250.png"></div>
+                <div class="contenedor-precio">
+                    <p class="producto-precio">$70</p>
+                </div>
+                <div class="contenedor-descripcion">
+                    <p class="producto-descripcion">Imitación Pepperoni basado en proteína vegetal</p>
+                </div>
+                <div class="contenedor-boton"><button>AGREGAR</button> </div>
+            </div>
+        </div>
+        <!--Termina Tarjetas de productos-->
+
+        <!--Inicia cursos-->
+        <!--
+        <div class="contenedor-subtitulo">
+            <p class="subtitulo">Cursos</p>
+        </div>
+
+        <div class="contenedor-cursos">
+            <div class="contenedor-curso-informacion">
+                <div class="contenedor-banner">
+                    <img class="banner-curso" src="../assets/img/Imagenes Cursos/Banner1.png">
+                    <p class="etiqueta-promo">OFERTA<p>
+                </div>
+                
+                <h2 class="titulo-curso">Bases de la comida vegana</h2>
+                <p class="descripcion-curso">Aprenderás a crear deliciosos platillos veganos desde cero. Aprenderás a combinar verduras, frutas, hongos, especias y aceites para explotar el sabor en tus creaciones culinarias.
+                </p>
+                <div class="contenedor-calificacion">
+                    <div class="contenedor-estrellas">
+                        <div class="estrellas">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+                                <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+                            </svg>
+                        </div>
+                        <div class="estrellas">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+                                <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+                            </svg>
+                        </div>
+                        <div class="estrellas">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+                                <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+                            </svg>
+                        </div>
+                        <div class="estrellas">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+                                <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+                            </svg>
+                        </div>
+                        <div class="estrellas">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+                                <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="calificacion">4.5/5</p>
+                </div>
+                <div class="contenedor-precio-curso">
+                    <a href="#" class="precio-cantidad">$99.99 MXN</a>
+                    <a href="#"class="precio-cantidad-descuento">(Antes $199.99 MXN)</a>
+                </div>
+            </div>
+        </div> 
+    -->
+        <!--Termina cursos-->
+    </div>
+
+
+    <footer>
+        <div class="footer"> <!--Ayuda a que el footer tome el ancho correcto en pantalla-->
+            <div class="redesSocialesIzquierda">
+                <a href="https://instagram.com/frijolvegano"><img src="../assets/img/Instagram.png"></a>
+                <a href="https://www.facebook.com/FrijolVegano/"><img src="../assets/img/Facebook.png"></a>
+                <a href="https://wa.me/message/EYIG5NRSYCEJE1"><img src="../assets/img/WhatsApp.png"></a>
+            </div>
+
+            <div class="textoIzquierda">
+                <a href="./avisoDePrivacidad.html">Aviso de Privacidad</a>
+                <a href="./politicasEnvio.html">Politica de Envio</a>
+                <p>Derechos Reservados Frijol Vegano®</p>
+            </div>
+
+            <div class="redesSocialesCentral">
+                <a href="https://instagram.com/frijolvegano"><img src="../assets/img/Instagram.png"></a>
+                <a href="https://www.facebook.com/FrijolVegano/"><img src="../assets/img/Facebook.png"></a>
+                <a href="https://wa.me/message/EYIG5NRSYCEJE1"><img src="../assets/img/WhatsApp.png"></a>
+            </div>
+
+            <div class="textoDerecha">
+                <p>Teléfono: (+52) 811 479 6150</p>
+                <p>Rafael Garza Cantú 3412 Col. Hidalgo, Monterrey, Nuevo León</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script src="../scripts/menuHamburguesa.js"></script>
+</body>
+
+</html>

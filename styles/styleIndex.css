@@ -1,0 +1,49 @@
+
+/*Inicia contenido*/
+
+.contenido{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    padding-top: 150px;
+}
+
+.contenido .contenedor-tarjetas{ /*Ajusta la cantidad de tarjetas que se muestran y los alinea al centro*/
+    margin-left: 10%;
+    margin-right:10%;
+}
+
+
+/*Subtítulo de la sección productos*/
+.contenedor-subtitulo{
+    text-align: center;
+    margin-top: 0px;
+}
+
+.subtitulo{
+    font-size: 50px;
+    text-decoration:none;
+    color:black;
+}
+
+
+@media screen and (max-width:991.00px){
+
+    .contenido{
+        padding-top: 100px;
+        display:block;
+        /*Falta agregar un bloqueo de la pantalla de fondo*/
+    }
+
+    .contenedor-carrusel{
+        margin: 75px 100px 25px 100px;
+    }
+ 
+}
+
+@media screen and (max-width:700px){
+
+}
+
+
+
