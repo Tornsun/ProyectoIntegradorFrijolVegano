@@ -187,7 +187,7 @@ function pintarCarrito(carrito) {
     // let pPrice;
 
     if (carritoCompras.length != 0) { 
-        cantidadEnCarrito = carritoCompras.length;
+        // cantidadEnCarrito = carritoCompras.length;
         carritoCompras.forEach(function (iteracionProductos) {
             id = iteracionProductos.id;
             esProducto = iteracionProductos.esProducto;
@@ -219,8 +219,8 @@ function pintarCarrito(carrito) {
                 </div>
             </div>
         `;
-        precioCarrito = pPrice + precioCarrito;
-        console.log(pPrice,precioCarrito);
+        // precioCarrito = pPrice + precioCarrito;
+        // console.log(pPrice,precioCarrito);
             contenidoCarrito.appendChild(contenedorItems);
         });
     } else {
@@ -237,11 +237,7 @@ function pintarCarrito(carrito) {
     `;
         contenidoCarrito.appendChild(contenedorItems);
     }
-    // * el resultado se redondea al número de decimales deseado utilizando Math.round() y luego se utiliza .toFixed(2) para asegurarse de que el resultado tenga SIEMPRE 2 decimales
-    precioCarrito = (Math.round(precioCarrito * 100) / 100).toFixed(2);
-    cantidadProductos.textContent = cantidadEnCarrito;
-    precioProductos.textContent = precioCarrito;
-
+    calcularSubtotalPago();
     console.log("Finaliza función crear productos en el carrito");
 }
 
@@ -251,8 +247,22 @@ function despintarCarrito() {
     pintarCarrito(carritoCompras);
 }
 
-function calcularPago(){
+function calcularSubtotalPago(){
+    let precioSubtotalPago = 0;
+    let cantidadSubtotalPago = 0;
+    let totalPago = 0;
+    carritoCompras.forEach(function (iteracionSubtotalPago) {
+        cantidadSubtotalPago = iteracionSubtotalPago.cantidad;
+        precioSubtotalPago = iteracionSubtotalPago.precio;
+        // precioSubtotalPago = iteracionSubtotalPago.precio + precioSubtotalPago;
+        totalPago = (cantidadSubtotalPago * precioSubtotalPago) + totalPago
+        console.log(cantidadSubtotalPago, precioSubtotalPago, totalPago);
+    });
     cantidadEnCarrito = carritoCompras.length;
+    // * el resultado se redondea al número de decimales deseado utilizando Math.round() y luego se utiliza .toFixed(2) para asegurarse de que el resultado tenga SIEMPRE 2 decimales
+    totalPago = (Math.round(totalPago * 100) / 100).toFixed(2);
+    cantidadProductos.textContent = cantidadEnCarrito;
+    precioProductos.textContent = totalPago;
 }
 
 //Manipulación del carrito
@@ -332,6 +342,7 @@ function modificarProductoAumento() {
     let converToJSON = JSON.stringify(carritoCompras);
     localStorage.setItem("carritoCompras", converToJSON);
     console.log(carritoCompras);
+    calcularSubtotalPago();
     // enviarDatosCarrito();
     console.log("Finaliza función modificar producto");
 }
@@ -373,6 +384,7 @@ function modificarProductoDecremento() {
     let converToJSON = JSON.stringify(carritoCompras);
     localStorage.setItem("carritoCompras", converToJSON);
     console.log(carritoCompras);
+    calcularSubtotalPago();
     // enviarDatosCarrito();
     console.log("Finaliza función modificar producto");
 }
@@ -405,6 +417,7 @@ function eliminarProducto() {
     let converToJSON = JSON.stringify(carritoCompras);
     localStorage.setItem("carritoCompras", converToJSON);
     console.log(carritoCompras);
+    calcularSubtotalPago();
     // enviarDatosCarrito();
     console.log("Finaliza función eliminar producto");
 }
@@ -428,6 +441,7 @@ function vaciarProductos() {
     console.log(carritoCompras);
     let converToJSON = JSON.stringify(carritoCompras);
     localStorage.setItem("carritoCompras", converToJSON);
+    calcularSubtotalPago();
     // enviarDatosCarrito();
     console.log("Finaliza función vaciar productos");
 }
