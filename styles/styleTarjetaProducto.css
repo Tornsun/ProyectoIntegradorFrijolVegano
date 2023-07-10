@@ -9,7 +9,7 @@
 .contenedor-tarjetas .card {
     display: flex;
     width: 210px;
-    height: 350px;
+    height: 390px;
     border-radius: 25px;
     box-shadow: 0 2px 2ox rgba(0, 0, 0, 0.2);
     overflow: hidden;
@@ -25,9 +25,25 @@
     box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
 }
 
+.contenedor-tarjetas .card .contenedor-nombre {
+    height: 60px;
+    max-width: 160px;
+    max-height: 250px;
+    overflow: hidden;
+    align-items: center;
+    overflow: hidden;
+}
+
+.contenedor-tarjetas .card .producto-nombre {
+    margin-top:15px;
+    font-size: 25px;
+    max-width: 250px;
+    max-height: 250px;
+}
+
+
 .contenedor-tarjetas .card .contenedor-imagen {
     background-color: white;
-    margin-top: 10px;
 }
 
 .contenedor-tarjetas .card .contenedor-imagen img {
@@ -41,7 +57,6 @@
     height: 20px;
     max-height: 25px;
     margin-top: 10px;
-    margin-bottom: 10px;
 }
 
 .contenedor-tarjetas .card .contenedor-precio .producto-precio {
@@ -49,23 +64,25 @@
     font-weight: bold;
 }
 
+
 .contenedor-tarjetas .card .contenedor-descripcion {
-    height: 80px;
+    height: 50px;
     max-width: 160px;
     max-height: 250px;
     overflow: hidden;
     align-items: center;
-    overflow: hidden;
 }
 
 .contenedor-tarjetas .card .producto-descripcion {
-    font-weight: bold;
+    margin-top:5px;
     font-size: 15px;
     max-width: 250px;
     max-height: 250px;
 }
 
+
 .contenedor-boton {
+    margin-top:10px;
     width: 100%;
     height: 15%;
 }
@@ -118,7 +135,7 @@
         margin-bottom: 0;
     }
 
-    .contenedor-tarjetas .card .contenedor-precio .producto-descripcion {
+    .contenedor-tarjetas .card .contenedor-precio .producto-nombre {
         font-size: 10px;
     }
 
@@ -128,7 +145,7 @@
         font-weight: bold;
     }
 
-    .contenedor-tarjetas .card .contenedor-descripcion {
+    .contenedor-tarjetas .card .contenedor-nombre {
         height: 50px;
         max-width: 160px;
         max-height: 50px;
@@ -137,7 +154,7 @@
         overflow: hidden;
     }
 
-    .contenedor-tarjetas .card .producto-descripcion {
+    .contenedor-tarjetas .card .producto-nombre {
         font-weight: bold;
         font-size: 12px;
         max-width: 110px;

@@ -37,29 +37,48 @@
 }
 
 #contenedor-imagen{
-    margin: 50px auto 80px auto;
+    margin: 50px auto 50px auto;
 }
 
 #contenedor-imagen label{
     text-align: center;
+    background-color: #F50087;
+    color:white;
+    padding: 10px;
+    border-radius:10px;
+    margin-bottom:15px;
 }
 
 #contenedor-imagen input{
     display:none;
 }
 
-#contenedor-imagen #espacio-imagen{
+#contenedor-imagen #espacio-imagen, #img{
     height:250px;
     width:350px;
-    border: 1px solid black;
+}
 
+#contenedor-descripcion{
+    margin-bottom: 50px;
+}
+
+#contenedor-descripcion #descripcion{
+    height: 200px;
+}
+
+.contenedor-oferta, .contenedor-precio-oferta{
+    margin: auto auto 50px auto;
+}
+
+.contenedor-precio-oferta{
+    display:none;
 }
 
 .boton{
     background-color:#F50087;
     color:white;
     border:none;
-    border-radius:5px;
+    border-radius:10px;
     width:300px;
     height:80px;
     margin:auto auto 100px auto ;

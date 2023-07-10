@@ -142,6 +142,9 @@
 
 
 /*Inicia footer*/
+footer{
+    width:100%;
+}
 .footer {
     background-color:#EE692A;
     color:white;
