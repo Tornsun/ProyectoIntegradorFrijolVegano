@@ -524,3 +524,4 @@ btnPagar.addEventListener("click", (e) => {
 // https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex
 // https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
 // https://developer.mozilla.org/es/docs/Web/API/fetch
+// https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed

@@ -5,6 +5,7 @@
 }
 
 main {
+    margin: 0;
   margin-top: 150px;
   text-align: center;
 }
@@ -46,6 +47,7 @@ main {
   /* border: solid 1px black; */
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 35px;
 }
@@ -97,6 +99,11 @@ main {
 }
 
 /*Estilos de columna derecha */
+.contenedor-columna2{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
 
 .contenedor-subtotalPago {
   /* border: solid 1px black; */
@@ -106,16 +113,6 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 25px;
-
-  /* display: flexbox; */
-  /* flex-basis: 30%; */
-  /* flex-direction: column; */
-  /* justify-content:center; */
-  /* text-align: center; */
-  /* order: -1; */
-  /* margin-top: -1825px;
-    margin-right: 50px;
-    margin-left: 900px; */
 }
 
 .btn-vaciar,
@@ -144,6 +141,7 @@ button:hover {
 
 .contenedor-recomendaciones {
   margin-top: 55px;
+  text-align: center;
 }
 
 .titulo-subtotal,
@@ -190,20 +188,87 @@ button:hover {
   border-radius: 5px;
 }
 
-/* 
-.contenedor {
-display: flex;
-flex-wrap: wrap;
-justify-content: space-between;
-} */
-
-@media (max-width: 767px) {
-  .contenedor-subtotalPago {
+@media (max-width: 753px) {
+    main {
+      margin-top: 240px;
+    }
+    .contenedor-seccion-completa {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .contenedor-columna1, .contenedor-columna2 {
+        border: none;
+        padding:0;
+        /* padding-right: px; */
+      }
+  .descrpcion-item {
     display: none;
+  }
+  .contenedor-items {
+    margin:0;
+    /* gap: 35px; */
+  }
+
+  .contenedorDescripcion p{
+    margin: 0;
+  }
+
+  .fila-botones {
+    margin-top: 10px;
+  }
+  
+  .imagen-izquierda {
+    margin: 0;
+    height: 150;
+    width: 150;
+    object-fit: cover;
+  }
+  .contenedor-subtotalPago {
+    
+    gap: 5px;
+    margin: 0;
+    padding: 0;
+    /* background-color: */
+    background-color: rgba(217, 217, 217, .9);
+    opacity: 99%;
+    /* border-bottom: solid 1px #d9d9d9; */
+    position: fixed;
+    min-width: 100%;
+    top: 85px;
+    z-index: 2;
+  }
+  .btn-vaciar, .boton-pago {
+    padding: 5px;
   }
 }
 
-h1 {
-  margin-left: 30px;
-  /* Ajusta el valor del margen */
+@media (min-width: 574px) and (max-width: 991.98px){
+    .contenedor-seccion-completa {
+        margin: 0;
+        padding: 2px;
+        /* gap: 1px; */
+        justify-content: space-around;
+    }
+    .contenedor-columna1 {
+        padding: 0;
+    }
+    .imagen-izquierda {
+        margin: 0;
+        height: 150px;
+        width: 150px;
+        object-fit: cover;
+      }
+      .contenedor-items {
+        gap: 10px;
+      }
+      .descrpcion-item {
+        display: none;
+      }
+      .fila-botones {
+        gap: 5px;
+      }
+      .fila-botones button {
+        padding: 5px 15px;
+      }
 }
