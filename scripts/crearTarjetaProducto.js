@@ -84,7 +84,7 @@ function nuevaTarjetaProducto() {
     contenedorDescripcion.appendChild(descripcion);
     card.appendChild(contenedorDescripcion);
 
-    /*Termina Nombre */
+    /*Termina Descripcion */
 
     
 

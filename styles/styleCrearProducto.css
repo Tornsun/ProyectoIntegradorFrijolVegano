@@ -1,17 +1,39 @@
 
+
 .contenido{
-    padding-top:120px;
-    margin:20px;
-    display:flex;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-top:150px;
     justify-content: center;
+}
+
+.opciones{
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+    margin: 25px 30% 50px 30%;
+}
+
+.opciones a{
+    font-size: 25px;
+    text-decoration: none;
+    color:black;
+}
+
+
+form{
+    margin: auto auto auto auto;
+    display:flex;
+    flex-wrap: wrap;
 }
 
 .contenedor-inputs{
     display:flex;
     flex-wrap: wrap;
-    width:40%;
     flex-direction:column;
-
+    justify-content: center;
+    width: 600px;
 }
 
 .seccion{
