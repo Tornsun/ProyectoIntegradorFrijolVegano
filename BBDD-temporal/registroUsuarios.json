@@ -1,0 +1,52 @@
+[
+    {
+        "id": 0,
+        "administrador": false,
+        "statusSesion": true,
+        "nombre": "GustavoMaldonado",
+        "telefono": "9991178822",
+        "correo": "magg959596@gmail.com",
+        "contraseña": "Abcd@1234",
+        "imagen": "../assets/ImagenesUsuarios/Gustavo.png"
+    },
+    {
+        "id": 1,
+        "administrador": false,
+        "statusSesion": false,
+        "nombre": "HectorRangel",
+        "telefono": "8184592356",
+        "correo": "hector.rangel948@gmail.com",
+        "contraseña": "Abcd@1234",
+        "imagen": "../assets/ImagenesUsuarios/Hector.png"
+    },
+    {
+        "id": 2,
+        "administrador": false,
+        "statusSesion": false,
+        "nombre": "AndreaAvila",
+        "telefono": "7131595695",
+        "correo": "andrea009795@gmail.com",
+        "contraseña": "Abcd@1234",
+        "imagen": "../assets/ImagenesUsuarios/Andrea.png"
+    },
+    {
+        "id": 3,
+        "administrador": false,
+        "statusSesion": false,
+        "nombre": "ItzelValle",
+        "telefono": "4921031325",
+        "correo": "itzel.vallemedina1@gmail.com",
+        "contraseña": "Abcd@1234",
+        "imagen": "../assets/ImagenesUsuarios/Itzel.png"
+    },
+    {
+        "id": 4,
+        "administrador": false,
+        "statusSesion": true,
+        "nombre": "RicardoDeHaro",
+        "telefono": "5548609841",
+        "correo": "elidharolpz@gmail.com",
+        "contraseña": "Abcd@1234",
+        "imagen": "../assets/ImagenesUsuarios/Ricardo.png"
+    }
+]
