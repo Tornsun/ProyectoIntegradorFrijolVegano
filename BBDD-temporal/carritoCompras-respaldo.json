@@ -1,0 +1,74 @@
+[
+    {
+        "id": 0,
+        "esProducto": true,
+        "modelo": "producto",
+        "src": "../assets/imagenesProductos/Beyond-meat-salchicha.JPG",
+        "nombre": "Producto 0",
+        "precio": 15.50,
+        "cantidad": 1
+    },
+    {
+        "id": 5,
+        "esProducto": false,
+        "modelo": "curso",
+        "src": "../assets/img/imgCursoGenerico.png",
+        "nombre": "Curso 5",
+        "precio": 11.50,
+        "cantidad": 2
+    },
+    {
+        "id": 5,
+        "esProducto": true,
+        "modelo": "producto",
+        "src": "../assets/imagenesProductos/Beyond-meat-salchicha.JPG",
+        "nombre": "Producto 5",
+        "precio": 15.50,
+        "cantidad": 4
+    },
+    {
+        "id": 4,
+        "esProducto": true,
+        "modelo": "producto",
+        "src": "../assets/imagenesProductos/Beyond-meat-salchicha.JPG",
+        "nombre": "Producto 4",
+        "precio": 15.50,
+        "cantidad": 3
+    },
+    {
+        "id": 8,
+        "esProducto": true,
+        "modelo": "producto",
+        "src": "../assets/imagenesProductos/Beyond-meat-salchicha.JPG",
+        "nombre": "Producto 8",
+        "precio": 15.50,
+        "cantidad": 4
+    },
+    {
+        "id": 1,
+        "esProducto": false,
+        "modelo": "curso",
+        "src": "../assets/img/imgCursoGenerico.png",
+        "nombre": "Curso 1",
+        "precio": 15.50,
+        "cantidad": 2
+    },
+    {
+        "id": 3,
+        "esProducto": true,
+        "modelo": "producto",
+        "src": "../assets/imagenesProductos/Beyond-meat-salchicha.JPG",
+        "nombre": "Producto 3",
+        "precio": 15.50,
+        "cantidad": 3
+    },
+    {
+        "id": 0,
+        "esProducto": false,
+        "modelo": "curso",
+        "src": "../assets/img/imgCursoGenerico.png",
+        "nombre": "Curso 0",
+        "precio": 11.50,
+        "cantidad": 2
+    }
+]
