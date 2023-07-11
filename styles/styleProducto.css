@@ -1,5 +1,44 @@
-.contenido {
+
+.contenido{
+    display: flex;
+    flex-direction: column;
+    margin: auto 30px auto 30px;
+}
+
+.informacion-producto {
     padding-top: 150px;
     display: flex;
     flex-wrap: wrap;
+    margin:50px 25px auto 25px;
+    justify-content: space-evenly;
+}
+
+.contenedor-imagen {
+    width:45%;
+}
+
+.contenedor-imagen img{
+    width:100%;
+}
+
+.informacion-producto p{
+    font-size:20px;
+    margin: 5px auto auto auto;
+}
+
+.contenedor-boton{
+    margin:20px auto 50px auto;
+}
+
+.boton-agregar{
+    font-weight: 500;
+    text-decoration: none;
+    background: #F50087;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    width: 350px;
+    height: 90px;
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+    font-size: 40px;
 }
