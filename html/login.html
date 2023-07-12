@@ -99,12 +99,12 @@
                     <div class="contenedorAlineador">
                         <h2 class="tituloLogIn">INICIA SESION</h2>
                         <div class="contenedorFormulario">
-                            <form>
+                            <form id="formularioLogIn">
                                 <label class="textoLabel">Usuario</label>
-                                <input class="form-control propiedadesFormulario" type="text" placeholder="Usuario"
+                                <input class="form-control propiedadesFormulario" id="inputUsuario" type="text" placeholder="Usuario"
                                     aria-label="default input example" required>
                                 <label class="textoLabel">Constraseña</label>
-                                <input class="form-control propiedadesFormulario" type="text" placeholder="Constraseña"
+                                <input class="form-control propiedadesFormulario" id="inputContrasenia" type="password" placeholder="Constraseña"
                                     aria-label="default input example" required>
                                 <br>
                                 <p class="enlacesLogIn">
@@ -114,8 +114,7 @@
                                     <a href="../html/registroUsuarios.html">Registrarse</a>
                                 </p>
                                 <div class="contenedorBotonLogIn">
-                                    <button type="submit" class="btn btn-primary colorBotonLogIn">Iniciar
-                                        Sesion</button>
+                                    <button type="submit" class="btn btn-primary colorBotonLogIn">Iniciar Sesion</button>
                                 </div>
                             </form>
                         </div>
@@ -163,6 +162,7 @@
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
     <script src="../scripts/menuHamburguesa.js"></script>
+    <script src="../scripts/login.js"></script>
 </body>
 
 </html>
