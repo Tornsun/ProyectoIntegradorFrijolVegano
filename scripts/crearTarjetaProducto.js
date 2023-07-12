@@ -3,6 +3,7 @@ var imgSrc = '../assets/img/ImagenesProductos/default.jpg';
 var textoPrecio = "";
 var textoNombre = "";
 var textoDescripcion ="";
+var id="";
 
 
 fetch(`../BBDD-temporal/productos.json`)
@@ -19,9 +20,9 @@ function obtenerInformacionProducto(datos){
         textoPrecio = `$${datos[i].precio}`;
         textoNombre = datos[i].nombre;
         textoDescripcion = datos[i].descripcion;
+        id=datos[i].id;
         nuevaTarjetaProducto();
     }
-    
 }
 
 
@@ -30,12 +31,13 @@ function nuevaTarjetaProducto() {
 
     const card = document.createElement('div');
     card.className = "card";
+    card.id = id;
 
     /*Nombre */
 
     const contenedorNombre = document.createElement('div');
     contenedorNombre.className = "contenedor-nombre";
-
+    
     const nombre = document.createElement('p');
     nombre.className = "producto-nombre";
     nombre.innerHTML = textoNombre;
@@ -45,16 +47,23 @@ function nuevaTarjetaProducto() {
 
     /*Termina Nombre */
 
+    /*Elemento a de la imagen*/
+    const link = document.createElement("a");
+    link.href="./producto.html";
+    /*Termina elemento a de la imagen */
+
     /*Imagen */
     const contenedorImagen = document.createElement('div');
     contenedorImagen.className = "contenedor-imagen";
 
     const img = document.createElement('img');
     img.src = imgSrc;
-
-    contenedorImagen.appendChild(img);
-
+    
+    link.appendChild(img);
+    contenedorImagen.appendChild(link);
     card.appendChild(contenedorImagen);
+
+   
 
     /*Termina imagen */
 
@@ -93,11 +102,26 @@ function nuevaTarjetaProducto() {
     contenedorBoton.className = "contenedor-boton";
 
     const boton = document.createElement('button');
+    boton.className="boton-agregar";
     boton.innerHTML = "AGREGAR";
+    
 
     contenedorBoton.appendChild(boton);
     card.appendChild(contenedorBoton);
     contenedorTarjetas.appendChild(card);
+
+     /*Función link imagen */
+     link.addEventListener("click", function(){
+        localStorage.setItem("detalles", card.id);
+    });
+    
+    /*Termina función link imagen */
+
+    /*Funcion del botón */
+    boton.addEventListener("click", function(){
+        localStorage.setItem("carrito", card.id);
+    });
+    /*Termina función del boton */
 
     /*Termina boton */
 

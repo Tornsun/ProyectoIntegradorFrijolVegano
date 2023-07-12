@@ -1,5 +1,6 @@
 [
     {
+        "id":"1",
         "nombre":"Milanesa de Seitán",
         "marca":"Soi-Yah!",
         "presentacion":"500g",
@@ -16,6 +17,7 @@
     },
 
     {
+        "id":"2",
         "nombre":"Bologna",
         "marca":"Soi-Yah!",
         "presentacion":"200g",
@@ -32,6 +34,7 @@
     },
 
     {
+        "id":"3",
         "nombre":"Chicharrón",
         "marca":"Soi-Yah!",
         "presentacion":"300g",
@@ -48,6 +51,7 @@
     },
 
     {
+        "id":"4",
         "nombre":"Deshebrada",
         "marca":"Soi-Yah!",
         "presentacion":"360g",
@@ -64,6 +68,7 @@
     },
 
     {
+        "id":"5",
         "nombre":"Jamón",
         "marca":"Meathical",
         "presentacion":"300g",
