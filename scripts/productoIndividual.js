@@ -37,91 +37,97 @@ function obtenerInformacionProducto(datos) {
     dimensionesTexto = `Dimensiones: ${datos[index].dimensiones}`;
     pesoTotalTexto = `Peso total: ${datos[index].pesoTotal}`;
     precioTexto = `Precio: $${datos[index].precio}`;
+
+    pintarDOM();
 }
 
 //Termina la función para obtener los datos del objeto en el índice seleccionado
 
 
+//Función para pintar en el DOM
+function pintarDOM() {
 
 /*Obtener referencia para insertar los datos */
 
-var contenido = document.querySelector(".contenido");
-var informacionProducto = document.querySelector(".informacion-producto");
+    var contenido = document.querySelector(".contenido");
+    var informacionProducto = document.querySelector(".informacion-producto");
 
 
-/*Crear elementos de la página */
+    /*Crear elementos de la página */
 
-/*Crear imagen */
-var contenedorImagen = document.createElement("div");
-contenedorImagen.className = "contenedor-imagen";
+    /*Crear imagen */
+    var contenedorImagen = document.createElement("div");
+    contenedorImagen.className = "contenedor-imagen";
 
-var imagen = document.createElement("img");
-imagen.src = imagenSrc;
+    var imagen = document.createElement("img");
+    imagen.src = imagenSrc;
 
-contenedorImagen.appendChild(imagen);
-informacionProducto.appendChild(contenedorImagen);
-/*Termina crear imagen */
+    contenedorImagen.appendChild(imagen);
+    informacionProducto.appendChild(contenedorImagen);
+    /*Termina crear imagen */
 
-/*Contenedor información */
-var contenedorInformacion = document.createElement("div");
-contenedorInformacion.className = "contenedor-informacion";
+    /*Contenedor información */
+    var contenedorInformacion = document.createElement("div");
+    contenedorInformacion.className = "contenedor-informacion";
 
-/*Nombre */
-var nombre = document.createElement("h2");
-nombre.className = "nombre";
-nombre.innerHTML = nombreTexto;
-contenedorInformacion.appendChild(nombre);
-/*Termina nombre */
+    /*Nombre */
+    var nombre = document.createElement("h2");
+    nombre.className = "nombre";
+    nombre.innerHTML = nombreTexto;
+    contenedorInformacion.appendChild(nombre);
+    /*Termina nombre */
 
-/*Marca */
-var marca = document.createElement("p");
-marca.className = "marca";
-marca.innerHTML = marcaTexto;
-contenedorInformacion.appendChild(marca);
-/*Termina marca */
+    /*Marca */
+    var marca = document.createElement("p");
+    marca.className = "marca";
+    marca.innerHTML = marcaTexto;
+    contenedorInformacion.appendChild(marca);
+    /*Termina marca */
 
-/*Presentación */
-var presentacion = document.createElement("p");
-presentacion.className = "presentacion";
-presentacion.innerHTML = presentacionTexto;
-contenedorInformacion.appendChild(presentacion);
-/*Termina presentación */
+    /*Presentación */
+    var presentacion = document.createElement("p");
+    presentacion.className = "presentacion";
+    presentacion.innerHTML = presentacionTexto;
+    contenedorInformacion.appendChild(presentacion);
+    /*Termina presentación */
 
-/*Fabricante*/
-var fabricante = document.createElement("p");
-fabricante.className = "fabricante";
-fabricante.innerHTML = fabricanteTexto;
-contenedorInformacion.appendChild(fabricante);
-/*Termina fabricante */
+    /*Fabricante*/
+    var fabricante = document.createElement("p");
+    fabricante.className = "fabricante";
+    fabricante.innerHTML = fabricanteTexto;
+    contenedorInformacion.appendChild(fabricante);
+    /*Termina fabricante */
 
-/*Descripción*/
-var descripcion = document.createElement("p");
-descripcion.className = "descripcion";
-descripcion.innerHTML = descripcionTexto;
-contenedorInformacion.appendChild(descripcion);
-/*Termina descripción */
+    /*Descripción*/
+    var descripcion = document.createElement("p");
+    descripcion.className = "descripcion";
+    descripcion.innerHTML = descripcionTexto;
+    contenedorInformacion.appendChild(descripcion);
+    /*Termina descripción */
 
-/*Tipo de envase*/
-var tipoEnvase = document.createElement("p");
-tipoEnvase.className = "tipo-envase";
-tipoEnvase.innerHTML = tipoEnvaseTexto;
-contenedorInformacion.appendChild(tipoEnvase);
-/*Termina tipo de envase */
+    /*Tipo de envase*/
+    var tipoEnvase = document.createElement("p");
+    tipoEnvase.className = "tipo-envase";
+    tipoEnvase.innerHTML = tipoEnvaseTexto;
+    contenedorInformacion.appendChild(tipoEnvase);
+    /*Termina tipo de envase */
 
 
-/*Dimensiones*/
-var dimensiones = document.createElement("p");
-dimensiones.className = "dimensiones";
-dimensiones.innerHTML = dimensionesTexto;
-contenedorInformacion.appendChild(dimensiones);
-/*Termina dimensiones*/
+    /*Dimensiones*/
+    var dimensiones = document.createElement("p");
+    dimensiones.className = "dimensiones";
+    dimensiones.innerHTML = dimensionesTexto;
+    contenedorInformacion.appendChild(dimensiones);
+    /*Termina dimensiones*/
 
-/*Peso total*/
-var pesoTotal = document.createElement("p");
-pesoTotal.className = "peso-total";
-pesoTotal.innerHTML = pesoTotalTexto;
-contenedorInformacion.appendChild(pesoTotal);
-/*Termina peso total*/
+    /*Peso total*/
+    var pesoTotal = document.createElement("p");
+    pesoTotal.className = "peso-total";
+    pesoTotal.innerHTML = pesoTotalTexto;
+    contenedorInformacion.appendChild(pesoTotal);
+    /*Termina peso total*/
 
-informacionProducto.appendChild(contenedorInformacion);
-contenido.appendChild(informacionProducto);
+    informacionProducto.appendChild(contenedorInformacion);
+    contenido.prepend(informacionProducto);
+
+}
