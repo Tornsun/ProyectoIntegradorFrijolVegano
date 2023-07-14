@@ -2,29 +2,62 @@ var contenedorTarjetas = document.querySelector('.contenedor-tarjetas');
 var imgSrc = '../assets/img/ImagenesProductos/default.jpg';
 var textoPrecio = "";
 var textoNombre = "";
-var textoDescripcion ="";
-var id="";
+var textoDescripcion = "";
+var id = "";
+const cantidadItems = [];
+var numeroItemsCarrito = document.querySelector(".numero-items");
+numeroItemsCarrito.innerHTML=localStorage.getItem("carrito");
 
 
 fetch(`../BBDD-temporal/productos.json`)
-    .then(res=> res.json())
-    .then(response=>{
+    .then(res => res.json())
+    .then(response => {
         obtenerInformacionProducto(response)
     })
 
 
-    /*Función para obtener la información del JSON e imprimir tantos objetos como haya en el JSON */
-function obtenerInformacionProducto(datos){
-    for(i=0; i<datos.length;i++){
-        imgSrc=datos[i].imagenProducto;
+/*Función para obtener la información del JSON e imprimir tantos objetos como haya en el JSON */
+function obtenerInformacionProducto(datos) {
+    for (i = 0; i < datos.length; i++) {
+        imgSrc = datos[i].imagenProducto;
         textoPrecio = `$${datos[i].precio}`;
         textoNombre = datos[i].nombre;
         textoDescripcion = datos[i].descripcion;
-        id=datos[i].id;
+        id = datos[i].id;
         nuevaTarjetaProducto();
     }
 }
+/* Termina Función para obtener la información del JSON e imprimir tantos objetos como haya en el JSON */
 
+/*Función para agregar productos al carrito*/
+function agregarItem() {
+    let id = localStorage.getItem("carrito");
+
+    //Si es el primer producto lo agrega al carrito
+    if (cantidadItems.length == 0) {
+        cantidadItems.push(id);
+        numeroItemsCarrito.innerHTML = cantidadItems.length;
+        console.log(cantidadItems);
+    }
+
+    //Si el id ya fue agregado manda un mensaje de que ya se agregó al carrito y modifica el id para que no pase la siguiente prueba
+    else {
+        for (i = 0; i < cantidadItems.length; i++) {
+            if (id == cantidadItems[i]) {
+                alert("Este producto ya fue agregado a tu carrito");
+                id = -1;
+            }
+        }
+
+    //Si pasó el filtro anterior, significa que es un elemento que no fue seleccionado y por ende lo agrega al carrito 
+        if (id != -1) {
+            cantidadItems.push(id);
+            numeroItemsCarrito.innerHTML = cantidadItems.length;
+            console.log(cantidadItems);
+        }
+    }
+}
+/*Termina función para agregar productos al carrito*/
 
 /*Función para crear nueva tarjeta */
 function nuevaTarjetaProducto() {
@@ -37,7 +70,7 @@ function nuevaTarjetaProducto() {
 
     const contenedorNombre = document.createElement('div');
     contenedorNombre.className = "contenedor-nombre";
-    
+
     const nombre = document.createElement('p');
     nombre.className = "producto-nombre";
     nombre.innerHTML = textoNombre;
@@ -49,7 +82,7 @@ function nuevaTarjetaProducto() {
 
     /*Elemento a de la imagen*/
     const link = document.createElement("a");
-    link.href="./producto.html";
+    link.href = "./producto.html";
     /*Termina elemento a de la imagen */
 
     /*Imagen */
@@ -58,12 +91,12 @@ function nuevaTarjetaProducto() {
 
     const img = document.createElement('img');
     img.src = imgSrc;
-    
+
     link.appendChild(img);
     contenedorImagen.appendChild(link);
     card.appendChild(contenedorImagen);
 
-   
+
 
     /*Termina imagen */
 
@@ -95,31 +128,32 @@ function nuevaTarjetaProducto() {
 
     /*Termina Descripcion */
 
-    
+
 
     /*Boton */
     const contenedorBoton = document.createElement('div');
     contenedorBoton.className = "contenedor-boton";
 
     const boton = document.createElement('button');
-    boton.className="boton-agregar";
+    boton.className = "boton-agregar";
     boton.innerHTML = "AGREGAR";
-    
+
 
     contenedorBoton.appendChild(boton);
     card.appendChild(contenedorBoton);
     contenedorTarjetas.appendChild(card);
 
-     /*Función link imagen */
-     link.addEventListener("click", function(){
+    /*Función link imagen */
+    link.addEventListener("click", function () {
         localStorage.setItem("detalles", card.id);
     });
-    
+
     /*Termina función link imagen */
 
     /*Funcion del botón */
-    boton.addEventListener("click", function(){
+    boton.addEventListener("click", function () {
         localStorage.setItem("carrito", card.id);
+        agregarItem();
     });
     /*Termina función del boton */
 

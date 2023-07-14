@@ -23,7 +23,7 @@
 }
 
 .contenedor-imagen img{
-    height:500px;
+    width:100%;
     display:flex;
     margin:auto;
 }
@@ -51,6 +51,8 @@
 }
 
 @media screen and (max-width:991.00px){
+
+
     .informacion-producto {
         flex-direction:column;
         padding-top: 40px;
