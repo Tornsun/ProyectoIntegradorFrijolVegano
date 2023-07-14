@@ -7,12 +7,11 @@
     <title>Crear un nuevo Curso </title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" href="../styles/crearCursos.css">
     <link rel="stylesheet" href="../styles/styleNavbarFooter.css">
+    <link rel="stylesheet" href="../styles/crearCursos.css">
 </head>
-
-<body>
-    <div class="navBar">
+<header>
+    <nav class="navBar">
         <div class="navBarSuperior">
             <!--Menú hamburguesa-->
             <div class="menu-hamburguesa">
@@ -26,7 +25,7 @@
 
             <!--Logo Frijol Vegano-->
             <div class="logo">
-                <a href="./index.html"><img src="../assets/img/logo.png"></a>
+                <a href="../index.html"><img src="../assets/img/logo.png"></a>
             </div>
             <!--TerminaLogo Frijol Vegano-->
 
@@ -51,7 +50,7 @@
                         <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
                     </svg>
                 </a>
-                <a href="./shoopingCar.html" target="_blank">
+                <a href="../html/productosGMG.html">
                     <svg class="logo-carrito" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-cart3"
                         viewBox="0 0 16 16">
                         <path
@@ -78,17 +77,19 @@
                         </div>
                     </div>
                 </li>
-                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="../index.html">Inicio</a></li>
                 <li><a href="./productos.html">Productos</a></li>
                 <li><a href="./acercaDeNosotros.html"> Nosotros</a></li>
                 <li><a href="./contactanos.html">Contacto</a></li>
+                <li><a href="./crearProducto.html">Producto</a></li>
             </ul>
         </div>
         <!--Termina Navbar secundaria-->
-    </div>
+    </nav>
+</header>
 
-    <!--Inicia contenido-->
-    <div class="contenido">
+
+    <body>
         <div class="HiperVinculoDeProducto">
             <div class="vinculo">
                 <a class="nuevoProducto" href="./crearProducto.html" target="_blank">Agregar un nuevo producto</a>
@@ -98,65 +99,55 @@
             </div><!--Cierre del segundo boton -->
         </div>
         <!--Aqui empezaos con el formulario de agregar un producto-->
-
-
-
-        <!--Div que contiene toda la tarjeta de agregar producto-->
-        <div class="titulo">
-            <h1>Agregar un nuevo Curso</h1>
-        </div> <!--Cierre titulo -->
         <div class="contenedorProductos">
-            <div class="a">
-                <!--Aqui empezamos con el formulario de agregar un producto-->
-                <form class="formulario">
-                    <!-- <div class="camposProducto"> Aqui empezaos con el formulario de agregar un producto -->
-                    <div class="idproducto">
-                        <p> ID del producto</p>
-                        <input type="text" maxlength="10" name="identificador" class="inputDelProducto"
-                            placeholder="ID del producto">
+
+            <!--Div que contiene toda la tarjeta de agregar producto-->
+            <div class="titulo">
+                <h1>Agregar un nuevo Curso</h1>
+            </div> <!--Cierre titulo -->
+
+            <!--Aqui empezamos con el formulario de agregar un producto-->
+            <form class="formulario">
+                <div class="camposProducto"> <!--Aqui empezaos con el formulario de agregar un producto -->
+                    <!--?--------------------------------------------------------------------------->
+                    <div class="divTituloDelCurso">
+                        <p> Titulo del Curso</p>
+                        <div class="divDelinputTitulo">
+                            <input type="text"  name="identificador" class="inputTituloDeCurso"
+                                placeholder="Titulo del Curso" required>
+                        </div>
                     </div>
-                    <!-- </div>Cierre del campo de llenado -->
+
+                    <!--?--------------------------------------------------------------------------->
+
+
                     <div class="divnombreProducto">
-                        <p>Nombre del producto</p>
-                        <input type="text" name="nombreProducto" class="inputNombreProducto"
-                            placeholder="Nombre del producto">
-                    </div>
-                    <div class="categoriaDeProductos">
-                        <p>Categoria</p>
-                        <select name="categorias" class="categoria">
-                            <option value="categoria">Categorias</option>
-                            <option value="chile">Chiles</option>
-                            <option value="Plato">Platos Fuertes</option>
-                            <option value="congelados">Alimentos Congelados</option>
-                            <option value="preparados">Alimentos Preparados</option>
-                            <option value="mexicanisimos">Platos Tipicos</option>
-                        </select>
-                    </div>
-                    <div class="superDescripcionProductos">
-                        <div class="titulodescripcionProducto">
-                            <p>Descripcion del Producto</p>
+                        <p>Categoría del Curso</p>
+                        <div class="divDelInputCategoria">
+                            <input type="text" name="nombreProducto" class="inputCategoriaCurso"
+                                placeholder="Categoría del Curso" required>
                         </div>
+                    </div>
+                    <!--?--------------------------------------------------------------------------->
+                    <div class="titulodescripcionProducto">
+                        <p>Descripción del Producto</p>
                         <div class="descripcionDelProducto">
-                            <textarea type="text" maxlength="300" name="descripcion" class="inputDescripcionProducto"
-                                placeholder="Descripcion del producto"></textarea>
+                            <textarea type="text" maxlength="350" name="descripcion" class="inputDescripcionProducto"
+                                placeholder=" Descripción del producto" required></textarea>
                         </div>
                     </div>
-
-
-
-                    <!-- !Empezamos con la modificacion de la imagen previa del producto -->
-                    <p>Imagen Previa</p>
-                    <input type="file" id="inputdelCurso" accept="image/*">
-                    <div id="divCurso"></div>
+                    <!--?--------------------------------------------------------------------------->
 
 
                     <div class="costosYExistencias">
                         <div class="row">
                             <div class="col-sm-12 col-md-3 col-lg-3">
-                                <li class="textoLista">Costo del curso</li>
+                                <ul class="miLista">
+                                <li class="textoLista">Costo del curso</li>                                
+                                </ul>
                             </div>
                             <div class="col-sm-12 col-md-3 col-lg-3">
-                                <input type="text" name="costo" class="inputCostoProducto"
+                                <input type="number" name="costo" class="inputCostoCurso"
                                     placeholder="Costo del curso">
                             </div>
 
@@ -164,73 +155,97 @@
                                 <li class="textoLista">Horas del curso</li>
                             </div>
                             <div class="col-sm-12 col-md-3 col-lg-3">
-                                <input type="text" maxlength="300" name="existencias" class="inputExistenciasProducto"
-                                    placeholder="">
+                                <input type="text" maxlength="300" name="existencias" class="inputhorasCurso"
+                                    placeholder="Horas">
+                                </ul>
                             </div>
                         </div>
                     </div>
+
+                    <!--?----------------------------------------------------------------------->
                     <div class="informacionCursos">
                         <p>Detalles del Curso</p>
-                        <li class="listaDeinputDetalles1"><input type="text" class="input1" placeholder="duracion"></li>
-                        <li class="listaDeinputDetalles2"><input type="text" class="input1" placeholder="modulos"></li>
-                        <li class="listaDeinputDetalles3"><input type="text" class="input1" placeholder="requisitos">
+                        <li class="listaDeinputDetalles1"><input type="text" class="input1" placeholder="duración"></li>
+                        <li class="listaDeinputDetalles2"><input type="text" class="input2" placeholder="modulos"></li>
+                        <li class="listaDeinputDetalles3"><input type="text" class="input3" placeholder="requisitos">
                         </li>
-                        <li class="listaDeinputDetalles4"><input type="text" class="input1" placeholder="material"></li>
-                        <li class="listaDeinputDetalles5"><input type="text" class="input1"></li>
+                        <li class="listaDeinputDetalles4"><input type="text" class="input4" placeholder="material"></li>
+                        <li class="listaDeinputDetalles5"><input type="text" class="input5" placeholder="info"></li>
                         <p>Que aprenderas en el Curso</p>
-                        <li class="listaQueAprenderas1"><input type="text" class="input1" placeholder="duracion"></li>
-                        <li class="listaQueAprenderas2"><input type="text" class="input1" placeholder="modulos"></li>
-                        <li class="listaQueAprenderas3"><input type="text" class="input1" placeholder="requisitos"></li>
-                        <li class="listaQueAprenderas4"><input type="text" class="input1" placeholder="material"></li>
-                        <li class="listaQueAprenderas5"><input type="text" class="input1"></li>
+                        <li class="listaQueAprenderas1"><input type="text" class="input6" placeholder="Información 1">
+                        </li>
+                        <li class="listaQueAprenderas2"><input type="text" class="input7" placeholder="Información 2">
+                        </li>
+                        <li class="listaQueAprenderas3"><input type="text" class="input8" placeholder="Información 3">
+                        </li>
+                        <li class="listaQueAprenderas4"><input type="text" class="input9" placeholder="Información 4">
+                        </li>
+                        <li class="listaQueAprenderas5"><input type="text" class="input0" placeholder="Información 5">
+                        </li>
+
                     </div>
 
-                    <p>Video del curso</p>
-                    <input type="file" id="videoCurso" accept="video/*, image/*">
-                    <div id="videoTotalCurso"></div>
 
-                </form>
-            </div>
+
+                    <!-- !Empezamos con la modificacion de la imagen previa del curso -->
+                    <div class="centroTituloImagen">
+                        <p>Imagen Previa</p>
+                    </div>
+                    <!--?----------------------------------------------------------------------->
+
+                    <div class="centrarImagenPrevia">
+                        <div id="cursoPrevisualizado" class="col-sm-12 col-md-3 col-lg-3">
+                            <img src="../assets/img/curso2 1.png" alt="producto" id="etiquetaDeImagen" class="img">
+                        </div>
+                        <!--! En este div solo alojaremos la imagen previa del producto importante NO MOVER -->
+                    </div>
+                    <div class="informacionFile">
+                        <label for="inputImagenCurso">Subir Imagen</label>
+                        <img src="../assets/img/archivo-de-respaldo.png" alt="subirimagen" for="imagenPrevia"
+                            class="imagenSubirArchivo">
+                        <input type="file" id="inputImagenCurso" accept="image/*">
+                    </div>
+                    <!--?----------------------------------------------------------------------->
+                    <!-- !Empezamos con la modificacion de la el video curso -->
+
+                    <div class="centroTituloImagen">
+                        <p>Video del curso</p>
+                    </div>
+
+                    <div class="centrarvideoPrevio">
+                        <div id="videoPrevisualizado">
+                            <video  alt="producto" id="etiquetaDevideo" width="1200" height="750" class="vid" controls>
+                                <source src="../assets/img/2023-07-11 17-33-17.mp4" type="video/mp4">
+                            </video>
+                        </div>
+               <!--! En este div solo alojaremos la imagen previa del producto importante NO MOVER -->
+                    </div>
+
+                    <div class="informacionFile">
+                        <label for="inputVideoCurso">Subir Video</label>
+                        <img src="../assets/img/archivo-de-respaldo.png" alt="subirvideo" for=""
+                            class="imagenSubirArchivo">
+                        <input type="file" id="inputVideoCurso" accept="video/*">
+                    </div>
+                
+ <div class="agregado">
+        <input type="submit" class="botonEnviar" value="Agregar Producto">
         </div>
+
+    </div>
+    </form>
+    </div>
+</div>
+
+</div>
         <!-- Cierre del formulario de los cursos  -->
         <!-- </div>  Cierre de mi contenedor -->
 
-        <div class="agregado">
-            <input type="submit" class="botonEnviar" value="Agregar Producto">
-        </div>
-    </div>
-    <!--Termina contenido-->
-
-    <footer>
-        <div class="footer"> <!--Ayuda a que el footer tome el ancho correcto en pantalla-->
-            <div class="redesSocialesIzquierda">
-                <a href="https://instagram.com/frijolvegano"><img src="../assets/img/Instagram.png"></a>
-                <a href="https://www.facebook.com/FrijolVegano/"><img src="../assets/img/Facebook.png"></a>
-                <a href="https://wa.me/message/EYIG5NRSYCEJE1"><img src="../assets/img/WhatsApp.png"></a>
-            </div>
-
-            <div class="textoIzquierda">
-                <a href="./avisoDePrivacidad.html">Aviso de Privacidad</a>
-                <a href="./politicasEnvio.html">Politica de Envio</a>
-                <p>Derechos Reservados Frijol Vegano®</p>
-            </div>
-
-            <div class="redesSocialesCentral">
-                <a href="https://instagram.com/frijolvegano"><img src="../assets/img/Instagram.png"></a>
-                <a href="https://www.facebook.com/FrijolVegano/"><img src="../assets/img/Facebook.png"></a>
-                <a href="https://wa.me/message/EYIG5NRSYCEJE1"><img src="../assets/img/WhatsApp.png"></a>
-            </div>
-
-            <div class="textoDerecha">
-                <p>Teléfono: (+52) 811 479 6150</p>
-                <p>Rafael Garza Cantú 3412 Col. Hidalgo, Monterrey, Nuevo León</p>
-            </div>
-        </div>
-    </footer>
+        
 
 
 
-
-</body>
+        <script src="../scripts/cearCurso.js"></script>
+    </body>
 
 </html>

@@ -2,6 +2,11 @@ let Usuarios = [];
 let contador = 0;
 let datosFormulario = document.getElementById('formularioRegistro');
 
+//* Variables para almacenar datos de bases de datos
+let url = 'https://frijolvegano-production.up.railway.app/frijolvegano/';
+let endPoint = `${url}usuarios`;
+
+
 // Función de validación del formulario
 function validarFormulario() {
     // event.preventDefault(); // Evita que el formulario se envíe automáticamente
@@ -47,32 +52,50 @@ function validarFormulario() {
 
     // Crear un objeto con los valores del formulario
     let registroUsuario = {
+        admon: "true",
         nombre: inputNombreCompleto,
         telefono: inputTelefono,
-        correo: inputCorreo,
-        contraseña: inputContraseña,
-        imagen: inputImagen,
+        email: inputCorreo,
+        contrasenia: inputContraseña,
+        imgen_perfil: inputImagen,
+        direccion: "Ingresa direccion...",
     };
 
     // Se anexan los datos a un array
-    Usuarios.push(registroUsuario);
-    contador++;
-    console.log(contador);
+    // Usuarios.push(registroUsuario);
+    // contador++;
+    // console.log(contador);
 
     // Convertir el objeto en una cadena JSON
-    let datoUsuario = JSON.stringify(Usuarios);
+    // let datoUsuario = JSON.stringify(Usuarios);
 
-    // Almacenar los datos en el Local Storage
-    localStorage.setItem('registroUsuario', datoUsuario);
+    // // Almacenar los datos en el Local Storage
+    // localStorage.setItem('registroUsuario', datoUsuario);
 
-    // Mensaje de éxito o redireccionamiento a otra página
-    alert('¡Formulario enviado y datos guardados en el Local Storage con éxito!');
-    // window.location.href = 'otra-pagina.html'; // Redireccionar a otra página si es necesario
+    // // Mensaje de éxito o redireccionamiento a otra página
+    // alert('¡Formulario enviado y datos guardados en el Local Storage con éxito!');
+    // // window.location.href = 'otra-pagina.html'; // Redireccionar a otra página si es necesario
 
-    // Resetea el formulario una vez que se activa el evento
-    datosFormulario.reset();
+    //Se llama a nuestro backend mediente un fetch
+    fetch(endPoint, {
+        method: "POST", //Se ejecuta un metodo post para registrar usuarios
+        headers: {     //Esta es la cabeza de la respuesta
+            "content-Type": "application/json",
+        },
+        body: JSON.stringify(registroUsuario), //Es la estructura con la quen nosotros enviamos los datos como  en Postman, se debe mandar como cadena de texto, por eso se utiliza el stringify aqui
+    })
+        .then((response) => response.text()) //Se recibe la respuesta
+        .then((data) => {
+            console.log("Usuario guardado:", data); 
+        })
+        .catch((error) => {
+            console.error("Error:", error); 
+        });
 
-}
+// Resetea el formulario una vez que se activa el evento
+datosFormulario.reset();
+
+        }
 
 document.getElementsByClassName("btn")[0].addEventListener("click", (e) => {
     e.preventDefault();

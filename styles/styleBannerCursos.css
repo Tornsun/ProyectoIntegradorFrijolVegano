@@ -19,9 +19,9 @@
     max-width: fit-content;
 }
 
-.banner-curso{
+ .banner-curso{
     width:100%;
-}
+} 
 
 .etiqueta-promo{
     position:absolute;
@@ -35,15 +35,15 @@
     margin-bottom:0;
 }
 
-.contenedor-estrellas{
+ .contenedor-estrellas{
     display:flex;
     align-items: center;
 }
 
-.estrellas{
+ .estrellas{
     margin:3px;
     color:rgb(182, 157, 17);
-}
+} 
 
 .contenedor-calificacion{
     display:flex;
@@ -69,4 +69,76 @@
     font-size: 15px;;
     color:gray;
     
+}
+.calificacion-curso{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+}
+
+.estrellas-curso{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    text-align: start;
+
+    /* Quiero ponerle un gap para hacer la separación de las estrellas pero debo hacerlo flex y reconfigurar TODO */
+    /* ? Est factible? */
+}
+
+/* * Creación de estrellas */
+.estrellas-curso input{
+    width: 55px;
+    height: 40px;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.estrellas-curso input::before{
+    content: url(../assets/img/estrellaResenia.svg);
+    /* !Ya no estamos usando el icono asi que no es neceario trabajar con la fuente */
+    /* font-family: fontAwesome; */
+    /* font-size: 34px; */
+    /* color: #C5B41A; */
+    /* gap: 15px; */
+}
+
+.numero-calificacion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;  
+    gap: 15px;
+}
+
+.numero-calificacion p{ 
+font-size: xx-large;
+color: gold;
+}
+.precioCurso{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+}
+
+.costoreal{
+    font-size: xx-large;
+}
+.oferta{
+    align-content: first baseline;
+    font-size:medium;
+}
+.descripcion-curso img{
+    /* padding: 20px; */
+    width: 80%;
+    height: 200px;
+    /* height: 40px; */
+}
+
+.descripcion-curso{
+    padding: 5%;
+    padding-top: 0%;
+    /* display: flex; */
+    /* align-items: center;
+    text-align: center; */
 }

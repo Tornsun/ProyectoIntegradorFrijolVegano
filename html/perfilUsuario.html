@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario</title>
+    <!-- Enlace con estilos CSS externos bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!-- Finaliza conexión con Bootstrap -->
+    <!-- Enlace con estilos CSS internos -->
+    <link rel="stylesheet" href="../styles/styleNavbarFooter.css">
+    <link rel="stylesheet" href="../styles/perfilUsuario.css">
+    <!-- * Le ponemos el elemento ico del logo -->
+    <link href="../assets/img/iconoFrijolVegano.ico" rel="icon" />
+</head>
+
+<body>
+    <header>
+        <nav></nav>
+    </header>
+    <div class="navBar">
+        <div class="navBarSuperior">
+            <!--Menú hamburguesa-->
+            <div class="menu-hamburguesa">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                </svg>
+            </div>
+            <!--Termina menú hamburguesa-->
+
+            <!--Logo Frijol Vegano-->
+            <div class="logo">
+                <a href="./index.html"><img src="../assets/img/logo.png"></a>
+            </div>
+            <!--TerminaLogo Frijol Vegano-->
+
+            <!--Barra de búsqueda-->
+            <div class="contenedor-barra-busqueda">
+                <input class="barra-buscar" type="textbox" placeholder="Buscar">
+                <div class="boton-buscar">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-search" viewBox="0 0 16 16">
+                        <path
+                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                    </svg>
+                </div>
+            </div>
+            <!--Termina Barra de búsqueda-->
+
+            <!--Logo usuario y carrito-->
+            <div class="logos">
+                <a href="./login.html" target="_blank">
+                    <svg class="logo-usuario" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                        class="bi bi-person-fill" viewBox="0 0 16 16">
+                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                    </svg>
+                </a>
+                <a href="./shoopingCar.html" target="_blank">
+                    <svg class="logo-carrito" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-cart3"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                    </svg>
+                </a>
+            </div>
+            <!--Termina Logo usuario y carrito-->
+        </div>
+        <!--Termina navbar superior-->
+
+        <!--Navbar secundaria-->
+        <div class="navBarInferior"> <!--No es responsiva-->
+            <ul class="nav-links">
+                <li id="id-barra-buscar-menu-hamburguesa">
+                    <div class="contenedor-barra-busqueda-menu-hamburguesa">
+                        <input class="barra-buscar-menu-hamburguesa" type="textbox" placeholder="Buscar">
+                        <div class="boton-buscar-menu-hamburguesa">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-search" viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                            </svg>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./productos.html">Productos</a></li>
+                <li><a href="./acercaDeNosotros.html"> Nosotros</a></li>
+                <li><a href="./contactanos.html">Contacto</a></li>
+            </ul>
+        </div>
+        <!--Termina Navbar secundaria-->
+    </div>
+    <main>
+    <section class="container mx-auto border border-grey" style="width: 95%; margin-top: 60px; border-radius: 5px;">
+        <div class="row contenedor-general">
+            <div class="col-md-6">
+                <h2 class="bienvenida">¡Bienvenido a tu sesión!</h2>
+                <div style="display: flex; justify-content: center;">
+                    <img class="img-usuario" id="img-usuario" src="../assets/img/perfil3.png" alt="Imagen de ejemplo"> <br>
+                </div>
+                <div style="display: flex; justify-content: center; margin-top: 30px;">
+                    <button class="boton-sesion">Cerrar sesión</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <p class=" cardDeInformacion"
+                    data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+                    aria-controls="collapseExample"> <strong>Usuario registrado</strong>
+                </p>
+
+<!--?---------------------------------------------------------------------------->
+                
+                <div class="contenedorInfoUsuario">
+                <div class="nomUsuario card card-body" >
+                    <p><strong>Nombre:</strong></p>
+                        <p id="nombre-usuario">Mariana Gónzalez</p>
+                </div>
+
+
+                <div class="corUsuario card card-body">
+                    <p><strong>Correo:</strong></p>
+                        <p id="correo-usuario">marianagonz@hotmail.com</p> 
+                </div>
+
+
+                <div class="telUsuario card card-body">
+                    <p><strong>Teléfono:</strong></p>
+                        <p id="telefono-usuario">4921234512</p> 
+                </div>
+
+
+                <div class="dirUsuario card card-body" >
+                    <p><strong>Dirección:</strong></p>
+                        <p id="telefono-usuario">Carlos Hank Gonzalez</p>
+                </div>
+           
+<!--?---------------------------------------------------------------------------->
+<div class="contenedorCambio">
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Cambiar datos
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Cambiar datos</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="formularioCambioDatos">
+            <p>Nombre</p><input type="text" class="cambioNombre">
+            <p>Telefono</p><input type="text" class="cambiotelefono">
+            <p>Direccion</p><input type="text" class="cambioDireccion">
+            <p>Foto de perfil</p><input type="file" class="cambiofoto">
+            <br>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="submit" class="btn btn-primary">Guardar cambios</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+            </div>
+        </div>
+    </section>
+</main>
+<footer>
+    <div class="footer"> <!--Ayuda a que el footer tome el ancho correcto en pantalla-->
+        <div class="redesSocialesIzquierda">
+            <a href="https://instagram.com/frijolvegano"><img src="../assets/img/Instagram.png"></a>
+            <a href="https://www.facebook.com/FrijolVegano/"><img src="../assets/img/Facebook.png"></a>
+            <a href="https://wa.me/message/EYIG5NRSYCEJE1"><img src="../assets/img/WhatsApp.png"></a>
+        </div>
+
+        <div class="textoIzquierda">
+            <a href="./avisoDePrivacidad.html">Aviso de Privacidad</a>
+            <a href="./politicasEnvio.html">Politica de Envio</a>
+            <p>Derechos Reservados Frijol Vegano®</p>
+        </div>
+
+        <div class="redesSocialesCentral">
+            <a href="https://instagram.com/frijolvegano"><img src="../assets/img/Instagram.png"></a>
+            <a href="https://www.facebook.com/FrijolVegano/"><img src="../assets/img/Facebook.png"></a>
+            <a href="https://wa.me/message/EYIG5NRSYCEJE1"><img src="../assets/img/WhatsApp.png"></a>
+        </div>
+
+        <div class="textoDerecha">
+            <p>Teléfono: (+52) 811 479 6150</p>
+            <p>Rafael Garza Cantú 3412 Col. Hidalgo, Monterrey, Nuevo León</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Conexión con JS externo Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+    integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+    crossorigin="anonymous"></script>
+<!-- Finaliza conexión de JS Bootstrap -->
+<!-- Conexión con JS interno -->
+<script src="../scripts/perfilUsuario.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>

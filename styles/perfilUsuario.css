@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap");
+
+* {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+main {
+  margin: 0;
+  margin-top: 150px;
+  text-align: center;
+}
+.container p{
+    margin: 0;
+    padding: 0;
+}
+
+.h1-mensajeSinSesion{
+  margin: 100px;
+  padding: 100px;
+}
+
+.card{
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.img-usuario{
+  width: 250px;
+  height: 250px;
+  border-radius:150px;
+  box-shadow: 0px 5px 5px rgba(0,0,0,0.8);
+  object-fit: cover;
+}
+
+.border-dark {
+  border-radius: 10px;
+}
+
+.boton-sesion {
+  color: white;
+  background-color: #f50087;
+  border: #f50087;
+  height: 50px;
+  width: 130px;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.bienvenida {
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+.cardDeInformacion{
+  height: 60px; 
+  width: 400px; 
+  text-align: center; 
+  background-color: #EE692A; 
+  border:#EE692A; 
+  margin-top: 70px; 
+  text-align: center;
+  color: white;
+
+}
+.nomUsuario,
+.corUsuario,
+.telUsuario,
+.dirUsuario{
+  height: 80px; 
+  width: 400px; 
+
+  margin-bottom: 0rem;
+}

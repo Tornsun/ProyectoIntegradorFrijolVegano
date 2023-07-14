@@ -4,7 +4,7 @@ let curso = [];
 
 //* Selectores para el curso
 let descripcionCompletaCurso = document.querySelector(".descripcionCompleta-curso");
-
+let $descripcionParcial = document.querySelector(".descripcionParcial");
 //* Selectores para el carrusel de reseñas
 let carruselBoostrap = document.querySelector(".carousel");
 let carruselResenias = document.querySelector(".carousel-inner");
@@ -13,12 +13,29 @@ const srcImgUsuario = "../assets/img/usuarioReseña.svg";
 const altImgUsuario = "imagenUsuario";
 
 //* Llamamos a las funciones para obtener los dato de las bases de datos
+
 obtenerDatosCursos();
 obtenerDatosResenia();
 
+// Obtén el valor almacenado en localStorage
+var valorJSON = localStorage.getItem('curso');
+
+// Convierte el valor JSON a un objeto JavaScript
+var objeto = JSON.parse(valorJSON);
+
+// Accede a las propiedades del objeto
+// console.log(objeto);
+
+cargarCurso(objeto);
+
+
+
+
 //* Seccion para consumir las fetch (opción 1)
+
 function obtenerDatosCursos() {
-  fetch('../BBDD-temporal/cursos.json')
+ fetch('../BBDD-temporal/cursos.json')
+
   .then((responseCurso)=>{
     if(!responseCurso.ok){
       throw new Error("Error HTTP: " + responseCurso.status);
@@ -26,7 +43,7 @@ function obtenerDatosCursos() {
     return responseCurso.json();
   })
   .then((curso) =>{
-    cargarCurso(curso);
+  cargarEstrellas(curso);
   })
   .catch((error) =>{
     console.log("Soy un error en conexión con los cursos: " + error);
@@ -65,27 +82,31 @@ async function obtenerDatosResenia() {
 //  * .prepend(); Se añade el nuevo elemento antes del primer hijo.
 
 //* Funciones para obtener los dato de las bases de datos
-function cargarCurso(curso) {
+
+
+function cargarCurso(objeto) {
   console.log("entramos a cargar los datos del curso");
   let id;
   let titulo;
-  let src;
   let descripcion;
+  let imagen;
   let detalles;
   let aprendizaje;
   let estrellas;
 
+//console.log("Estrellitas",estrellas);
   // * Asignación de datos de la BBDD
-  curso.forEach(function (iteracionCurso) {
+  objeto.forEach(function (iteracionCurso) {
     id = iteracionCurso.id;
     titulo = iteracionCurso.titulo;
-    src = iteracionCurso.src;
+    imagen = iteracionCurso.imagen;
     descripcion = iteracionCurso.descripcion;
     detalles = iteracionCurso.detalles;
     aprendizaje = iteracionCurso.aprendizaje;
     estrellas = iteracionCurso.estrellas;
 
     // * Pintamos la primer parte de la información del curso
+    
     const itemDescripcion = document.createElement("div");
     itemDescripcion.classList.add('descripcion-curso');
 
@@ -93,7 +114,7 @@ function cargarCurso(curso) {
     itemDescripcion.innerHTML = `
     <h2 class="titulo-curso">${titulo}</h2>
                 <img class="img-curso"
-                    src=${src}
+                    src=${imagen}
                     alt="imagen de curso" />
                 <p>${descripcion}</p>
     <div class="btn-adquirirCurso">
@@ -117,6 +138,8 @@ function cargarCurso(curso) {
     `;
     itemDescripcion.appendChild(itemDetalleYAprendizaje);
     // descripcionCompletaCurso.before(itemDetalleYAprendizaje,carruselBoostrap);
+
+
     // * Detalles
     let divisionDetalles = detalles.split(('.'));
     divisionDetalles.pop();
@@ -129,6 +152,7 @@ function cargarCurso(curso) {
     `;
       itemDetalle.appendChild(itemDetalleTemp);
     });
+    
 
     // * Aprendizaje
     let divisionAprendizaje = aprendizaje.split(('.'));
@@ -143,14 +167,14 @@ function cargarCurso(curso) {
       itemAprendizaje.appendChild(itemAprendizajeTemp);
     });
 
+    
     //  * Calificación con estrellas
     const calificacionCurso = document.createElement("div");
     calificacionCurso.classList.add('resenias-curso');
     calificacionCurso.innerHTML = `
   <h2>Reseñas de usuarios</h2>
   <div class="calificacion-curso">
-  <div class="estrellas-curso">
-  </div>
+  <div class="estrellas-curso">   </div>
   <div class="numero-calificacion">
   <p>${estrellas} / 5</p>
   </div>
@@ -323,4 +347,3 @@ function cargarResenia() {
 
   console.log("Finaliza función cargar reseña");
 }
-

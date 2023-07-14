@@ -4,13 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro de Usuarios</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" href="../styles/styleLogIn.css">
+    <title>Frijol Vegano</title>
+    <link rel="icon" type="image/x-icon" href="./assets/img/logo.png"> <!--Favicon improvisado-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles/styleNavbarFooter.css">
+    <link rel="stylesheet" href="../styles/styleProductos.css"> <!--Página Productos-->
+    <link rel="stylesheet" href="../styles/styleBannerCursos.css">
 </head>
 
 <body>
+    <!--Inicia navbar-->
     <div class="navBar">
         <div class="navBarSuperior">
             <!--Menú hamburguesa-->
@@ -85,64 +89,91 @@
         </div>
         <!--Termina Navbar secundaria-->
     </div>
+    <!--Termina navbar-->
 
-
-
-
-
-
-    <div class="container-fluid contenedorRegistro">
-        <div class="row">
-            <div class="col-md-6 col-lg-6 d-none d-lg-block d-md-block">
-                <img class="imagenRegistro" src="../assets/img/ChileRelleno.jpg">
+    <!--Inicia contenido-->
+    <div class="contenido">
+        <!--Inicia primera sección-->
+        <div class="primeraSeccion">
+            <!--Inicia menú opciones-->
+            <div class="menu-opciones">
+                <a href="../html/productos.html">Productos</a>
+                <a href="../html/cursos.html">Cursos</a>
             </div>
-
-            <div class="col-sm-12 col-md-6 col-lg-6">
-                <div class="contenedorAlineadorRegistro">
-                    <h2 class="tituloRegistro">REGISTRATE</h2>
-                    <div class="contenedorFormulario">
-                        <br>
-                        <form id="formularioRegistro">
-                            <label class="textoLabel">Nombre Completo</label>
-                            <input class="form-control propiedadesFormularioRegistro" type="text"
-                                placeholder="Nombre Completo" aria-label="default input example" id="inputNombreCompleto" required>
-                            <label class="textoLabel">No. Telefono</label>
-                            <div class="displayTelefono">
-                                <span class="iconoBandera"></span>
-                                <span class="codigoPais">+52</span>
-                                <input class="form-control propiedadesFormularioRegistro" id="inputTelefono" type="text"
-                                    placeholder="No. Telefono" aria-label="default input example" required>
-                            </div>
-                            <label class="textoLabel">Correo Electronico</label>
-                            <input class="form-control propiedadesFormularioRegistro" id="inputCorreo" type="email"
-                                placeholder="Correo Electronico" aria-label="default input example" required>
-                            <label class="textoLabel">Contraseña</label>
-                            <input class="form-control propiedadesFormularioRegistro" id="inputContraseña" type="password"
-                                placeholder="Constraseña" aria-label="default input example" id="contraseña" required
-                                minlength="8">
-                            <label class="textoLabel">Confirmar Contraseña</label>
-                            <input class="form-control propiedadesFormularioRegistro" type="password"
-                                placeholder="Confirmar Constraseña" aria-label="default input example" id="inputConfirmarContraseña" required>
-                            <label class="textoLabel">Foto de Perfil</label>
-                            <input class="form-control propiedadesFormularioRegistro" id="inputImagen" accept="image/*" type="file" required>
-                            <label class="textoCheckBox"><input type="checkbox" class="checkboxRegistro"> He leido y acepto los terminos y condiciones</label>
-                        </form>
-                        <div class="contenedorBotonRegistro">
-                            <button class="btn btn-primary colorBotonRegistro">Enviar</button>
-                        </div>
-                    </div>
+            <!--Termina menú opciones-->
+        </div>
+        <!--Termina primera sección-->
 
 
+        <!--Inicia segunda seccion-->
+        <div class="segundaSeccion">
+            <div class="checkBoxPrecio">
+                <p>Precio</p>
+                <div class="contenedor-masBajo">
+                    <label for="masBajo">Más bajo</label>
+                    <input class="precio" id="masBajo" name="precio" value="masBajo" type="radio">
+                </div>
+                <div class="contenedor-masAlto">
+                    <label for="masAlto">Más alto</label>
+                    <input class="precio" id="masAlto" name="precio" value="masAlto" type="radio">
                 </div>
             </div>
 
+
+            <div class="checkBoxEnOferta">
+                <div class="contenedor-enOferta">
+                    <label for="enOferta">En oferta</label>
+                    <input class="enOferta" id="enOferta" name="enOferta" value="enOferta" type="checkbox">
+                </div>
+            </div>
         </div>
+        <!--Termina segunda seccion-->
+
+
+        <!--Inicia tercera seccion-->
+        <div class="terceraSeccion">
+
+            <!--Inicia contenedor de cursos-->
+            <div class="contenedor-cursos">
+                <section class="informacionCurso">
+                <card class="tarjeta-curso">
+                    <!-- !Aqui va la imagen  que va a llevar mi curso -->
+                    <!-- <img src="" alt=""> -->
+                    <div class="contenedor-informacion-curso">
+                       <!-- !Aqui va la informacion del curso-->
+                        <h2 class="titulo-curso"></h2>
+                        <!-- <p class="descripcion-curso"></p> -->
+                        
+                        <div class="calificacion">
+                            <!-- !Aqui va la calificaion del curso-->
+                            <p class="calificaionEstrella"></p>
+                        </div>
+
+                        <div class="precioCurso">
+                            <!-- !Aqui va el precio del curso-->
+                            <p class="infoPrecio"></p>
+                        </div>
+                    
+                    </div>
+                </card>
+
+
+            </section>
+              
+            
+
+
+
+                
+
+
+
+            </div>
+            <!--Termina contenedor de cursos-->
+        </div>
+        <!--Termina tercera seccion-->
     </div>
-
-
-
-
-
+    <!--Termina contenido-->
 
     <footer>
         <div class="footer"> <!--Ayuda a que el footer tome el ancho correcto en pantalla-->
@@ -171,11 +202,12 @@
         </div>
     </footer>
 
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
     <script src="../scripts/menuHamburguesa.js"></script>
-    <script src="../scripts/scriptRegistro.js"></script>
+    <script src="../scripts/TarjetaCurso.js"></script>
 </body>
 
 </html>
