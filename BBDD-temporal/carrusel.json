@@ -1,0 +1,22 @@
+[
+    {
+        "src": "../assets/img/producto5.png",
+        "alt":"First slide"
+    },
+    {
+        "src": "../assets/img/curso2.png",
+        "alt":"Second slide"
+    },
+    {
+        "src": "../assets/img/curso3.png",
+        "alt":"Third slide"
+    },
+    {
+        "src": "../assets/img/curso4.png",
+        "alt":"Fourth slide"
+    },
+    {
+        "src": "../assets/img/producto6.png",
+        "alt":"Fifth slide"
+    }
+]

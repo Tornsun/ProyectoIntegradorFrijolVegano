@@ -5,6 +5,7 @@
 }
 
 .tarjeta-curso{
+    
     border-radius: 25px;
     display:flex;
     flex-wrap: wrap;
@@ -24,6 +25,7 @@
 }
 
 .etiqueta-promo{
+    justify-content: center;
     position:absolute;
     margin-bottom:0;
     bottom:0;
@@ -54,10 +56,13 @@
     margin-bottom:0px;
     padding-left:10px;
     color:rgb(182, 157, 17);
+    align-items: center;
+    
 }
 
 .contenedor-precio-curso{
     align-items: center;
+    text-align: center;
 }
 
 .precio-cantidad, .precio-cantidad-descuento{
