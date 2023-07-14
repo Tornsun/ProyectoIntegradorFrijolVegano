@@ -1,0 +1,52 @@
+.comentarios{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: start;
+    width:50%;
+}
+
+.arriba{
+    display: flex;
+}
+
+.centro{
+    display: flex;
+    flex-direction: row;
+}
+
+.estrellas-usuario{
+    display: flex;
+}
+
+.centro .estrellas-usuario .estrellas{
+    margin-right:15px;
+}
+
+
+.centro .estrellas-usuario .estrellas svg{
+    color:gold;
+}
+
+.nota p{
+    margin-bottom:0;
+}
+
+.imagen-usuario{
+    height: 75px;
+    width: 75px;
+    border-radius: 100px;
+}
+
+.usuario{
+    margin: auto 15px auto 15px;
+    font-weight: bold;
+}
+
+.abajo .contenedor-fecha .fecha{
+    font-size:18px;
+    color:gray;
+    margin-bottom:0;
+
+}

@@ -5,10 +5,12 @@
     text-align: center;
 }
 
-.contenido p{
-    text-align:justify ;
-    padding: 5%;
+.contenido{
+    margin-top:150px;
+    margin-bottom:150px;
+
 }
+
 .mision,
 .vision,
 .valores {
@@ -63,9 +65,6 @@ h1 {
     text-align: center;
     font-size: 30px;
 }
-li{
-    font-size: 30px;
-}
 
 @media (max-width: 576px) {
 
@@ -85,15 +84,19 @@ li{
 /*
 Aqui empieza la modificaion de la card para que haga el zoom */
 .contenedor {
-    height: 100%;
-    width: 100%;
+    /* height: 100%;
+    width: 100%; */
     display: flex;
     flex-wrap: wrap;
+    /* justify-content: space-around;
+  align-items: start; Me alinea mi item al principio */
     gap: 20px;
     align-items: center;
-    margin: 50px;
+    /* margin: 50px; */
     justify-content: space-evenly;
     align-items: center;
+    margin-left: 10%;
+margin-right: 10%;
 
 }
 
@@ -258,24 +261,7 @@ a {
     opacity: 1;
 }
 
-/*Aqui empieza la creacion de la card 6 */
-.carta6 {
-    background: url("../assets/img/Carlos.png") center center no-repeat;
-    background-size: 300px;
-}
 
-.carta6:hover {
-    background: url("../assets/img/Carlos.png") left center no-repeat;
-    background-size: 600px;
-}
-
-.carta6:hover h2 {
-    opacity: 1;
-}
-
-.carta6:hover .fa {
-    opacity: 1;
-}
 
 
 /*Aqui finaliza la creacion de la card  */

@@ -1,0 +1,107 @@
+
+
+.contenido{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-top:150px;
+    justify-content: center;
+}
+
+.opciones{
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+    margin: 25px 30% 50px 30%;
+}
+
+.opciones a{
+    font-size: 25px;
+    text-decoration: none;
+    color:black;
+}
+
+
+form{
+    margin: auto auto auto auto;
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.contenedor-inputs{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction:column;
+    justify-content: center;
+    width: 600px;
+}
+
+.seccion{
+    display: flex;
+    flex-direction: column;
+}
+
+#imagen{
+    margin:50px auto 50px auto ;
+    justify-items: center;
+}
+
+.contenedor-precio-existencias{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#contenedor-precio, #contenedor-existencias{
+    display:flex;
+    justify-content: space-around;
+    width:35%;
+}
+
+#contenedor-imagen{
+    margin: 50px auto 50px auto;
+}
+
+#contenedor-imagen label{
+    text-align: center;
+    background-color: #F50087;
+    color:white;
+    padding: 10px;
+    border-radius:10px;
+    margin-bottom:15px;
+}
+
+#contenedor-imagen input{
+    display:none;
+}
+
+#contenedor-imagen #espacio-imagen, #img{
+    height:250px;
+    width:350px;
+}
+
+#contenedor-descripcion{
+    margin-bottom: 50px;
+}
+
+#contenedor-descripcion #descripcion{
+    height: 200px;
+}
+
+.contenedor-oferta, .contenedor-precio-oferta{
+    margin: auto auto 50px auto;
+}
+
+.contenedor-precio-oferta{
+    display:none;
+}
+
+.boton{
+    background-color:#F50087;
+    color:white;
+    border:none;
+    border-radius:10px;
+    width:300px;
+    height:80px;
+    margin:auto auto 100px auto ;
+}

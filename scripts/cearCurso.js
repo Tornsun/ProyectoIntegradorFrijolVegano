@@ -1,55 +1,3 @@
-//Aqui colocamos la funcion de que cuando de clic en un boton le aparesca otro formulario, y a su vez desaparesca
-//  const contenedorDeProducto = document.getElementsByClassName('contenedorProductos')
-//  const contenedorDeCurso = document.getElementsByClassName('contenedorCurso')
-//  const cambioBoton =document.getElementsByClassName('button2')
-
-
-
-//  function cambioBoton() {
-//     var formulario1 = document.getElementById("contenedorProductos");
-//      var formulario2 = document.getElementById("contenedorCurso");
-  
-//      // Ocultar formulario 1
-//      formulario1.style.display = "inline";
-//      // Mostrar formulario 2
-//      formulario2.style.display = "inline";
-//   }
-
-
-
-
-const defaultFile = '../assets/img/producto1.png';//Si no cargan una imagen nos va a devolver una imagen random de algun producto
-const $imagenPrevia = document.getElementById('imagenPrevia');//Creamos una variable que nos traiga del HTML la imagen que el cliente selecciono
-const $imagenPrevisualizada = document.getElementById('imagenPrevisualizada');//Traemos el img de nuestra imagen para que nos la pinte el DOM
-
-$imagenPrevia.addEventListener('change', e => { //Hacemos un evento que cuando encuentre un cambio se haga algo
-  const archivos = e.target.files;
-  if (archivos.length > 0) { // Limpiar cualquier vista previa anterior
-    $imagenPrevisualizada.innerHTML = '';
-    for (let i = 0; i < archivos.length; i++) {
-      const archivo = archivos[i];
-      const reader = new FileReader();
-      reader.onload = function (e) {
-        const src = e.target.result;
-
-        // Crear un elemento de imagen para mostrar la vista previa
-        const img = document.createElement('img');
-        img.src = src;
-        img.classList.add('vistaPreviaProducto');
-
-        // Agregar el elemento de imagen a la vista previa
-        $imagenPrevisualizada.appendChild(img);
-      };
-
-      reader.readAsDataURL(archivo);
-    }
-  } else { // Si no hay archivos salimos de la función y quitamos la imagen
-    // Si no se seleccionan archivos, mostrar la imagen por defecto
-    $imagenPrevisualizada.innerHTML = `<img src="${defaultFile}" alt="Vista previa">`;
-  }
-});//Cierre de mi EvenListener
-
-
 
 
 const defaultFileCurso = '../assets/img/producto1.png';//Si no cargan una imagen nos va a devolver una imagen random de algun producto
@@ -125,5 +73,4 @@ $videoCurso.addEventListener('change', e => {
   }
 });
 
-
-
+var $inputDelProducto =document.getElementsByClassName('.inputDelProducto');
