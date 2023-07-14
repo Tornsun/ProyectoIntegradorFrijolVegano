@@ -43,8 +43,8 @@ function tarjetaCurso(datosCurso) {
 
 
     itemDescripcion.innerHTML = `
-                  <img class="img-curso" src=${imagen} alt="imagen de curso"/>
-                  <h2 class="titulo-curso">${titulo}</h2>
+        <a href="../html/plantillaCursos.html">
+        <img class="img-curso" src=${imagen} alt="imagen de curso"/></a>
                   <p>${descripcion}</p>`;
 
     descripcionCompletaCurso.appendChild(itemDescripcion);

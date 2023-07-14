@@ -1,10 +1,11 @@
 // let url = '../BBDD-temporal/'; 
 // let endPoint = `${url}registroUsuarios.json`;
 let elementosUsuario;
+let emailSesion;
 
 let url = 'https://frijolvegano-production.up.railway.app/frijolvegano/';
 let endPoint = `${url}usuarios`;
-let statusSesion = false;
+let statusSesion;
 
 const loginButton = document.getElementsByClassName('btn')[0]; // Acceder al primer elemento de la colección
 
@@ -31,11 +32,19 @@ function login(e) {
                 });
 
                 if (usuarioEncontrado) {
-                    // let indiceUsuario = usuarios.findIndex(function (indice) {
-                    //     return indice.email === emailInput;
-                    // })
-                    // elementosUsuario = usuarios[indiceUsuario];
+                    let indiceUsuario = usuarios.findIndex(function (indice) {
+                        return indice.email === emailInput;
+                    })
+                    elementosUsuario = usuarios[indiceUsuario];
+
                     statusSesion = true;
+                    let converToJSONStatus = JSON.stringify(statusSesion);
+                    localStorage.setItem("statusSesion", converToJSONStatus);
+
+                    emailSesion = elementosUsuario.email;
+                    let converToJSONEmail = JSON.stringify(emailSesion);
+                    localStorage.setItem("emailSesion", converToJSONEmail);
+
                     window.location.href = "../html/perfilUsuario.html";
 
                     // Mostrar los datos del usuario en una alerta

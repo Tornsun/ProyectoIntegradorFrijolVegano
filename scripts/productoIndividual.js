@@ -8,6 +8,10 @@ var tipoEnvaseTexto;
 var dimensionesTexto;
 var pesoTotalTexto;
 var id = localStorage.getItem("detalles"); /*La página tendrá siempre un valor que se pasará desde productos */
+var numeroItemsCarrito = document.querySelector(".numero-items");
+numeroItemsCarrito.innerHTML = localStorage.getItem("carrito");
+
+
 
 //Obtiene el indice correctamente pero creo que el error viene del Async y Await
 
@@ -127,7 +131,19 @@ function pintarDOM() {
     contenedorInformacion.appendChild(pesoTotal);
     /*Termina peso total*/
 
+    /*Botón */
+    var contenedorBoton = document.createElement("div");
+    contenedorBoton.className="contenedor-boton";
+    var boton = document.createElement("button");
+    boton.className="boton-agregar";
+    boton.innerHTML ="AGREGAR";
+    contenedorBoton.appendChild(boton);
+
+    /*Termina botón*/
+
     informacionProducto.appendChild(contenedorInformacion);
+    contenido.prepend(contenedorBoton);
     contenido.prepend(informacionProducto);
 
 }
+

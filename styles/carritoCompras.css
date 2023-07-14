@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap");
+
+* {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+main {
+    margin: 0;
+  margin-top: 150px;
+  text-align: center;
+}
+
+.contenedor-seccion-completa {
+  /* Separamos del contenido del titulo de la página */
+  /* margin-top:70px; */
+  padding: 40px;
+  /* Colocamos disposición flex para poder colocar en row y quede uno elemeno a lado del otro */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.carritoCompras {
+  display: flex;
+  flex-direction: column;
+}
+
+.contenedor-columna1 {
+  /* border: solid 1px black; */
+  border-right: solid 1px #d9d9d9;
+  padding-right: 10px;
+}
+
+/* .boton-pago {
+    background-color: #F50087;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 10px 12px;
+    border: none;
+    cursor: pointer;
+    width: 150px;
+    margin: 18px 18px 150px 18px;
+    border-radius: 5px; */
+
+.contenedor-items {
+  margin: 15px 15px 100px 15px;
+  /* border: solid 1px black; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 35px;
+}
+
+.imagen-izquierda {
+  /* float: left; */
+  margin-right: 70px;
+  /* Opcional: Agrega un margen a la derecha de la imagen */
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+  /* * Hace que la imagen se ajuste dentro del cuadro sin perder su relación de aspecto original, recortando o ampliando según sea necesario para llenar el cuadro, el detalle es la calidad de las imagenes */
+  /* Establece el ancho deseado para la imagen */
+  /* height: auto; */
+  /* Mantiene la proporción de aspecto original de la imagen */
+}
+
+.descrpcion-item {
+  text-align: justify;
+}
+
+.item {
+  margin-top: 10px;
+  /* margin-bottom: 60px; */
+  /* Agrega un margen inferior entre los divs */
+}
+
+.fila-botones {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 25px;
+}
+
+.fila-botones button {
+  background-color: #f50087;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 900;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 5px;
+}
+
+.contenedorProducto {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+/*Estilos de columna derecha */
+.contenedor-columna2{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.contenedor-subtotalPago {
+  /* border: solid 1px black; */
+  padding-bottom: 50px;
+  border-bottom: solid 1px #d9d9d9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.btn-vaciar,
+.boton-pago {
+  background-color: #f50087;
+  color: #ffffff;
+  /* Cambia el color del texto */
+  font-size: 18px;
+  font-weight: 900;
+  /* Cambia el tamaño de fuente a 16 píxeles */
+  padding: 15px 35px;
+  /* Opcional: Agrega un relleno interno de 5 píxeles vertical y 10 píxeles horizontal */
+  border: none;
+
+  border-radius: 5px;
+  width: 302px;
+}
+
+.modal-body p {
+  text-align: justify;
+}
+
+button:hover {
+  opacity: 70%;
+}
+
+.contenedor-recomendaciones {
+  margin-top: 55px;
+  text-align: center;
+}
+
+.titulo-subtotal,
+.titulo-total {
+  /* font-weight: bold; */
+  margin: 0;
+  text-align: center;
+  /* margin-bottom: 5px; */
+}
+
+/*Estilos de recomendaciones */
+.subtotalRecomendaciones {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.imagen-recomendaciones {
+  margin-right: 0px;
+  /* Opcional: Agrega un margen a la derecha de la imagen */
+  width: 100px;
+  /* Establece el ancho deseado para la imagen */
+  height: 60px 60px;
+  /* Mantiene la proporción de aspecto original de la imagen */
+  margin-block-end: 40px;
+}
+
+.precio-recomendaciones {
+  margin-right: 10px;
+  margin: 10px;
+}
+
+.boton-recomendaciones {
+  background-color: #f50087;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 10px 12px;
+  border: none;
+  cursor: pointer;
+  width: 150px;
+  margin-bottom: 150px;
+  border-radius: 5px;
+}
+
+@media (max-width: 753px) {
+    main {
+      margin-top: 240px;
+    }
+    .contenedor-seccion-completa {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .contenedor-columna1, .contenedor-columna2 {
+        border: none;
+        padding:0;
+        /* padding-right: px; */
+      }
+  .descrpcion-item {
+    display: none;
+  }
+  .contenedor-items {
+    margin:0;
+    /* gap: 35px; */
+  }
+
+  .contenedorDescripcion p{
+    margin: 0;
+  }
+
+  .fila-botones {
+    margin-top: 10px;
+  }
+  
+  .imagen-izquierda {
+    margin: 0;
+    height: 150;
+    width: 150;
+    object-fit: cover;
+  }
+  .contenedor-subtotalPago {
+    
+    gap: 5px;
+    margin: 0;
+    padding: 0;
+    /* background-color: */
+    background-color: rgba(217, 217, 217, .9);
+    opacity: 99%;
+    /* border-bottom: solid 1px #d9d9d9; */
+    position: fixed;
+    min-width: 100%;
+    top: 85px;
+    z-index: 2;
+  }
+  .btn-vaciar, .boton-pago {
+    padding: 5px;
+  }
+}
+
+@media (min-width: 574px) and (max-width: 991.98px){
+    .contenedor-seccion-completa {
+        margin: 0;
+        padding: 2px;
+        /* gap: 1px; */
+        justify-content: space-around;
+    }
+    .contenedor-columna1 {
+        padding: 0;
+    }
+    .imagen-izquierda {
+        margin: 0;
+        height: 150px;
+        width: 150px;
+        object-fit: cover;
+      }
+      .contenedor-items {
+        gap: 10px;
+      }
+      .descrpcion-item {
+        display: none;
+      }
+      .fila-botones {
+        gap: 5px;
+      }
+      .fila-botones button {
+        padding: 5px 15px;
+      }
+}
